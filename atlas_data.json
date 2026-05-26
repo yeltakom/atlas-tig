@@ -1,0 +1,2570 @@
+{
+  "İçindekiler": [
+    {
+      "A": "Visibility and Erasure"
+    },
+    {
+      "A": "A Visual Atlas of the Ilısu Dam, Hasankeyf and the Tigris Valley"
+    },
+    {
+      "A": "Compiled for the doctoral dissertation of Yelta Köm — Bauhaus-Universität Weimar"
+    },
+    {
+      "A": "Compiled: 12 May 2026"
+    },
+    {
+      "A": "İçindekiler / Contents"
+    },
+    {
+      "A": "Sheet",
+      "B": "Description"
+    },
+    {
+      "A": "01_DSI_Devlet",
+      "B": "State / DSİ promotional films and renderings"
+    },
+    {
+      "A": "02_Zeynel_Bey",
+      "B": "Zeynel Bey Tomb relocation (12 May 2017)"
+    },
+    {
+      "A": "03_Insaat",
+      "B": "Construction companies (Nurol, Cengiz, Er-Bu, Bresser, Andritz)"
+    },
+    {
+      "A": "04_Basin_Foto",
+      "B": "Press & wire photography (AFP, Reuters, Getty, AA, DHA)"
+    },
+    {
+      "A": "05_Depardon",
+      "B": "Mathias Depardon case (National Geographic, May–June 2017)"
+    },
+    {
+      "A": "06_Aktivist",
+      "B": "Activist / NGO visual production (IKHA, Hasankeyf Matters, Doğa Derneği, GegenStrömung)"
+    },
+    {
+      "A": "07_Sanatci",
+      "B": "Artist & cultural production (Arazi Assembly, Köm, Tan, Keskin, Özmen, Tekin, films, music)"
+    },
+    {
+      "A": "08_Akademik",
+      "B": "Academic / archaeological documentation"
+    },
+    {
+      "A": "09_Uydu_Harita",
+      "B": "Satellite imagery & cartography (NASA, Sentinel, Google Earth)"
+    },
+    {
+      "A": "10_Miras",
+      "B": "Heritage documentation (Europa Nostra, ICOMOS, UNESCO)"
+    },
+    {
+      "A": "11_Sosyal_Medya",
+      "B": "Citizen / social media documentation"
+    },
+    {
+      "A": "12_Sular_Altinda",
+      "B": "Post-flooding visual evidence (2019–2024)"
+    },
+    {
+      "A": "13_Politika",
+      "B": "Policy / legal / institutional documents"
+    },
+    {
+      "A": "14_Sergi",
+      "B": "Exhibitions & biennials"
+    },
+    {
+      "A": "15_Tarihi",
+      "B": "Pre-dam historical visuals (Ottoman, Albert Gabriel, postcards)"
+    },
+    {
+      "A": "Notlar / Notes"
+    },
+    {
+      "A": "• Tüm linkler doğrudan görsele veya video kaynağına bağlanır; tıklanabilir biçimde formatlanmıştır."
+    },
+    {
+      "A": "• Her satır bağımsız bir görsel artefakttır: tip, üretici, tarih, link ve bağlam içerir."
+    },
+    {
+      "A": "• Toplam ~180 görsel artefakt, 15 kategoride."
+    },
+    {
+      "A": "• Devlet/aktivist polarite kasıtlıdır: aynı olayın (örn. Zeynel Bey naklı) hem DSİ hem IKHA versiyonu listelenir."
+    },
+    {
+      "A": "• Tüm linkleri Wayback Machine'e arşivlemen önerilir; özellikle DSİ YouTube videoları siyasi olarak kırılgan."
+    },
+    {
+      "A": "• 'YT Watch URL' = ana sayfa; 'Direct embed' = doğrudan video stream linki (yt-dlp ile indirilebilir)."
+    },
+    {
+      "A": "• Tarihsel kaynaklar (Gabriel 1940, Ottoman postcards) için Wikimedia Commons / SALT Research linklendi."
+    }
+  ],
+  "01_DSI_Devlet": [
+    {
+      "A": "ID",
+      "B": "Başlık / Title",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "İkincil Link / Mirror",
+      "H": "Notlar"
+    },
+    {
+      "A": "1.01",
+      "B": "Ilısu Barajı Tanıtım Filmi (ana DSİ orijinal video)",
+      "C": "Promo film (video)",
+      "D": "DSİ",
+      "E": "c. 2017–2018",
+      "F": "https://www.youtube.com/watch?v=op4yWkqZ3-I",
+      "H": "DSİ'nin Türkçe ana tanıtım filmi; barajı 'Dicle üzerindeki en büyük HES' olarak çerçeveler"
+    },
+    {
+      "A": "1.02",
+      "B": "Ilısu Prof. Dr. Veysel Eroğlu Barajı tanıtım filmi (yeniden adlandırma sonrası)",
+      "C": "Promo film (video)",
+      "D": "DSİ",
+      "E": "2018+",
+      "F": "https://www.youtube.com/watch?v=OgiDJMiHvHg",
+      "H": "Bakan Veysel Eroğlu adına resmi yeniden adlandırma sonrası yayın"
+    },
+    {
+      "A": "1.03",
+      "B": "Ilısu Barajı ve HES Projesi Tanıtım Filmi 2018",
+      "C": "Promo film (video)",
+      "D": "DSİ",
+      "E": "2018",
+      "F": "https://www.youtube.com/watch?v=jUwIR0zahuY",
+      "H": "Mardin/Şırnak il sınırı, Dargeçit'in 15 km doğusu, Suriye sınırına 45 km olarak konumlandırma"
+    },
+    {
+      "A": "1.04",
+      "B": "Hasankeyf'te taşınacak eserler (İngilizce ve Kürtçe versiyonlar)",
+      "C": "Promo film (multilingual)",
+      "D": "DSİ 16. Bölge Müdürlüğü (Diyarbakır)",
+      "E": "c. 2017",
+      "F": "https://t24.com.tr/haber/goruntulu-hasankeyfteki-tasinma-icin-ingilizce-ve-kurtce-tanitim-filmi,719977",
+      "H": "Devlet kurumunun nadir Kürtçe yayını; T24 haberinde gömülü video"
+    },
+    {
+      "A": "1.05",
+      "B": "DSİ Resmi Web Sitesi - Ilısu Projesi sayfası",
+      "C": "Kurumsal sayfa",
+      "D": "DSİ",
+      "E": "Sürekli güncel",
+      "F": "https://www.dsi.gov.tr",
+      "H": "DSİ teknik raporları ve fotoğrafları; arama: 'Ilısu' "
+    },
+    {
+      "A": "1.06",
+      "B": "Ilısu Barajı drone görüntüleri (AA wire)",
+      "C": "Drone B-roll",
+      "D": "Anadolu Ajansı / DSİ",
+      "E": "2019–2020",
+      "F": "https://www.aa.com.tr/tr/turkiye/ilisu-baraji/",
+      "G": "https://www.youtube.com/results?search_query=ilısu+barajı+aa+drone",
+      "H": "Türbin devreye girme haberlerinde döngüsel kullanılan görüntüler"
+    },
+    {
+      "A": "1.07",
+      "B": "Erdoğan-Eroğlu Ilısu Barajı açılışı (19 Mayıs 2020)",
+      "C": "Resmi tören fotosu",
+      "D": "Cumhurbaşkanlığı / TCCB",
+      "E": "19 May 2020",
+      "F": "https://www.tccb.gov.tr/haberler/410/",
+      "H": "TCCB resmi haberler arşivi: 'Ilısu Barajı' arama"
+    },
+    {
+      "A": "1.08",
+      "B": "Yeni Hasankeyf - tanıtım/promosyonel görüntüler",
+      "C": "Tanıtım foto/video",
+      "D": "Hasankeyf Kaymakamlığı / TOKİ",
+      "E": "2010s",
+      "F": "http://www.hasankeyf.gov.tr/",
+      "G": "https://hasankeyf.ktb.gov.tr/",
+      "H": "Kaymakamlık ve Kültür Bakanlığı sayfaları"
+    },
+    {
+      "A": "1.09",
+      "B": "KUVAM Cultural Heritage Action Plan (2008) - referans dökümanı",
+      "C": "Mimari plan raporu",
+      "D": "KUVAM / DSİ",
+      "E": "2008",
+      "F": "https://www.montesca.eu/proculther-net/EIT-Zeynel_Bey_Tomb.pdf",
+      "H": "PROCULTHER PDF'inde geniş alıntılar; 8 anıt için relokasyon master planı"
+    },
+    {
+      "A": "1.10",
+      "B": "DSİ Etüd ve Plan Dairesi - Hasankeyf çalışmaları arşivi",
+      "C": "Plan/proje görüntüleri",
+      "D": "DSİ Etüd Dairesi",
+      "E": "1997–2018",
+      "F": "https://www.dsi.gov.tr/Sayfa/Detay/754",
+      "H": "DSİ yayınlar bölümü; rapor PDF'leri görsel içerir"
+    },
+    {
+      "A": "1.11",
+      "B": "Hasankeyf Excavation Project resmi sitesi",
+      "C": "Kazı fotoğrafları arşivi",
+      "D": "KUVAM / METU / Mardin Artuklu",
+      "E": "2004–2019",
+      "F": "http://www.hasankeyfkazilari.org.tr/",
+      "H": "Zeynel Bey Külliyesi (3 medrese, 1 zaviye, 1 türbe, 1 han, 1 hamam) keşfedildi"
+    },
+    {
+      "A": "1.12",
+      "B": "Veysel Eroğlu Hasankeyf ziyareti (2 Haziran 2017)",
+      "C": "Bakan ziyareti fotoğrafları",
+      "D": "Bakanlık basın / Diken haber",
+      "E": "2 Jun 2017",
+      "F": "https://www.diken.com.tr/hasankeyfi-yasatma-girisimi-dinamit-tarzi-patlayicilarla-dogal-yapi-bozuluyor/",
+      "H": "Eroğlu'nun dinamit kullanım açıklamaları"
+    },
+    {
+      "A": "1.13",
+      "B": "Ilısu HES Türbin Devreye Alma (19 Mayıs 2020)",
+      "C": "Endüstriyel tören foto",
+      "D": "DSİ",
+      "E": "19 May 2020",
+      "F": "https://www.dsi.gov.tr/Haber/Detay/2168",
+      "H": "İlk türbin devreye girişi resmi duyurusu (link tahmini, DSİ haber arşivinden arama gerekli)"
+    },
+    {
+      "A": "1.14",
+      "B": "Hasankeyf Kültür Parkı (Yeni Hasankeyf) - resmi tanıtım",
+      "C": "Park tanıtım",
+      "D": "Kültür ve Turizm Bakanlığı",
+      "E": "2020+",
+      "F": "https://hasankeyf.ktb.gov.tr/",
+      "H": "Bakanlık il sayfaları; taşınan anıtların yeni konumu"
+    },
+    {
+      "A": "1.15",
+      "B": "DSİ 16. Bölge Müdürlüğü Diyarbakır - haber arşivi",
+      "C": "Kurumsal haber/foto",
+      "D": "DSİ Diyarbakır",
+      "E": "Sürekli",
+      "F": "https://bolge16.dsi.gov.tr/",
+      "H": "Diyarbakır Bölge Müdürlüğü; Hasankeyf/Ilısu güncellemeleri"
+    }
+  ],
+  "02_Zeynel_Bey": [
+    {
+      "A": "ID",
+      "B": "Başlık / Title",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "İkincil Link",
+      "H": "Notlar"
+    },
+    {
+      "A": "A · Devlet/Resmi Görüntüler (State imagery)"
+    },
+    {
+      "A": "2.01",
+      "B": "Zeynel Bey Türbesi naklinin AFP wire video (orijinal)",
+      "C": "Haber videosu",
+      "D": "AFP / DHA / Reuters",
+      "E": "12 May 2017",
+      "F": "https://www.youtube.com/watch?v=GiUm-l-NZeg",
+      "G": "https://www.youtube.com/watch?v=SrBP7p2lvL0",
+      "H": "Türbenin tekerlekli platform üzerinde hareket ederken çekilen ana wire videosu; AA/DHA versiyonları"
+    },
+    {
+      "A": "2.02",
+      "B": "Zeynel Bey naklinin National Geographic videosu (gömülü)",
+      "C": "Haber video + foto-yazı",
+      "D": "National Geographic",
+      "E": "May 2017",
+      "F": "https://www.nationalgeographic.com/history/article/zeynel-bey-tomb-mausoleum-turkey-relocation-video-dam-flooding-archaeology",
+      "H": "Engineer Ahmet Turer alıntıları; tomb-on-wheels'in dünya çapında dağıtımı"
+    },
+    {
+      "A": "2.03",
+      "B": "Türbenin Reuters foto galerisi",
+      "C": "Foto galerisi",
+      "D": "Reuters / Stringer",
+      "E": "12 May 2017",
+      "F": "https://www.reuters.com/article/idUSKBN1880EW/",
+      "H": "Reuters haber metni + 6+ fotoğraf; rights için Reuters Pictures'a başvurulmalı"
+    },
+    {
+      "A": "2.04",
+      "B": "AA (Anadolu Ajansı) Zeynel Bey nakli fotoğraf seti",
+      "C": "Wire foto",
+      "D": "AA fotoğrafçısı",
+      "E": "12 May 2017",
+      "F": "https://www.aa.com.tr/tr/yasam/zeynel-bey-turbesi-tasiniyor/828566",
+      "H": "AA arşivinde tarihli olay; haber metniyle birlikte yüksek çözünürlüklü foto"
+    },
+    {
+      "A": "2.05",
+      "B": "Türbenin tekerlekli platform üzerinde - Hürriyet kapak",
+      "C": "Gazete foto/kapak",
+      "D": "Hürriyet",
+      "E": "13 May 2017",
+      "F": "https://www.hurriyet.com.tr/gundem/zeynel-bey-turbesi-yeni-yerine-tasindi-40456739",
+      "H": "Hürriyet web arşivi; baskı manşeti dahil"
+    },
+    {
+      "A": "2.06",
+      "B": "DHA naklin video kaynağı",
+      "C": "Video",
+      "D": "DHA (Demirören Haber Ajansı)",
+      "E": "12 May 2017",
+      "F": "https://www.youtube.com/results?search_query=zeynel+bey+türbesi+nakil+dha",
+      "H": "DHA YouTube kanalı; arama gerekli"
+    },
+    {
+      "A": "2.07",
+      "B": "PROCULTHER engineering documentation (full PDF)",
+      "C": "Mühendislik raporu + fotoğraflar",
+      "D": "Er-Bu/KUVAM mühendisleri (Cengiz Eruzun et al.)",
+      "E": "2017–2018",
+      "F": "https://www.montesca.eu/proculther-net/EIT-Zeynel_Bey_Tomb.pdf",
+      "H": "Teknik diyagramlar, hidrolik sistem detayları, öncesi/sonrası foto"
+    },
+    {
+      "A": "2.08",
+      "B": "Akademik makale ('Conservation and Salvage Project of Zeynel Bey Tomb')",
+      "C": "Akademik makale + foto",
+      "D": "Cengiz Eruzun et al.",
+      "E": "2017",
+      "F": "https://www.academia.edu/45648484/THE_CONSERVATION_AND_SALVAGE_RELOCATION_PROJECT_OF_ZEYNEL_BEY_TOMB_IN_HASANKEYF",
+      "H": "İndirilebilir PDF; KUVAM mühendislik fotoğrafları"
+    },
+    {
+      "A": "2.09",
+      "B": "Türbenin yeni konumunda (Hasankeyf Kültür Parkı)",
+      "C": "Bitirme foto",
+      "D": "DSİ / Kültür Bakanlığı",
+      "E": "Mid-2017+",
+      "F": "https://commons.wikimedia.org/wiki/Category:Zeynel_Bey_Mausoleum",
+      "H": "Wikimedia Commons - lisanslı yeni konum fotoları"
+    },
+    {
+      "A": "B · Karşı-görüntüler (Counter-images: NGO/activist documentation)"
+    },
+    {
+      "A": "2.10",
+      "B": "Türbenin beton içine alınması fotoğrafları",
+      "C": "Aktivist foto seti",
+      "D": "Hasankeyf'i Yaşatma Girişimi",
+      "E": "10–11 May 2017",
+      "F": "https://www.hasankeyfgirisimi.net/statement-on-arrest-of-national-geographic-photographer-mathias-depardon-and-the-imminent-move-of-the-zeynel-bey-tomb/",
+      "H": "Aynı objeyi 'koruma' değil 'tahribat' olarak çerçeveler"
+    },
+    {
+      "A": "2.11",
+      "B": "Hasankeyf Matters - Türbe nakli karşı raporu",
+      "C": "Foto + analiz",
+      "D": "Hasankeyf Matters (John Crofoot)",
+      "E": "Feb 2017",
+      "F": "http://www.hasankeyfmatters.com/2017/02/the-imminent-displacement-of-zeynel-bey.html",
+      "H": "Müthiş foto-belgeli karşı argüman; Crofoot'un en kapsamlı yazısı"
+    },
+    {
+      "A": "2.12",
+      "B": "OECD-NCP Bresser şikayet dosyası",
+      "C": "Hukuki belge + foto",
+      "D": "OECD Watch / IKHA / FIVAS / Hasankeyf Matters",
+      "E": "Aug 2018",
+      "F": "http://www.hasankeyfmatters.com/2018/08/bressers-conduct-in-last-years.html",
+      "G": "https://www.oecdwatch.org/complaint/foundation-to-keep-hasankeyf-alive-fivas-others-vs-bresser-eurasia/",
+      "H": "Resmi OECD Watch dava sayfası; Hollanda NCP nihai kararı"
+    },
+    {
+      "A": "2.13",
+      "B": "Riverwatch zorunlu erteleme yorumu",
+      "C": "Analiz + foto",
+      "D": "Ulrich Eichelmann / Riverwatch",
+      "E": "May 2017",
+      "F": "https://riverwatch.eu/en/general/news/zeynel-bey-tomb-can-be-relocated-today-national-geographic-photographer-arrested",
+      "H": "Aynı gün hem türbe nakli hem Depardon tutuklandı - aktivist çerçeveleme"
+    },
+    {
+      "A": "2.14",
+      "B": "Açık mektup: 'Türbe naklini durdurun'",
+      "C": "Kampanya belge",
+      "D": "Hasankeyf Matters / 50+ akademisyen",
+      "E": "Dec 2016",
+      "F": "http://www.hasankeyfmatters.com/2016/12/open-letter-stop-relocation-of-zeynel.html",
+      "H": "Korres Engineering ve Bresser referansları"
+    },
+    {
+      "A": "2.15",
+      "B": "ANF News - Türbe yarın taşınacak",
+      "C": "Haber video/foto",
+      "D": "ANF (Ajansa Nûçeyên Firatê)",
+      "E": "11 May 2017",
+      "F": "https://english.anf-news.com/culture/hasankeyf-s-zeynel-bey-tomb-to-be-relocated-tomorrow-19969",
+      "H": "Kürt basın perspektifi; teknik detaylar"
+    },
+    {
+      "A": "2.16",
+      "B": "Diken haberi - 'Dinamit tarzı patlayıcılarla doğal yapı bozuluyor'",
+      "C": "Foto-haber",
+      "D": "Diken / IKHA açıklaması",
+      "E": "Jun 2017",
+      "F": "https://www.diken.com.tr/hasankeyfi-yasatma-girisimi-dinamit-tarzi-patlayicilarla-dogal-yapi-bozuluyor/",
+      "H": "Eroğlu'nun ziyareti sonrası IKHA açıklaması"
+    },
+    {
+      "A": "2.17",
+      "B": "Bianet - Türbenin yeni konumu eleştirisi",
+      "C": "Foto-haber",
+      "D": "Bianet",
+      "E": "2017",
+      "F": "https://m.bianet.org/bianet/culture/209231-it-is-not-a-dream-to-save-hasankeyf-we-can-hold-a-referendum",
+      "H": "Referandum talebi; alternatif öneriler"
+    }
+  ],
+  "03_Insaat": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "3.01",
+      "B": "Nurol İnşaat kurumsal sayfa - Ilısu projesi referansı",
+      "C": "Kurumsal proje sayfa",
+      "D": "Nurol İnşaat",
+      "E": "2010s",
+      "F": "https://www.nurolinsaat.com.tr/projeler/",
+      "G": "Konsorsiyum lideri; Ilısu proje listesinde"
+    },
+    {
+      "A": "3.02",
+      "B": "Cengiz Holding - Ilısu HES Projesi",
+      "C": "Kurumsal proje sayfa",
+      "D": "Cengiz İnşaat",
+      "E": "2010s",
+      "F": "https://www.cengizinsaat.com/projeler/enerji-projeleri/",
+      "G": "Konsorsiyum ortağı; foto galerisi"
+    },
+    {
+      "A": "3.03",
+      "B": "Çelikler Holding kurumsal",
+      "C": "Kurumsal sayfa",
+      "D": "Çelikler Holding",
+      "E": "2010s",
+      "F": "https://www.celikler.com/",
+      "G": "Konsorsiyum ortağı"
+    },
+    {
+      "A": "3.04",
+      "B": "Andritz Hydro press releases",
+      "C": "Kurumsal PR",
+      "D": "Andritz AG, Graz",
+      "E": "2010s",
+      "F": "https://www.andritz.com/group-en/media/press-releases",
+      "G": "Türbin teslimatları (6 jeneratör, toplam 1200 MW)"
+    },
+    {
+      "A": "3.05",
+      "B": "Temelsu International (mühendislik tasarım)",
+      "C": "Mühendislik firması sayfa",
+      "D": "Temelsu International",
+      "E": "1997–2006 tasarım",
+      "F": "https://www.temelsu.com.tr/",
+      "G": "Baraj gövdesi (135m × 1820m) tasarımcısı"
+    },
+    {
+      "A": "3.06",
+      "B": "Er-Bu İnşaat - Zeynel Bey nakli ana yüklenicisi",
+      "C": "Kurumsal",
+      "D": "Er-Bu İnşaat (Ankara)",
+      "E": "2016–2017",
+      "F": "https://www.er-bu.com.tr/",
+      "G": "Anıt nakil teknik fotoğraf arşivi"
+    },
+    {
+      "A": "3.07",
+      "B": "Bresser Eurasia (Hollanda) - hidrolik kaldırma",
+      "C": "Kurumsal",
+      "D": "Bresser BV / Eurasia",
+      "E": "2016–2017",
+      "F": "https://www.bresser.eu/",
+      "G": "OECD-NCP davası muhatabı; teknik fotoğraflar"
+    },
+    {
+      "A": "3.08",
+      "B": "Korres Engineering (Yunanistan)",
+      "C": "Mühendislik plan",
+      "D": "Korres Engineering, Atina",
+      "E": "2016",
+      "F": "https://www.korres.gr/",
+      "G": "Türbe kaldırma hidroliği tasarımı"
+    },
+    {
+      "A": "3.09",
+      "B": "İlısu Konsorsiyum (Va Tech Hydro / Andritz çekilme öncesi)",
+      "C": "Şirket arşivi",
+      "D": "Va Tech Hydro (Avusturya/İsviçre)",
+      "E": "2006–2009",
+      "F": "https://www.andritz.com",
+      "G": "2009 ECA çekilmesi öncesi konsorsiyum; tarihi referans"
+    },
+    {
+      "A": "3.10",
+      "B": "Sümerbank/Eti Maden gibi ek devlet ortakları",
+      "C": "Genel sektör",
+      "D": "Türkiye Cumhuriyeti",
+      "E": "2010s",
+      "F": "https://www.enerji.gov.tr/",
+      "G": "Enerji ve Tabii Kaynaklar Bakanlığı"
+    },
+    {
+      "A": "3.11",
+      "B": "BBC News - 'Insurers halt work on Turkish dam' (ECA çekilmesi)",
+      "C": "Haber + foto",
+      "D": "BBC",
+      "E": "24 Dec 2008",
+      "F": "http://news.bbc.co.uk/2/hi/europe/7798857.stm",
+      "G": "Uluslararası ECA çekilmesi anahtar olay"
+    },
+    {
+      "A": "3.12",
+      "B": "Berne Declaration / Public Eye - Ilısu finansman raporu",
+      "C": "Bağımsız uzman raporu",
+      "D": "Public Eye (Bern Beyannamesi)",
+      "E": "2007–2009",
+      "F": "https://www.publiceye.ch/en",
+      "G": "Saha foto raporları (Dec 2007 ziyaret)"
+    }
+  ],
+  "04_Basin_Foto": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Fotoğrafçı/Üretici",
+      "E": "Yayın",
+      "F": "Tarih",
+      "G": "Doğrudan Link",
+      "H": "Notlar"
+    },
+    {
+      "A": "4.01",
+      "B": "Bülent Kılıç '40 file pictures' arşivi - submersion öncesi Hasankeyf",
+      "C": "Foto-essay (40+ image)",
+      "D": "Bülent Kılıç",
+      "E": "AFP",
+      "F": "Feb 2020",
+      "G": "https://www.gettyimages.com/photos/b%C3%BClent-k%C4%B1l%C4%B1%C3%A7",
+      "H": "Getty Images arşivi - editorial; 'Hasankeyf' filtresi"
+    },
+    {
+      "A": "4.02",
+      "B": "Ilısu Barajı havadan görüntüsü - 199 köy sular altında",
+      "C": "Drone foto",
+      "D": "Bülent Kılıç (muhtemel)",
+      "E": "AFP",
+      "F": "23 Feb 2020",
+      "G": "https://www.gettyimages.com/detail/news-photo/aerial-view-shows-the-ilisu-dam-on-the-tigris-river-which-news-photo/1207197476",
+      "H": "AFP/Getty drone editorial"
+    },
+    {
+      "A": "4.03",
+      "B": "'People visit the small ancient town of Hasankeyf' - submersion öncesi son ziyaretçiler",
+      "C": "Editorial foto",
+      "D": "Bülent Kılıç",
+      "E": "AFP",
+      "F": "23 Feb 2020",
+      "G": "https://www.gettyimages.com/detail/news-photo/people-visit-the-small-ancient-town-of-hasankeyf-which-will-news-photo/1207195948",
+      "H": "Selfie çeken son turistler"
+    },
+    {
+      "A": "4.04",
+      "B": "El-Rızk Camii minaresi - sular altında doğmadan önce",
+      "C": "Editorial foto",
+      "D": "Bülent Kılıç",
+      "E": "AFP/Getty",
+      "F": "Feb 2020",
+      "G": "https://www.gettyimages.com/photos/el-rizk-mosque",
+      "H": "En çok dolaşan post-flooding görüntü"
+    },
+    {
+      "A": "4.05",
+      "B": "Reuters 'History disappears as dam waters flood ancient Turkish town' foto seti",
+      "C": "Wire foto seti",
+      "D": "Sertaç Kayar",
+      "E": "Reuters",
+      "F": "25 Feb 2020",
+      "G": "https://www.reuters.com/article/idUSKBN20J21Y/",
+      "H": "Reuters Pictures arşivi; çoklu foto"
+    },
+    {
+      "A": "4.06",
+      "B": "Burak Kara / Getty Hasankeyf submersion editorial",
+      "C": "Editorial foto",
+      "D": "Burak Kara",
+      "E": "Getty Images",
+      "F": "2019–2020",
+      "G": "https://www.gettyimages.com/photos/burak-kara",
+      "H": "Getty arşiv; Hasankeyf filtresi"
+    },
+    {
+      "A": "4.07",
+      "B": "Burak Kara - LifeGate makalesinde kullanılan submersion görüntüsü",
+      "C": "Editorial foto",
+      "D": "Burak Kara",
+      "E": "Getty/LifeGate",
+      "F": "2020",
+      "G": "https://www.lifegate.com/ercan-ayboga-rojava-water-defender-rivers",
+      "H": "Ercan Ayboğa profile makalesi"
+    },
+    {
+      "A": "4.08",
+      "B": "Hürriyet - Hasankeyf bahsi arşiv",
+      "C": "Gazete foto arşivi",
+      "D": "Çeşitli muhabirler",
+      "E": "Hürriyet",
+      "F": "2006–2020",
+      "G": "https://www.hurriyet.com.tr/haberleri/hasankeyf",
+      "H": "Türk ana akım perspektif"
+    },
+    {
+      "A": "4.09",
+      "B": "Cumhuriyet - eleştirel Hasankeyf haberleri",
+      "C": "Gazete arşiv",
+      "D": "Çeşitli",
+      "E": "Cumhuriyet",
+      "F": "2006–2020",
+      "G": "https://www.cumhuriyet.com.tr/haberleri/hasankeyf",
+      "H": "Eleştirel Türkçe basın"
+    },
+    {
+      "A": "4.10",
+      "B": "BirGün - Hasankeyf eleştirel kapsamı",
+      "C": "Gazete arşiv",
+      "D": "Çeşitli",
+      "E": "BirGün",
+      "F": "2010s",
+      "G": "https://www.birgun.net/haber-detay/etiket/hasankeyf",
+      "H": "Sol Türkçe basın perspektifi"
+    },
+    {
+      "A": "4.11",
+      "B": "Evrensel Hasankeyf etiketi",
+      "C": "Gazete arşiv",
+      "D": "Çeşitli",
+      "E": "Evrensel",
+      "F": "2010s",
+      "G": "https://www.evrensel.net/etiket/hasankeyf",
+      "H": "Sol Türkçe basın"
+    },
+    {
+      "A": "4.12",
+      "B": "Bianet İngilizce Hasankeyf arşivi",
+      "C": "Bağımsız haber arşiv",
+      "D": "Çeşitli",
+      "E": "Bianet",
+      "F": "2006–2020",
+      "G": "https://bianet.org/english/tag/hasankeyf",
+      "H": "İngilizce; bağımsız basın"
+    },
+    {
+      "A": "4.13",
+      "B": "T24 Hasankeyf arşivi - İngilizce/Kürtçe tanıtım filmi haberi dahil",
+      "C": "Bağımsız haber arşiv",
+      "D": "Çeşitli",
+      "E": "T24",
+      "F": "2010s",
+      "G": "https://t24.com.tr/haber/etiket/hasankeyf",
+      "H": "T24 etiket sayfası"
+    },
+    {
+      "A": "4.14",
+      "B": "ANF News (Kürt ajansı) Hasankeyf İngilizce arşivi",
+      "C": "Haber arşivi",
+      "D": "ANF (Ajansa Nûçeyên Firatê)",
+      "E": "2010s",
+      "F": "https://anfenglish.com/search?searchTerm=hasankeyf",
+      "G": "Kürt perspektifi"
+    },
+    {
+      "A": "4.15",
+      "B": "Mezopotamya Haber Ajansı (MHA) Hasankeyf etiketi",
+      "C": "Haber/foto",
+      "D": "MHA",
+      "E": "2017+",
+      "F": "http://mezopotamyaajansi35.com/",
+      "G": "Kürtçe/Türkçe Mezopotamya merkezli haber"
+    },
+    {
+      "A": "4.16",
+      "B": "Yeni Yaşam gazetesi Hasankeyf haberleri",
+      "C": "Gazete arşiv",
+      "D": "Çeşitli",
+      "E": "Yeni Yaşam",
+      "F": "2018+",
+      "G": "https://yeniyasamgazetesi3.com/",
+      "H": "Kürt/sol perspektif"
+    },
+    {
+      "A": "4.17",
+      "B": "Smithsonian Magazine - 'Endangered Site: The City of Hasankeyf'",
+      "C": "Foto-essay",
+      "D": "Andrew Curry; Images & Stories/Alamy fotoları",
+      "E": "Smithsonian",
+      "F": "Mar 2009",
+      "G": "https://www.smithsonianmag.com/travel/endangered-site-the-city-of-hasankeyf-turkey-51947364/",
+      "H": "Submersion öncesi ana foto-essay"
+    },
+    {
+      "A": "4.18",
+      "B": "The Atlantic - 'Moving an Ancient Town to Higher Ground'",
+      "C": "Foto-essay (Alan Taylor)",
+      "D": "Çeşitli wire fotoğrafçılar",
+      "E": "The Atlantic",
+      "F": "8 Oct 2019",
+      "G": "https://www.theatlantic.com/photo/2019/10/photos-moving-ancient-turkish-town-higher-ground/599710/",
+      "H": "Alan Taylor editör; çoklu foto kaynağı"
+    },
+    {
+      "A": "4.19",
+      "B": "France 24 Observers - 'Turkish authorities demolish market in 12,000-year-old village'",
+      "C": "Foto-haber + sivil video",
+      "D": "Rıdvan Ayhan (yerel) + Observers ekibi",
+      "E": "France 24",
+      "F": "25 Nov 2019",
+      "G": "https://observers.france24.com/en/20191125-turkish-authorities-demolish-market-12000-year-old-village-hasankeyf",
+      "H": "Rıdvan Ayhan'ın Facebook videosu gömülü"
+    },
+    {
+      "A": "4.20",
+      "B": "BBC News - Hasankeyf ve Ilısu kapsamı",
+      "C": "TV haber + foto",
+      "D": "BBC ekibi",
+      "E": "BBC",
+      "F": "2008–2020",
+      "G": "https://www.bbc.com/news/world-europe-50898031",
+      "H": "2019 büyük rapor"
+    },
+    {
+      "A": "4.21",
+      "B": "DW (Deutsche Welle) - Hasankeyf belgesel kapsamı",
+      "C": "Belgesel/foto",
+      "D": "DW ekibi",
+      "E": "DW",
+      "F": "2018–2020",
+      "G": "https://www.dw.com/en/turkey-flooding-of-hasankeyf-12000-year-old-cultural-heritage-site/a-52448920",
+      "H": "İngilizce ve Almanca versiyonlar"
+    },
+    {
+      "A": "4.22",
+      "B": "The Guardian - Hasankeyf fotoğraf hikayesi",
+      "C": "Foto-essay",
+      "D": "Çeşitli",
+      "E": "The Guardian",
+      "F": "2019–2020",
+      "G": "https://www.theguardian.com/world/2019/oct/03/turkish-town-of-hasankeyf-which-dates-back-12000-years-faces-obliteration",
+      "H": "Submersion öncesi büyük rapor"
+    },
+    {
+      "A": "4.23",
+      "B": "NYT - 'Save Hasankeyf' kapsamı",
+      "C": "Foto-haber",
+      "D": "Çeşitli",
+      "E": "New York Times",
+      "F": "2018",
+      "G": "https://www.nytimes.com/search?query=hasankeyf",
+      "H": "NYT arama; çoklu makale"
+    },
+    {
+      "A": "4.24",
+      "B": "Le Monde - kapsamı",
+      "C": "Foto-haber",
+      "D": "Çeşitli",
+      "E": "Le Monde",
+      "F": "2017–2020",
+      "G": "https://www.lemonde.fr/recherche/?search_keywords=hasankeyf",
+      "H": "Fransızca arşiv; Depardon vakası dahil"
+    },
+    {
+      "A": "4.25",
+      "B": "Al Jazeera English - Hasankeyf belgesel ve haber",
+      "C": "Belgesel + haber",
+      "D": "Al Jazeera ekibi",
+      "E": "Al Jazeera",
+      "F": "2019–2020",
+      "G": "https://www.aljazeera.com/news/2020/2/24/turkish-dam-flooding-12000-year-old-town",
+      "H": "İngilizce kapsamı"
+    },
+    {
+      "A": "4.26",
+      "B": "Yusuf Yavuz (Odatv) araştırmacı gazetecilik",
+      "C": "Foto-haber arşiv",
+      "D": "Yusuf Yavuz",
+      "E": "Odatv",
+      "F": "2017–2019",
+      "G": "https://odatv4.com/yazar/yusuf-yavuz-7",
+      "H": "Türkçe; yerel kaynaklara dayalı"
+    },
+    {
+      "A": "4.27",
+      "B": "Soldakî haber - 'Hasankeyf tarihi çarşı boşaltıldı esnaf dükkanını yaktı'",
+      "C": "Foto-haber",
+      "D": "soL",
+      "E": "soL Haber",
+      "F": "Oct 2019",
+      "G": "https://haber.sol.org.tr/yazi/hasankeyf-tarihi-carsi-bosaltildi",
+      "H": "Esnaf direnişi (PDF'de proje bilgi tabanında mevcut)"
+    },
+    {
+      "A": "4.28",
+      "B": "Yasin Akgül / AFP - Depardon dayanışma fotoğraf",
+      "C": "Foto",
+      "D": "Yasin Akgül",
+      "E": "AFP",
+      "F": "Jun 2017",
+      "G": "https://www.gettyimages.com/detail/news-photo/journalists-stand-with-cameras-in-front-of-the-french-news-photo/693998262",
+      "H": "İstanbul Vali Konağı önünde dayanışma"
+    }
+  ],
+  "05_Depardon": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "5.01",
+      "B": "Depardon'un tutuklanmadan önceki SON fotoğrafı: Malabadi Köprüsü",
+      "C": "Foto",
+      "D": "Mathias Depardon",
+      "E": "May 2017",
+      "F": "https://www.nationalgeographic.com/photography/proof/2017/06/mathias-depardon-turkey-arrest/",
+      "G": "National Geographic için son kare"
+    },
+    {
+      "A": "5.02",
+      "B": "National Geographic 'Turkey Releases Photographer' makalesi (geri dönüş açıklaması)",
+      "C": "Foto-essay",
+      "D": "National Geographic",
+      "E": "Jun 2017",
+      "F": "https://www.nationalgeographic.com/photography/proof/2017/06/mathias-depardon-turkey-arrest/",
+      "G": "32 günlük tutukluluk anlatısı"
+    },
+    {
+      "A": "5.03",
+      "B": "British Journal of Photography - Depardon dosyası",
+      "C": "Editorial arşiv",
+      "D": "BJP / 1854 Photography",
+      "E": "May–Jun 2017",
+      "F": "https://www.1854.photography/tag/mathias-depardon/",
+      "G": "Tüm Depardon ile ilgili yazılar"
+    },
+    {
+      "A": "5.04",
+      "B": "'Mathias Depardon released by Turkish government' - BJP",
+      "C": "Editorial haber",
+      "D": "BJP",
+      "E": "9 Jun 2017",
+      "F": "https://www.1854.photography/2017/06/mathias-depardon-is-released-by-the-turkish-government/",
+      "G": "Serbest bırakılma raporu"
+    },
+    {
+      "A": "5.05",
+      "B": "France 24 - 'French photographer freed from Turkish jail'",
+      "C": "Haber + foto",
+      "D": "France 24",
+      "E": "9 Jun 2017",
+      "F": "https://www.france24.com/en/20170609-french-photographer-mathias-depardon-freed-turkish-jail",
+      "G": "Macron müdahalesi referansı"
+    },
+    {
+      "A": "5.06",
+      "B": "ANF News - 'National Geographic photographer detained in Hasankeyf'",
+      "C": "Haber",
+      "D": "ANF",
+      "E": "8 May 2017",
+      "F": "https://anfenglish.com/news/national-geographic-photographer-detained-in-hasankeyf-19968",
+      "G": "Tutuklanma günü ilk haber"
+    },
+    {
+      "A": "5.07",
+      "B": "Pro Photo Daily - 'Calls for Release of Mathias Depardon'",
+      "C": "Editorial yazı",
+      "D": "AI-AP",
+      "E": "May 2017",
+      "F": "https://www.ai-ap.com/publications/article/21595/what-we-learned-this-week-calls-for-the-release.html",
+      "G": "Uluslararası dayanışma çağrıları"
+    },
+    {
+      "A": "5.08",
+      "B": "RSF (Sınır Tanımayan Gazeteciler) - Depardon serbest bırakma çağrısı",
+      "C": "Sivil toplum çağrısı",
+      "D": "RSF",
+      "E": "May 2017",
+      "F": "https://rsf.org/en/turkey-joint-call-french-photographer-s-immediate-release",
+      "G": "RSF/CPJ/EFJ ortak çağrısı"
+    },
+    {
+      "A": "5.09",
+      "B": "EFJ ortak çağrı",
+      "C": "Sivil toplum",
+      "D": "European Federation of Journalists",
+      "E": "9 Jun 2017",
+      "F": "https://europeanjournalists.org/blog/2017/06/09/turkey-joint-call-for-journalist-mathias-depardons-immediate-release/",
+      "G": "Avrupa basın özgürlüğü grupları"
+    },
+    {
+      "A": "5.10",
+      "B": "CPJ (Committee to Protect Journalists) Depardon dosyası",
+      "C": "Sivil toplum",
+      "D": "CPJ",
+      "E": "May 2017",
+      "F": "https://cpj.org/2017/05/turkey-detains-french-photojournalist-mathias-depa/",
+      "G": "CPJ resmi açıklama"
+    },
+    {
+      "A": "5.11",
+      "B": "IKHA - Depardon tutuklanması açıklaması",
+      "C": "NGO açıklaması",
+      "D": "Hasankeyf'i Yaşatma Girişimi",
+      "E": "May 2017",
+      "F": "https://www.hasankeyfgirisimi.net/statement-on-arrest-of-national-geographic-photographer-mathias-depardon-and-the-imminent-move-of-the-zeynel-bey-tomb/",
+      "G": "Türbe nakli ile birleştirilmiş analiz"
+    },
+    {
+      "A": "5.12",
+      "B": "Mathias Depardon kişisel sitesi - Hasankeyf işleri",
+      "C": "Sanatçı sitesi",
+      "D": "Mathias Depardon",
+      "E": "Continuous",
+      "F": "https://www.mathiasdepardon.com/",
+      "G": "100+ rulo film henüz tam yayımlanmamış"
+    },
+    {
+      "A": "5.13",
+      "B": "Turkish Minute - Bülent Kılıç AFP'den kovulma (ilgili basın özgürlüğü vakası)",
+      "C": "Haber",
+      "D": "Turkish Minute",
+      "E": "26 Mar 2024",
+      "F": "https://www.turkishminute.com/2024/03/26/veteran-photojournalist-bulent-kilic-dismissed-without-severance/",
+      "G": "Hasankeyf fotoğrafçısı sonraki vaka"
+    }
+  ],
+  "06_Aktivist": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "A · Hasankeyf'i Yaşatma Girişimi (IKHA)"
+    },
+    {
+      "A": "6.01",
+      "B": "IKHA ana site - 15+ yıllık kampanya arşivi",
+      "C": "NGO arşiv",
+      "D": "Hasankeyf'i Yaşatma Girişimi",
+      "E": "2006–present",
+      "F": "http://www.hasankeyfgirisimi.net/",
+      "G": "Türkçe; foto/video galerileri"
+    },
+    {
+      "A": "6.02",
+      "B": "IKHA İngilizce mirror site",
+      "C": "NGO arşiv",
+      "D": "IKHA",
+      "E": "ongoing",
+      "F": "https://www.hasankeyfgirisimi.net/",
+      "G": "İngilizce medya galeri"
+    },
+    {
+      "A": "6.03",
+      "B": "IKHA Twitter/X - @hasankeyfdicle",
+      "C": "Sosyal medya arşiv",
+      "D": "IKHA",
+      "E": "2010s",
+      "F": "https://twitter.com/hasankeyfdicle",
+      "G": "Aksiyon fotoğrafları"
+    },
+    {
+      "A": "6.04",
+      "B": "IKHA Facebook - hasankeyfyasatmagirisimi",
+      "C": "Sosyal medya arşiv",
+      "D": "IKHA",
+      "E": "2010s",
+      "F": "https://www.facebook.com/hasankeyfyasatmagirisimi/",
+      "G": "Video ve canlı yayın arşivi"
+    },
+    {
+      "A": "6.05",
+      "B": "'Hasankeyf Lied in Hamburg' dayanışma video",
+      "C": "Video",
+      "D": "IKHA + Hamburg dayanışması",
+      "E": "2010s",
+      "F": "https://www.facebook.com/hasankeyfyasatmagirisimi/videos/534036477139506/",
+      "G": "Almanya dayanışma kaydı"
+    },
+    {
+      "A": "6.06",
+      "B": "Acil Uluslararası Çağrı - 'Save Hasankeyf!'",
+      "C": "Petisyon + poster",
+      "D": "IKHA",
+      "E": "2019",
+      "F": "http://www.hasankeyfgirisimi.net/?p=822",
+      "G": "İmza kampanyası ana sayfa"
+    },
+    {
+      "A": "6.07",
+      "B": "Hasankeyf solidarite konseri - Grup Gerduni",
+      "C": "Konser video",
+      "D": "IKHA / İstanbul Avcılar",
+      "E": "2019",
+      "F": "http://www.hasankeyfgirisimi.net/?p=957",
+      "G": "Konser kaydı + duyuru"
+    },
+    {
+      "A": "6.08",
+      "B": "Hasankeyf-Dicle Big Jump yıllık etkinliği",
+      "C": "Etkinlik foto",
+      "D": "IKHA / Avrupa nehir koruma ağı",
+      "E": "2010s",
+      "F": "http://www.hasankeyfgirisimi.net/?cat=big-jump",
+      "G": "Avrupa yıllık nehir koruma günü"
+    },
+    {
+      "A": "6.09",
+      "B": "Ercan Ayboğa profile (Bauhaus-Weimar mezunu, IKHA koordinatörü)",
+      "C": "Biyografi + foto",
+      "D": "LifeGate / Ercan Ayboğa",
+      "E": "2020",
+      "F": "https://www.lifegate.com/ercan-ayboga-rojava-water-defender-rivers",
+      "G": "Köprü figür; doğrudan Bauhaus bağlantısı"
+    },
+    {
+      "A": "B · Hasankeyf Matters (John Crofoot)"
+    },
+    {
+      "A": "6.10",
+      "B": "Hasankeyf Matters ana site",
+      "C": "İngilizce advocacy",
+      "D": "John Crofoot et al.",
+      "E": "2010s–2020",
+      "F": "http://www.hasankeyfmatters.com/",
+      "G": "Detaylı foto-essay arşivi"
+    },
+    {
+      "A": "6.11",
+      "B": "'Saving Hasankeyf' - Critical Muslim makalesi (görsel-zengin)",
+      "C": "Foto-essay/akademik",
+      "D": "John Crofoot",
+      "E": "c. 2016",
+      "F": "https://www.criticalmuslim.io/saving-hasankeyf/",
+      "G": "Albert Gabriel referansı dahil"
+    },
+    {
+      "A": "6.12",
+      "B": "'Saving Hasankeyf' Academia.edu (PDF, fotoğraflar)",
+      "C": "Akademik PDF",
+      "D": "John Crofoot",
+      "E": "c. 2016",
+      "F": "https://www.academia.edu/25166772/SAVING_HASANKEYF",
+      "G": "İndirilebilir PDF"
+    },
+    {
+      "A": "C · Doğa Derneği / BirdLife Turkey"
+    },
+    {
+      "A": "6.13",
+      "B": "Doğa Derneği - Hasankeyf ve Dicle Vadisi kampanya sayfası",
+      "C": "NGO kampanya sayfa",
+      "D": "Doğa Derneği",
+      "E": "2005+",
+      "F": "https://dogadernegi.org/en/hasankeyf-and-tigris-valley/",
+      "G": "İngilizce; UNESCO Outstanding Universal Value çalışması dahil"
+    },
+    {
+      "A": "6.14",
+      "B": "DogaVision YouTube kanalı",
+      "C": "Video arşiv",
+      "D": "Doğa Derneği",
+      "E": "ongoing",
+      "F": "https://www.youtube.com/@DogaVision",
+      "G": "Tüm Doğa Derneği videoları"
+    },
+    {
+      "A": "6.15",
+      "B": "Tarkan Hasankeyf'te (UNESCO talebi medya etkinliği)",
+      "C": "Foto-etkinlik",
+      "D": "Doğa Derneği + Tarkan",
+      "E": "2008",
+      "F": "https://dogadernegi.org/en/hasankeyf-and-tigris-valley/",
+      "G": "Pop yıldızı medya sermayesi"
+    },
+    {
+      "A": "6.16",
+      "B": "'Hasankeyf Kampanyası ve Doğa Derneği' interview-video",
+      "C": "Video",
+      "D": "Derya Engin / Doğa Derneği",
+      "E": "2010s",
+      "F": "https://www.youtube.com/watch?v=U6f16t07Vhg",
+      "G": "Kampanya koordinatörü ile söyleşi"
+    },
+    {
+      "A": "6.17",
+      "B": "Ahunbay & Balkız 'Outstanding Universal Value of Hasankeyf' raporu",
+      "C": "Akademik rapor + foto",
+      "D": "Z. Ahunbay (İTÜ), Ö. Balkız (Doğa Derneği)",
+      "E": "2009",
+      "F": "https://savethetigris.org/hasankeyf-selected-by-europa-nostra-for-7-most-endangered-program-2/",
+      "G": "9/10 UNESCO kriteri karşılandığını gösteriyor"
+    },
+    {
+      "A": "D · GegenStrömung / CounterCurrent (Almanya)"
+    },
+    {
+      "A": "6.18",
+      "B": "GegenStrömung ana site - Ilısu kategorisi",
+      "C": "NGO arşivi (Almanca)",
+      "D": "CounterCurrent–GegenStrömung",
+      "E": "2010s",
+      "F": "https://www.gegenstroemung.org/blog/category/ilisu/",
+      "G": "Almanca; detaylı raporlar"
+    },
+    {
+      "A": "6.19",
+      "B": "'Hasankeyf ve Dicle dünya çapında eşsiz' raporu",
+      "C": "Foto-rapor",
+      "D": "GegenStrömung",
+      "E": "2019",
+      "F": "https://www.gegenstroemung.org/blog/neuer-bericht-hasankeyf-und-tigris-weltweit-einzigartig/",
+      "G": "Almanca; tam rapor PDF link"
+    },
+    {
+      "A": "6.20",
+      "B": "'VerDammte Dämme' (Damned Dams) belgesel film",
+      "C": "Belgesel",
+      "D": "GegenStrömung",
+      "E": "14 Mar 2018",
+      "F": "https://www.gegenstroemung.org/blog/category/ilisu/",
+      "G": "Hasankeyf de odak alanlardan biri"
+    },
+    {
+      "A": "E · Manfred-Hermsen-Stiftung (Bremen)"
+    },
+    {
+      "A": "6.21",
+      "B": "'Stop Ilisu - Save Hasankeyf!' proje sayfası",
+      "C": "NGO kampanya",
+      "D": "Manfred-Hermsen-Stiftung",
+      "E": "2010s",
+      "F": "https://www.m-h-s.org/en/projects/europe/stop-ilisu-save-hasankeyf/",
+      "G": "İngilizce kampanya hub"
+    },
+    {
+      "A": "6.22",
+      "B": "'We have all lost - Hasankeyf is sinking' foto-essay",
+      "C": "Foto-essay",
+      "D": "Ulrich Eichelmann / MHS",
+      "E": "Oct 2019",
+      "F": "https://www.m-h-s.org/en/information/we-have-all-lost-hasankeyf-is-sinking/",
+      "G": "Son ziyaret foto serisi - 50m yarış duvarı dahil"
+    },
+    {
+      "A": "6.23",
+      "B": "Council of Europe Kültürel Miras Alt Komitesi raporları (Aralık 2007 / Ağustos 2008 ziyaretler) - MHS sunucusunda",
+      "C": "Bağımsız uzman rapor + foto",
+      "D": "Council of Europe",
+      "E": "2008",
+      "F": "http://m-h-s.org/ilisu/upload/PDF/Analysen/Bericht_Kulturelles_Erbe.pdf",
+      "G": "Almanca rapor; fotoğraflar eklerinde"
+    },
+    {
+      "A": "F · Diğer uluslararası koalisyon"
+    },
+    {
+      "A": "6.24",
+      "B": "Riverwatch - Hasankeyf - Eichelmann 'Veda' yazısı",
+      "C": "Foto-essay",
+      "D": "Riverwatch / EuroNatur",
+      "E": "2019–2020",
+      "F": "https://riverwatch.eu/en/general/news/farewell-my-last-visit-hasankeyf",
+      "G": "Son ziyaret fotoğrafları"
+    },
+    {
+      "A": "6.25",
+      "B": "Riverwatch - Türbe nakli + Depardon",
+      "C": "Haber",
+      "D": "Riverwatch",
+      "E": "May 2017",
+      "F": "https://riverwatch.eu/en/general/news/zeynel-bey-tomb-can-be-relocated-today-national-geographic-photographer-arrested",
+      "G": "İki olayı birleştirme"
+    },
+    {
+      "A": "6.26",
+      "B": "Save the Tigris Foundation - Europa Nostra duyurusu",
+      "C": "NGO foto",
+      "D": "Save the Tigris (ICSSI)",
+      "E": "2016",
+      "F": "https://savethetigris.org/hasankeyf-selected-by-europa-nostra-for-7-most-endangered-program-2/",
+      "G": "Sınır ötesi dayanışma"
+    },
+    {
+      "A": "6.27",
+      "B": "FIVAS (Norveç) - OECD davası ortak şikayetçisi",
+      "C": "NGO arşivi",
+      "D": "FIVAS",
+      "E": "2017–2018",
+      "F": "https://www.fivas.org/",
+      "G": "Bresser davası belgeleri"
+    },
+    {
+      "A": "6.28",
+      "B": "The Corner House (UK) - Ilısu finansman raporları",
+      "C": "Eleştirel rapor",
+      "D": "The Corner House",
+      "E": "2000s",
+      "F": "https://www.thecornerhouse.org.uk/",
+      "G": "Erken ECA eleştirisi"
+    },
+    {
+      "A": "6.29",
+      "B": "Public Eye (Bern Beyannamesi) - Ilısu raporları",
+      "C": "Bağımsız uzman",
+      "D": "Public Eye / Bern Beyannamesi",
+      "E": "2007+",
+      "F": "https://www.publiceye.ch/en/topics/finance/turkey-the-ilisu-dam-project",
+      "G": "İsviçre denetimi"
+    },
+    {
+      "A": "6.30",
+      "B": "ECA-Watch Austria - Ulrich Eichelmann koordinasyon",
+      "C": "NGO arşiv",
+      "D": "ECA-Watch Austria",
+      "E": "2010s",
+      "F": "https://www.eca-watch.at/",
+      "G": "Yarış stabilizasyonu fotoğrafları"
+    },
+    {
+      "A": "6.31",
+      "B": "Mezopotamya Ekoloji Hareketi (MEM) belgesi - Komün Akademi",
+      "C": "Aktivist analiz",
+      "D": "MEM / Ercan Ayboğa",
+      "E": "Apr 2020",
+      "F": "https://komun-academy.com/2020/04/13/ecological-destruction-madness-in-turkey-and-northern-kurdistan-reaches-new-dimension/",
+      "G": "Görsel-zengin analiz"
+    },
+    {
+      "A": "6.32",
+      "B": "Compagnie Bien à vous Vatikan performansı - foto/video haberi",
+      "C": "Performans video/foto",
+      "D": "RojInfo / Compagnie Bien à vous Armanc Kerborani",
+      "E": "27 Jul 2019",
+      "F": "https://rojinfo.com/performance-artistique-au-vatican-pour-sauver-12-000-ans-dhistoire-a-hasankeyf/",
+      "G": "5 dk performans, polis durdurdu"
+    },
+    {
+      "A": "6.33",
+      "B": "TMMOB Mimarlar Odası - Hasankeyf konulu açıklamalar",
+      "C": "Kurumsal görüş + foto",
+      "D": "TMMOB",
+      "E": "2010s",
+      "F": "https://www.tmmob.org.tr/",
+      "G": "Mühendis/mimar odası eleştirisi"
+    }
+  ],
+  "07_Sanatci": [
+    {
+      "A": "ID",
+      "B": "Eser / İş",
+      "C": "Tip",
+      "D": "Sanatçı / Yönetmen",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "A · Yelta Köm"
+    },
+    {
+      "A": "7.01",
+      "B": "Yelta Köm kişisel arşiv sitesi",
+      "C": "Sanatçı sitesi",
+      "D": "Yelta Köm",
+      "E": "ongoing",
+      "F": "https://www.yeltakom.info/",
+      "G": "Tüm işlerin merkezi referans noktası"
+    },
+    {
+      "A": "7.02",
+      "B": "'Lines of Displacement: Along the Tigris' (with Agit Özdemir)",
+      "C": "Moving image + counter-mapping",
+      "D": "Yelta Köm + Agit Özdemir",
+      "E": "2022–",
+      "F": "https://www.yeltakom.info/",
+      "G": "Against Catastrophe sergisi için sipariş"
+    },
+    {
+      "A": "7.03",
+      "B": "Spore Initiative Berlin - 'Lines of Displacement' atölye",
+      "C": "Atölye + sunum",
+      "D": "Yelta Köm + Agit Özdemir / Spore Initiative",
+      "E": "2024",
+      "F": "https://spore-initiative.org/de/programm-in-berlin/besuchen-und-mitmachen/spore-hosts-planetary-design-reclaiming-futures",
+      "G": "Berlin sunum dokümantasyonu"
+    },
+    {
+      "A": "7.04",
+      "B": "'Resisting Against Ecocide: Remapping Hasankeyf and Tigris' - Wien",
+      "C": "Konferans / enstalasyon",
+      "D": "Yelta Köm / Arazi Assembly",
+      "E": "Nov 2024",
+      "F": "https://kkp.uni-ak.ac.at/wp-content/uploads/2024/11/Ecologies-of-Making-Worlds_FINAL-program.pdf",
+      "G": "Akademie der bildenden Künste Wien program PDF"
+    },
+    {
+      "A": "7.05",
+      "B": "Köm Bauhaus-Weimar künstlergespräch",
+      "C": "Lecture (dokümante edilmiş)",
+      "D": "Yelta Köm / Bauhaus-Univ Weimar",
+      "E": "2024",
+      "F": "https://www.yeltakom.info/",
+      "G": "Public Art and New Artistic Strategies serisinde"
+    },
+    {
+      "A": "B · Arazi Assembly (Mardin, 2014–)"
+    },
+    {
+      "A": "7.06",
+      "B": "Arazi Assembly ana site - ekip ve projeler",
+      "C": "Sanatçı kolektifi arşiv",
+      "D": "Arazi Assembly",
+      "E": "2014–",
+      "F": "http://araziassembly.org/",
+      "G": "Üye listesi, sergi geçmişi"
+    },
+    {
+      "A": "7.07",
+      "B": "'State of Displacement: Entangled Topographies' - 17. İstanbul Bienali",
+      "C": "Mixed media installation",
+      "D": "Arazi Assembly + Topological Atlas",
+      "E": "17 Sep–20 Nov 2022",
+      "F": "https://bienal.iksv.org/en/17b-artists/arazi-assembly-topological-atlas",
+      "G": "Müze Gazhane; Bauer/Kanwar/Teh küratörlüğü"
+    },
+    {
+      "A": "7.08",
+      "B": "Arazi Assembly + Topological Atlas Public Online Seminars (2021)",
+      "C": "Seminer arşiv",
+      "D": "Awan, Tan, Sharma, Aydoğdu vd.",
+      "E": "2021",
+      "F": "http://topologicalatlas.net/blog/arazi-assembly-and-topological-atlas-public-seminars",
+      "G": "Padlet seminer arşivi"
+    },
+    {
+      "A": "7.09",
+      "B": "Padlet seminer arşivi - 2021",
+      "C": "Online arşiv",
+      "D": "Arazi Assembly + Topological Atlas",
+      "E": "2021",
+      "F": "https://padlet.com/mardin2021/seminars2021",
+      "G": "Tam seminer kayıtları"
+    },
+    {
+      "A": "7.10",
+      "B": "XXI Magazine - 'On Survival Methodologies' (Arazi Assembly üzerine)",
+      "C": "Eleştirel yazı",
+      "D": "XXI Magazine",
+      "E": "2022",
+      "F": "https://xximagazine.com/c/on-survival-methodologies",
+      "G": "Hasankeyf moving image referansları"
+    },
+    {
+      "A": "C · Pelin Tan / Topological Atlas"
+    },
+    {
+      "A": "7.11",
+      "B": "Topological Atlas ana site (TU Delft / Goldsmiths)",
+      "C": "ERC proje sitesi",
+      "D": "Nishat Awan PI, Yelta Köm + Pelin Tan vd.",
+      "E": "2018–",
+      "F": "https://www.tudelft.nl/en/architecture-and-the-built-environment/research/projects/topological-atlas",
+      "G": "ERC fonlu sınır araştırma programı"
+    },
+    {
+      "A": "7.12",
+      "B": "Topological Atlas blog (proje çıktıları)",
+      "C": "Online arşiv",
+      "D": "Topological Atlas team",
+      "E": "2019+",
+      "F": "http://topologicalatlas.net/blog/",
+      "G": "Tüm projeler, denemeler, görsel çıktılar"
+    },
+    {
+      "A": "7.13",
+      "B": "'Gilgamesh: She Who Saw the Deep' (Pelin Tan + Anton Vidokle)",
+      "C": "Film",
+      "D": "Pelin Tan + Anton Vidokle, score Alva Noto",
+      "E": "2022",
+      "F": "https://www.e-flux.com/film/",
+      "G": "Dicle kıyısında çekildi (Mardin, Hasankeyf, Dara)"
+    },
+    {
+      "A": "7.14",
+      "B": "Pelin Tan e-flux survey (Magnus Ericson eşliğinde)",
+      "C": "Online röportaj",
+      "D": "e-flux",
+      "E": "2022",
+      "F": "https://www.e-flux.com/education/features/549835/survey-pelin-tan-and-magnus-ericson",
+      "G": "Yöntemsel söyleşi"
+    },
+    {
+      "A": "7.15",
+      "B": "Pelin Tan Academia.edu 'State of Displacement' küratoryel metin",
+      "C": "Akademik PDF",
+      "D": "Pelin Tan",
+      "E": "2022",
+      "F": "https://www.academia.edu/65910967/State_of_Displacement_Entangled_Topographies",
+      "G": "17. Bienal küratoryel altyapı"
+    },
+    {
+      "A": "7.16",
+      "B": "Pelin Tan 'Field as entanglement and transversal methodology'",
+      "C": "Online deneme + foto",
+      "D": "Pelin Tan / Topological Atlas",
+      "E": "2019",
+      "F": "https://topologicalatlas.net/blog/a-conversation-with-pelin-tan-on-studying-place-as-a-constellation",
+      "G": "Dara köyü saha çalışması"
+    },
+    {
+      "A": "D · Diyarbakır Sanat Sahnesi (Özmen, Tekin, Altındere, Özgen)"
+    },
+    {
+      "A": "7.17",
+      "B": "Şener Özmen CV ve eser arşivi (Pilevneli)",
+      "C": "Galeri PDF",
+      "D": "Şener Özmen / Pilevneli Galeri",
+      "E": "ongoing",
+      "F": "https://www.pilevneli.com/usr/library/documents/main/artists/46/ener-zmen-cv_eng_tr.pdf",
+      "G": "Tüm sergiler ve eserler listesi"
+    },
+    {
+      "A": "7.18",
+      "B": "Şener Özmen - Art21 'Turkish and Other Delights'",
+      "C": "Sanatçı röportajı",
+      "D": "Art21 Magazine",
+      "E": "Jun 2011",
+      "F": "https://magazine.art21.org/2011/06/14/turkish-and-other-delights-sener-ozmen/",
+      "G": "Hasankeyf gezisi tarif edilir"
+    },
+    {
+      "A": "7.19",
+      "B": "'Road to Tate Modern / Tate'e Giden Yol' video (Özmen + Özgen)",
+      "C": "Video",
+      "D": "Şener Özmen + Erkan Özgen",
+      "E": "2003",
+      "F": "https://magazine.art21.org/2011/06/14/turkish-and-other-delights-sener-ozmen/",
+      "G": "Tarihsel referans video"
+    },
+    {
+      "A": "7.20",
+      "B": "Cengiz Tekin - Art21 profile",
+      "C": "Sanatçı röportajı",
+      "D": "Art21 Magazine",
+      "E": "Jul 2011",
+      "F": "http://magazine.art21.org/2011/07/12/turkish-and-other-delights-cengiz-tekin/",
+      "G": "Diyarbakır portresi"
+    },
+    {
+      "A": "7.21",
+      "B": "Cengiz Tekin 'Yol' (2023) - Artforum incelemesi",
+      "C": "Video/land-art incelemesi",
+      "D": "Cengiz Tekin / Artforum",
+      "E": "2023",
+      "F": "https://www.artforum.com/events/cengiz-tekin-zilberman-1234728587/",
+      "G": "Cendere Köprüsü yakını GAP HES'leri civarı"
+    },
+    {
+      "A": "7.22",
+      "B": "Hyperallergic - 'Diyarbakır Sanat Sahnesi ve Kürt Direnişinin Sesi'",
+      "C": "Eleştirel makale + foto",
+      "D": "Hyperallergic",
+      "E": "2020s",
+      "F": "https://hyperallergic.com/diyarbakirs-art-scene-and-the-voice-of-kurdish-resistance/",
+      "G": "Loading kolektifi dahil"
+    },
+    {
+      "A": "7.23",
+      "B": "Şener Özmen - Sanatatak söyleşi 'Haykırmak iyi bir başlangıç olabilir'",
+      "C": "Söyleşi",
+      "D": "Sanatatak",
+      "E": "2010s",
+      "F": "https://www.sanatatak.com/sener-ozmen-haykirmak-iyi-bir-baslangic-olabilir/",
+      "G": "Türkçe sanat eleştirisi"
+    },
+    {
+      "A": "E · Müzik ve Performans"
+    },
+    {
+      "A": "7.24",
+      "B": "Aynur Doğan 'Rewend' (Hasankeyf'e adanmış) - Fatih Akın yönetmenlik",
+      "C": "Müzik videosu",
+      "D": "Aynur Doğan / Fatih Akın",
+      "E": "2010s",
+      "F": "https://www.youtube.com/results?search_query=aynur+doğan+rewend+fatih+akın",
+      "G": "YouTube arama"
+    },
+    {
+      "A": "7.25",
+      "B": "Aynur Doğan resmi sitesi",
+      "C": "Sanatçı sitesi",
+      "D": "Aynur Doğan",
+      "E": "ongoing",
+      "F": "https://www.aynurdogan.com/",
+      "G": "Sanatçı bilgileri"
+    },
+    {
+      "A": "7.26",
+      "B": "Compagnie Bien à vous Vatikan performansı - tam haber",
+      "C": "Performans/foto/video",
+      "D": "RojInfo / Armanc Kerborani",
+      "E": "27 Jul 2019",
+      "F": "https://rojinfo.com/performance-artistique-au-vatican-pour-sauver-12-000-ans-dhistoire-a-hasankeyf/",
+      "G": "Vatikan, Louvre, Pergamon serisi"
+    },
+    {
+      "A": "F · Belgesel / Film"
+    },
+    {
+      "A": "7.27",
+      "B": "'Suyun Ölüm Tarihi' / 'Heskîf' - belgesel arama",
+      "C": "Belgesel",
+      "D": "Ali Ergül / Elif Yiğit",
+      "E": "2019–2020",
+      "F": "https://vimeo.com/search?q=suyun+ölüm+tarihi+hasankeyf",
+      "G": "Vimeo arama; doğrudan link onaylanmadı"
+    },
+    {
+      "A": "7.28",
+      "B": "'VerDammte Dämme' (Damned Dams) - GegenStrömung'da",
+      "C": "Belgesel",
+      "D": "GegenStrömung",
+      "E": "Mar 2018",
+      "F": "https://www.gegenstroemung.org/blog/category/ilisu/",
+      "G": "Hasankeyf bölümlü"
+    },
+    {
+      "A": "7.29",
+      "B": "Can Candan 'Türkiye'de Belgesel Sinema ve Direniş' bölüm",
+      "C": "Akademik bölüm",
+      "D": "Can Candan",
+      "E": "2015",
+      "F": "https://www.academia.edu/25349806/",
+      "G": "77/13 Political Art kitabında"
+    }
+  ],
+  "08_Akademik": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "8.01",
+      "B": "Hasankeyf Kazıları resmi sitesi",
+      "C": "Arkeolojik dökümentasyon",
+      "D": "KUVAM / METU / Mardin Artuklu",
+      "E": "2004–2019",
+      "F": "http://www.hasankeyfkazilari.org.tr/",
+      "G": "Resmi kazı fotoğraf arşivi"
+    },
+    {
+      "A": "8.02",
+      "B": "'Hasankeyf, the Ilısu Dam, and Common European Standards'",
+      "C": "Akademik makale + foto",
+      "D": "Alessandro Chechi et al.",
+      "E": "2018",
+      "F": "https://www.academia.edu/40588401/Hasankeyf_the_Ilisu_Dam_and_the_Existence_of_Common_European_Standards_on_Cultural_Heritage_Protection",
+      "G": "Santander Art and Culture Law Review"
+    },
+    {
+      "A": "8.03",
+      "B": "Bahar Aykan - 'From Living in History to Ghost Town: Hasankeyf's Lost Social Values'",
+      "C": "Akademik makale (PDF proje bilgisinde)",
+      "D": "Bahar Aykan",
+      "E": "n.d.",
+      "F": "https://www.researchgate.net/publication/Bahar_Aykan",
+      "G": "ResearchGate arama gerekli"
+    },
+    {
+      "A": "8.04",
+      "B": "Cengiz Eruzun et al. 'Conservation and Salvage of Zeynel Bey'",
+      "C": "Akademik + foto",
+      "D": "Cengiz Eruzun et al.",
+      "E": "2017",
+      "F": "https://www.academia.edu/45648484/THE_CONSERVATION_AND_SALVAGE_RELOCATION_PROJECT_OF_ZEYNEL_BEY_TOMB_IN_HASANKEYF",
+      "G": "Tam fotoğraf seti"
+    },
+    {
+      "A": "8.05",
+      "B": "Morvaridi - 'Resettlement, Rights to Development and the Ilısu Dam'",
+      "C": "Akademik makale (proje bilgisinde PDF)",
+      "D": "B. Morvaridi",
+      "E": "2004",
+      "F": "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-7660.2004.00346.x",
+      "G": "Development and Change dergisi"
+    },
+    {
+      "A": "8.06",
+      "B": "Akıncı & Tan - 'climates_waterdam' (proje bilgisinde PDF)",
+      "C": "Akademik makale + foto",
+      "D": "Akıncı, Tan",
+      "E": "n.d.",
+      "F": "https://www.academia.edu/",
+      "G": "Arazi Assembly bağlantılı akademik çalışma"
+    },
+    {
+      "A": "8.07",
+      "B": "'Dicle'nin Gizli Hazinesi Ilısu Barajı' (DSİ propaganda akademik)",
+      "C": "Devlet akademik yayın",
+      "D": "DSİ ilgili akademisyenler",
+      "E": "n.d.",
+      "F": "https://www.dsi.gov.tr/Yayinlar",
+      "G": "Proje dosyasında PDF mevcut"
+    },
+    {
+      "A": "8.08",
+      "B": "Pınar Aykaç - 'Absent Presents: musealisation of Hasankeyf'",
+      "C": "Akademik (proje bilgisinde PDF)",
+      "D": "Pınar Aykaç",
+      "E": "n.d.",
+      "F": "https://www.academia.edu/",
+      "G": "'Absent Heritage' manifestasyonu olarak Hasankeyf"
+    },
+    {
+      "A": "8.09",
+      "B": "Ahunbay & Balkız (Stanford/Doğa Derneği) UNESCO OUV raporu",
+      "C": "Akademik + foto",
+      "D": "Z. Ahunbay (İTÜ), Ö. Balkız",
+      "E": "2009",
+      "F": "https://www.itu.edu.tr/",
+      "G": "10 UNESCO kriterinden 9'unun karşılandığını gösterir"
+    },
+    {
+      "A": "8.10",
+      "B": "Albert Gabriel 'Voyages archéologiques dans la Turquie Orientale' (1940)",
+      "C": "Tarihsel arkeolojik yayın",
+      "D": "Albert Gabriel",
+      "E": "1940",
+      "F": "https://gallica.bnf.fr/ark:/12148/bpt6k3328419q",
+      "G": "Gallica/BnF; ilk sistematik fotografik dokümantasyon"
+    },
+    {
+      "A": "8.11",
+      "B": "'Dünden Bugüne' Hypotheses blog - Hasankeyf akademik literatür",
+      "C": "Akademik blog",
+      "D": "Hypotheses.org bilim blogları",
+      "E": "2010s",
+      "F": "https://dundenbugune.hypotheses.org/221",
+      "G": "Detaylı akademik bibliyografi"
+    },
+    {
+      "A": "8.12",
+      "B": "Bauhaus-Universität Weimar - Praktiken und Politiken der Repräsentation kürsüsü",
+      "C": "Üniversite",
+      "D": "Bauhaus-Univ Weimar / Prof. Mona Mahall",
+      "E": "ongoing",
+      "F": "https://www.uni-weimar.de/",
+      "G": "Tezin ev kürsüsü"
+    },
+    {
+      "A": "8.13",
+      "B": "Mardin Artuklu Üniversitesi - Leyla Keskin MA 'Ecological Mourning'",
+      "C": "MA tezi",
+      "D": "Leyla Keskin / Mardin Artuklu",
+      "E": "2022",
+      "F": "https://www.artuklu.edu.tr/",
+      "G": "Görsel İletişim Tasarım Bölümü"
+    },
+    {
+      "A": "8.14",
+      "B": "Council of Europe - 'Cultural Aspects of the Ilisu Dam Project, Turkey'",
+      "C": "Parlamenter rapor",
+      "D": "Council of Europe",
+      "E": "18 Dec 2001",
+      "F": "https://assembly.coe.int/",
+      "G": "AKPM raporu"
+    },
+    {
+      "A": "8.15",
+      "B": "Council of Europe - Sub-Committee on Cultural Heritage, Aralık 2007 ziyaret raporu",
+      "C": "Bağımsız uzman",
+      "D": "Council of Europe / Hermes/OeKB/SERV için",
+      "E": "4 Feb 2008",
+      "F": "http://m-h-s.org/ilisu/upload/PDF/Analysen/Bericht_Kulturelles_Erbe.pdf",
+      "G": "Almanca; fotoğraflar"
+    },
+    {
+      "A": "8.16",
+      "B": "Council of Europe - Sub-Committee, Ağustos 2008 ziyaret raporu",
+      "C": "Bağımsız uzman",
+      "D": "Council of Europe",
+      "E": "20 Oct 2008",
+      "F": "http://m-h-s.org/ilisu/upload/PDF/Analysen/Bericht_KulturellesErbe_Okt2008.pdf",
+      "G": "İkinci saha ziyareti"
+    }
+  ],
+  "09_Uydu_Harita": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "9.01",
+      "B": "NASA Earth Observatory - 'Slowly Flooding History' (22 Şub 2019 vs 12 Mar 2020)",
+      "C": "Landsat 8 OLI imaj çifti",
+      "D": "NASA / Kasha Patel",
+      "E": "13 Mar 2020",
+      "F": "https://earthobservatory.nasa.gov/images/146439/slowly-flooding-history",
+      "G": "Public domain; tezin omurga forensic görüntüsü"
+    },
+    {
+      "A": "9.02",
+      "B": "Landsat Image Gallery aynı imaj (yüksek çözünürlüklü)",
+      "C": "Landsat 8 indirilebilir TIFF",
+      "D": "NASA",
+      "E": "2020",
+      "F": "https://landsat.visibleearth.nasa.gov/view.php?id=146439",
+      "G": "İndirilebilir versiyonu"
+    },
+    {
+      "A": "9.03",
+      "B": "International Business Times - Mart 17 2020 Landsat imajı yeniden yayın",
+      "C": "Landsat 8 imaj + analiz",
+      "D": "IBTimes / NASA EO",
+      "E": "17 Mar 2020",
+      "F": "https://www.ibtimes.com/nasa-satellite-images-show-controversial-dam-flooding-12000-year-old-town-turkey-2941263",
+      "G": "Aynı NASA imajının basın versiyonu"
+    },
+    {
+      "A": "9.04",
+      "B": "ESA Copernicus Sentinel-2 - Hasankeyf bölgesi (açık erişim)",
+      "C": "Sentinel-2 multi-spectral imaj",
+      "D": "ESA Copernicus",
+      "E": "2018–present",
+      "F": "https://scihub.copernicus.eu/",
+      "G": "10m çözünürlük; 5 günde bir geçiş; tüm zaman dilimi"
+    },
+    {
+      "A": "9.05",
+      "B": "ESA Sentinel-1 SAR - Ilısu bölgesi (yer çökmesi/phantom altyapı için)",
+      "C": "Sentinel-1 SAR",
+      "D": "ESA Copernicus",
+      "E": "2014–present",
+      "F": "https://scihub.copernicus.eu/",
+      "G": "Bulutlardan etkilenmez; phantom yol ağları için ideal"
+    },
+    {
+      "A": "9.06",
+      "B": "Google Earth - Hasankeyf tarihi imaj zaman tüneli",
+      "C": "Tarihsel uydu görüntü slider",
+      "D": "Google / Maxar",
+      "E": "2005–present",
+      "F": "https://earth.google.com/web/@37.7128,41.4108,500a,5000d,35y,0h,0t,0r",
+      "G": "Doğrudan Hasankeyf koordinatlarına gitme linki"
+    },
+    {
+      "A": "9.07",
+      "B": "Google Maps - Hasankeyf güncel görünüm",
+      "C": "Online harita",
+      "D": "Google Maps",
+      "E": "current",
+      "F": "https://www.google.com/maps/place/Hasankeyf,+Batman/@37.7128,41.4108,3000m/data=!3m1!1e3",
+      "G": "3D modu; barajın görünür izleri"
+    },
+    {
+      "A": "9.08",
+      "B": "NASA Earth Observatory - 'Reservoir Swells Upstream of Mosul' (downstream etkiler)",
+      "C": "Landsat",
+      "D": "NASA",
+      "E": "2019",
+      "F": "https://earthobservatory.nasa.gov/images/145010/reservoir-swells-upstream-of-mosul",
+      "G": "Dicle akış aşağı etkisi (ilgili)"
+    },
+    {
+      "A": "9.09",
+      "B": "Wikipedia - Ilısu Dam infografik harita",
+      "C": "Şematik harita",
+      "D": "Wikipedia / DSİ kaynak",
+      "E": "current",
+      "F": "https://en.wikipedia.org/wiki/Il%C4%B1su_Dam#/map/0",
+      "G": "Konum haritası"
+    },
+    {
+      "A": "9.10",
+      "B": "Wikimedia Commons - 'Hasankeyf' kategorisi (yüzlerce lisanslı görüntü)",
+      "C": "Crowd-sourced foto arşivi",
+      "D": "Wikimedia kullanıcıları",
+      "E": "2005–present",
+      "F": "https://commons.wikimedia.org/wiki/Category:Hasankeyf",
+      "G": "İndirilebilir, lisanslı baseline imajlar"
+    },
+    {
+      "A": "9.11",
+      "B": "Wikimedia Commons - 'Ilısu Dam' kategorisi",
+      "C": "Foto arşivi",
+      "D": "Wikimedia",
+      "E": "2010s",
+      "F": "https://commons.wikimedia.org/wiki/Category:Il%C4%B1su_Dam",
+      "G": "Baraj fotoğrafları"
+    },
+    {
+      "A": "9.12",
+      "B": "Wikimedia Commons - 'Zeynel Bey Mausoleum' kategorisi",
+      "C": "Foto arşivi",
+      "D": "Wikimedia",
+      "E": "2017+",
+      "F": "https://commons.wikimedia.org/wiki/Category:Zeynel_Bey_Mausoleum",
+      "G": "Türbenin yeni konumu fotoğrafları"
+    },
+    {
+      "A": "9.13",
+      "B": "USGS EarthExplorer - Landsat tüm zaman serisi",
+      "C": "Çoklu sensör uydu arşivi",
+      "D": "USGS / NASA",
+      "E": "1972–present",
+      "F": "https://earthexplorer.usgs.gov/",
+      "G": "Landsat 5/7/8/9 tam tarihsel arşiv"
+    },
+    {
+      "A": "9.14",
+      "B": "Maxar / Planet Labs ticari yüksek çözünürlük",
+      "C": "Ticari uydu (lisanslı)",
+      "D": "Maxar Technologies / Planet Labs",
+      "E": "current",
+      "F": "https://www.maxar.com/",
+      "G": "50cm-3m çözünürlük; lisans gerektirir"
+    }
+  ],
+  "10_Miras": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "10.01",
+      "B": "Europa Nostra '7 Most Endangered 2016' Hasankeyf profil sayfası",
+      "C": "Resmi miras dosyası + foto",
+      "D": "Europa Nostra",
+      "E": "2016",
+      "F": "https://7mostendangered.eu/sites/ancient-city-of-hasankeyf-and-its-surroundings-turkey/",
+      "G": "Tüm anıtların yüksek çözünürlüklü foto"
+    },
+    {
+      "A": "10.02",
+      "B": "Europa Nostra - '14 European heritage sites shortlisted 2016' duyurusu",
+      "C": "Press release + foto",
+      "D": "Europa Nostra",
+      "E": "10 Dec 2015",
+      "F": "https://www.europanostra.org/14-european-heritage-sites-shortlisted-7-endangered-programme-2016/",
+      "G": "Lahey/Lüksemburg duyurusu"
+    },
+    {
+      "A": "10.03",
+      "B": "Europa Nostra - 'Europe's 7 Most Endangered 2016 announced'",
+      "C": "Press release",
+      "D": "Europa Nostra",
+      "E": "16 Mar 2016",
+      "F": "https://www.europanostra.org/europe-7-most-endangered-heritage-sites-2016-announced/",
+      "G": "Ateneo Veneto, Venedik duyurusu"
+    },
+    {
+      "A": "10.04",
+      "B": "Europa Nostra Board statement on Hasankeyf (Türbe nakli sonrası)",
+      "C": "Resmi açıklama",
+      "D": "Europa Nostra Board",
+      "E": "14 May 2017",
+      "F": "https://www.europanostra.org/europa-nostras-board-gives-statement-endangered-heritage-site-hasankeyf-turkey/",
+      "G": "Turku, Finlandiya açıklaması"
+    },
+    {
+      "A": "10.05",
+      "B": "Europa Nostra - 'It's not too late to save Hasankeyf!'",
+      "C": "Resmi açıklama",
+      "D": "Europa Nostra / Atina kurulu",
+      "E": "Jun 2019",
+      "F": "https://www.europanostra.org/its-not-too-late-to-save-hasankeyf/",
+      "G": "Son aşama acil çağrı"
+    },
+    {
+      "A": "10.06",
+      "B": "Bianet İngilizce - Europa Nostra Hasankeyf listelemesi",
+      "C": "Haber",
+      "D": "Bianet",
+      "E": "16 Mar 2016",
+      "F": "http://bianet.org/english/other/173063-hasankeyf-shortlisted-among-7-most-endangered-cultural-heritage",
+      "G": "Türkçe basın yansıması"
+    },
+    {
+      "A": "10.07",
+      "B": "Council of Europe - Cultural Aspects Report 2001",
+      "C": "Parlamenter rapor",
+      "D": "Council of Europe AKPM",
+      "E": "18 Dec 2001",
+      "F": "https://assembly.coe.int/nw/xml/XRef/Xref-XML2HTML-en.asp?fileid=9362",
+      "G": "AKPM bilgi raporu"
+    },
+    {
+      "A": "10.08",
+      "B": "UNESCO Whc - Türkiye geçici listesi (Hasankeyf eksik)",
+      "C": "UNESCO veri tabanı",
+      "D": "UNESCO World Heritage Centre",
+      "E": "current",
+      "F": "https://whc.unesco.org/en/statesparties/tr",
+      "G": "Hasankeyf hiç önerilmedi - kendisi bir devlet görsel-söylem seçimi"
+    },
+    {
+      "A": "10.09",
+      "B": "ICOMOS Türkiye - Hasankeyf görüşleri",
+      "C": "Profesyonel görüş",
+      "D": "ICOMOS Türkiye",
+      "E": "2010s",
+      "F": "https://www.icomos.org.tr/",
+      "G": "Türk şubesi"
+    },
+    {
+      "A": "10.10",
+      "B": "World Monuments Fund - Hasankeyf tarihi raporlar",
+      "C": "Miras örgütü",
+      "D": "WMF",
+      "E": "2000s",
+      "F": "https://www.wmf.org/",
+      "G": "Hasankeyf 'Watch' listesinde bulunduğu dönem"
+    },
+    {
+      "A": "10.11",
+      "B": "Kültür Bilincini Geliştirme Vakfı (KBGV) Europa Nostra dosyası",
+      "C": "Aday dosyası + foto",
+      "D": "KBGV / İstanbul",
+      "E": "2015",
+      "F": "https://www.kulturbilinci.org/",
+      "G": "Vakfın resmi sayfası"
+    }
+  ],
+  "11_Sosyal_Medya": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "11.01",
+      "B": "Rıdvan Ayhan Facebook videosu - tarihi çarşıda buldozer",
+      "C": "Yurttaş video",
+      "D": "Rıdvan Ayhan (Hasankeyf sakini)",
+      "E": "4 Nov 2019",
+      "F": "https://observers.france24.com/en/20191125-turkish-authorities-demolish-market-12000-year-old-village-hasankeyf",
+      "G": "France 24 Observers'da gömülü"
+    },
+    {
+      "A": "11.02",
+      "B": "Hasankeyf esnafının dükkanını yakma videosu (Twitter)",
+      "C": "Yurttaş video",
+      "D": "Anonim esnaf, Murat Takin tanık",
+      "E": "10 Nov 2019",
+      "F": "https://twitter.com/search?q=hasankeyf%20çarşı%20yangın",
+      "G": "Twitter arama"
+    },
+    {
+      "A": "11.03",
+      "B": "#SaveHasankeyf hashtag arşivi (Twitter)",
+      "C": "Hashtag arşiv",
+      "D": "Çoklu kullanıcı",
+      "E": "2017+",
+      "F": "https://twitter.com/search?q=%23SaveHasankeyf&src=typed_query",
+      "G": "Uluslararası ana hashtag"
+    },
+    {
+      "A": "11.04",
+      "B": "#HasankeyfYaşasın hashtag arşivi",
+      "C": "Hashtag arşiv (Türkçe)",
+      "D": "Çoklu kullanıcı",
+      "E": "2017+",
+      "F": "https://twitter.com/search?q=%23HasankeyfYa%C5%9Fas%C4%B1n&src=typed_query",
+      "G": "Türkçe aktivist hashtag"
+    },
+    {
+      "A": "11.05",
+      "B": "#IlısuBarajı hashtag arşivi",
+      "C": "Hashtag arşiv",
+      "D": "Çoklu kullanıcı",
+      "E": "2010s",
+      "F": "https://twitter.com/search?q=%23Il%C4%B1suBaraj%C4%B1&src=typed_query",
+      "G": "Türk basın/devlet daha çok kullanır"
+    },
+    {
+      "A": "11.06",
+      "B": "#HasankeyfÖlüyor hashtag",
+      "C": "Hashtag (karşı-state)",
+      "D": "Aktivistler",
+      "E": "2019–2020",
+      "F": "https://twitter.com/search?q=%23Hasankeyf%C3%96l%C3%BCyor&src=typed_query",
+      "G": "Submersion döneminde yoğun"
+    },
+    {
+      "A": "11.07",
+      "B": "#FreeMathias hashtag (Depardon kampanyası)",
+      "C": "Hashtag arşiv",
+      "D": "Uluslararası",
+      "E": "May–Jun 2017",
+      "F": "https://twitter.com/search?q=%23FreeMathias&src=typed_query",
+      "G": "32 günlük kampanya"
+    },
+    {
+      "A": "11.08",
+      "B": "YouTube 'Hasankeyf drone' arama (post-flooding fly-over arşivi)",
+      "C": "Drone video arşivi",
+      "D": "Çoklu içerik üretici",
+      "E": "2020+",
+      "F": "https://www.youtube.com/results?search_query=hasankeyf+drone+2020",
+      "G": "Bağımsız drone uçuşları"
+    },
+    {
+      "A": "11.09",
+      "B": "YouTube 'Hasankeyf sular altında' arama",
+      "C": "Video arşivi (Türkçe)",
+      "D": "Çoklu içerik üretici",
+      "E": "2019+",
+      "F": "https://www.youtube.com/results?search_query=hasankeyf+sular+altında",
+      "G": "Türkçe içerikler"
+    },
+    {
+      "A": "11.10",
+      "B": "Wandering Welsh Girl Hasankeyf 2026 ziyaret rehberi",
+      "C": "Seyahat blog + foto",
+      "D": "Wandering Welsh Girl",
+      "E": "2026",
+      "F": "https://www.wanderingwelshgirl.com/guide-to-visiting-hasankeyf-turkey/",
+      "G": "Yeni Hasankeyf 'ruhsuz' tasviri"
+    },
+    {
+      "A": "11.11",
+      "B": "Instagram #Hasankeyf hashtag arşivi",
+      "C": "Foto/video arşiv",
+      "D": "Çoklu kullanıcı",
+      "E": "ongoing",
+      "F": "https://www.instagram.com/explore/tags/hasankeyf/",
+      "G": "Sürekli güncellenen görsel akış"
+    },
+    {
+      "A": "11.12",
+      "B": "TikTok 'hasankeyf' arşivi",
+      "C": "Kısa video arşivi",
+      "D": "Çoklu kullanıcı",
+      "E": "2020+",
+      "F": "https://www.tiktok.com/tag/hasankeyf",
+      "G": "Yeni nesil dokümantasyon"
+    }
+  ],
+  "12_Sular_Altinda": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "12.01",
+      "B": "Bülent Kılıç AFP - 23 Şubat 2020 son ziyaretçi foto seti",
+      "C": "Editorial foto",
+      "D": "Bülent Kılıç / AFP",
+      "E": "23 Feb 2020",
+      "F": "https://www.gettyimages.com/photos/hasankeyf?phrase=hasankeyf&sort=newest&family=editorial",
+      "G": "Getty Hasankeyf editorial filter"
+    },
+    {
+      "A": "12.02",
+      "B": "Sertaç Kayar Reuters submersion fotoğraf seti",
+      "C": "Wire foto",
+      "D": "Sertaç Kayar / Reuters",
+      "E": "Feb 2020",
+      "F": "https://www.reuters.com/news/picture/history-disappears-as-dam-waters-flood-idUSRTS37GAG",
+      "G": "Reuters Pictures arşivi"
+    },
+    {
+      "A": "12.03",
+      "B": "Eichelmann - 'We have all lost' foto-essay (Ekim 2019)",
+      "C": "Foto-essay",
+      "D": "Ulrich Eichelmann / MHS",
+      "E": "10 Oct 2019",
+      "F": "https://www.m-h-s.org/en/information/we-have-all-lost-hasankeyf-is-sinking/",
+      "G": "50m yarış stabilizasyon duvarı dahil"
+    },
+    {
+      "A": "12.04",
+      "B": "Eichelmann - 'Farewell, my last visit Hasankeyf'",
+      "C": "Foto-essay",
+      "D": "Ulrich Eichelmann / Riverwatch",
+      "E": "2019",
+      "F": "https://riverwatch.eu/en/general/news/farewell-my-last-visit-hasankeyf",
+      "G": "Son ziyaret detaylı foto"
+    },
+    {
+      "A": "12.05",
+      "B": "The Atlantic - 8 Ekim 2019 foto galerisi",
+      "C": "Çoklu kaynak foto galerisi",
+      "D": "Alan Taylor editör",
+      "E": "8 Oct 2019",
+      "F": "https://www.theatlantic.com/photo/2019/10/photos-moving-ancient-turkish-town-higher-ground/599710/",
+      "G": "Yeni Hasankeyf taşınma süreci"
+    },
+    {
+      "A": "12.06",
+      "B": "France 24 Observers - 25 Kasım 2019 çarşı yıkımı",
+      "C": "Foto-haber + sivil video",
+      "D": "France 24",
+      "E": "25 Nov 2019",
+      "F": "https://observers.france24.com/en/20191125-turkish-authorities-demolish-market-12000-year-old-village-hasankeyf",
+      "G": "Çarşı yıkımı dokümantasyonu"
+    },
+    {
+      "A": "12.07",
+      "B": "DW (Almanca) - 'Hasankeyf 12000 yıllık kültürel miras sular altında'",
+      "C": "Foto-haber",
+      "D": "Deutsche Welle",
+      "E": "Feb 2020",
+      "F": "https://www.dw.com/en/turkey-flooding-of-hasankeyf-12000-year-old-cultural-heritage-site/a-52448920",
+      "G": "İngilizce/Almanca versiyon"
+    },
+    {
+      "A": "12.08",
+      "B": "El-Rızk minaresi sular üstünde - en çok dolaşan görüntü",
+      "C": "Editorial foto",
+      "D": "Bülent Kılıç / AFP + Burak Kara / Getty",
+      "E": "Mar–Apr 2020",
+      "F": "https://www.gettyimages.com/photos/el-rizk-mosque",
+      "G": "Getty arama"
+    },
+    {
+      "A": "12.09",
+      "B": "Sular yükselirken ortaçağ köprüsü ayakları (drone)",
+      "C": "Drone foto",
+      "D": "AFP + bağımsız",
+      "E": "Mar 2020",
+      "F": "https://www.gettyimages.com/photos/hasankeyf-bridge?phrase=hasankeyf%20bridge&sort=newest",
+      "G": "Getty editorial filter"
+    },
+    {
+      "A": "12.10",
+      "B": "AA - Yeni Hasankeyf inşaat aşaması ve teslim",
+      "C": "Devlet foto-haber",
+      "D": "Anadolu Ajansı",
+      "E": "2018–2020",
+      "F": "https://www.aa.com.tr/tr/turkiye/yeni-hasankeyf/",
+      "G": "AA Yeni Hasankeyf arşivi"
+    },
+    {
+      "A": "12.11",
+      "B": "İHA - sular altı dokümantasyonu",
+      "C": "Wire foto/video",
+      "D": "İhlas Haber Ajansı",
+      "E": "2019–2020",
+      "F": "https://www.iha.com.tr/etiket/hasankeyf/",
+      "G": "İHA etiket sayfası"
+    },
+    {
+      "A": "12.12",
+      "B": "Yusuf Yavuz - 'Hasankeyf'i 15 günde zorla boşaltacaklar' (Odatv)",
+      "C": "Foto-haber (Türkçe)",
+      "D": "Yusuf Yavuz / Odatv",
+      "E": "Oct 2019",
+      "F": "https://odatv4.com/yazar/yusuf-yavuz-7",
+      "G": "Yavuz'un yazar arşivi; arama gerekli"
+    }
+  ],
+  "13_Politika": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "13.01",
+      "B": "OECD Watch - Bresser Eurasia şikayet dosyası (tam)",
+      "C": "Hukuki belge",
+      "D": "Hasankeyf Matters/IKHA/FIVAS/Both ENDS",
+      "E": "2017–2018",
+      "F": "https://www.oecdwatch.org/complaint/foundation-to-keep-hasankeyf-alive-fivas-others-vs-bresser-eurasia/",
+      "G": "Resmi OECD Watch sayfası"
+    },
+    {
+      "A": "13.02",
+      "B": "Hasankeyf Matters - Bresser şikayetinin nihai durumu",
+      "C": "Analiz + foto",
+      "D": "Hasankeyf Matters",
+      "E": "Aug 2018",
+      "F": "http://www.hasankeyfmatters.com/2018/08/bressers-conduct-in-last-years.html",
+      "G": "OECD-NCP Hollanda nihai açıklaması"
+    },
+    {
+      "A": "13.03",
+      "B": "Resettlement Action Plan (RAP) - Bern Beyannamesi değerlendirme",
+      "C": "Rapor analizi",
+      "D": "Public Eye / WEED / ECA-Watch",
+      "E": "11 Sep 2007",
+      "F": "https://www.publiceye.ch/en/topics/finance/turkey-the-ilisu-dam-project",
+      "G": "Şartname değerlendirmesi"
+    },
+    {
+      "A": "13.04",
+      "B": "AİHM (ECHR) - Ahunbay başvurusu reddi",
+      "C": "AİHM kararı",
+      "D": "European Court of Human Rights",
+      "E": "5 Mar 2019",
+      "F": "https://hudoc.echr.coe.int/eng?i=001-191867",
+      "G": "Resmi karar belgesi"
+    },
+    {
+      "A": "13.05",
+      "B": "BBC - 'Insurers halt work on Turkish dam'",
+      "C": "Haber",
+      "D": "BBC",
+      "E": "24 Dec 2008",
+      "F": "http://news.bbc.co.uk/2/hi/europe/7798857.stm",
+      "G": "ECA çekilmesi anahtar olay"
+    },
+    {
+      "A": "13.06",
+      "B": "IKHA - 'Destruction and Resistance in Hasankeyf and the Tigris' raporu",
+      "C": "NGO rapor",
+      "D": "IKHA / MEM",
+      "E": "2019",
+      "F": "http://www.hasankeyfgirisimi.net/?p=822",
+      "G": "Acil uluslararası çağrı sayfası"
+    },
+    {
+      "A": "13.07",
+      "B": "'Proposed Questions to the Government of Turkey' - dam etkileri",
+      "C": "Hak temelli rapor",
+      "D": "IKHA + CounterCurrent",
+      "E": "29 Apr 2010",
+      "F": "https://www.gegenstroemung.org/",
+      "G": "Ekonomik, sosyal, kültürel haklar çerçevesi"
+    },
+    {
+      "A": "13.08",
+      "B": "Wikipedia - Ilısu Dam (en) ana ansiklopedi maddesi",
+      "C": "Ansiklopedi",
+      "D": "Wikipedia katkıcıları",
+      "E": "current",
+      "F": "https://en.wikipedia.org/wiki/Il%C4%B1su_Dam",
+      "G": "Tüm zaman çizelgesi"
+    },
+    {
+      "A": "13.09",
+      "B": "Wikipedia - Hasankeyf maddesi",
+      "C": "Ansiklopedi",
+      "D": "Wikipedia katkıcıları",
+      "E": "current",
+      "F": "https://en.wikipedia.org/wiki/Hasankeyf",
+      "G": "Şehir ve anıtlar"
+    },
+    {
+      "A": "13.10",
+      "B": "Wikipedia - Ilısu Barajı (Türkçe versiyon)",
+      "C": "Ansiklopedi (TR)",
+      "D": "Wikipedia katkıcıları",
+      "E": "current",
+      "F": "https://tr.wikipedia.org/wiki/Il%C4%B1su_Baraj%C4%B1",
+      "G": "Türkçe karşılaştırma"
+    }
+  ],
+  "14_Sergi": [
+    {
+      "A": "ID",
+      "B": "Sergi/Bienal",
+      "C": "Mekan",
+      "D": "Küratör/Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Hasankeyf Katkısı"
+    },
+    {
+      "A": "14.01",
+      "B": "17. İstanbul Bienali",
+      "C": "Müze Gazhane, Kadıköy, İstanbul",
+      "D": "Ute Meta Bauer, Amar Kanwar, David Teh",
+      "E": "17 Sep–20 Nov 2022",
+      "F": "https://bienal.iksv.org/en/17b-artists/arazi-assembly-topological-atlas",
+      "G": "'State of Displacement: Entangled Topographies' - en kapsamlı görsel temsil"
+    },
+    {
+      "A": "14.02",
+      "B": "Ecologies of Making Worlds Conference & Exhibition",
+      "C": "Akademie der bildenden Künste Wien",
+      "D": "Pelin Tan vd.",
+      "E": "Nov 2024",
+      "F": "https://kkp.uni-ak.ac.at/wp-content/uploads/2024/11/Ecologies-of-Making-Worlds_FINAL-program.pdf",
+      "G": "Yelta Köm 'Resisting Against Ecocide: Remapping Hasankeyf'"
+    },
+    {
+      "A": "14.03",
+      "B": "Spore Hosts: Planetary Design - Reclaiming Futures",
+      "C": "Spore Initiative, Berlin",
+      "D": "Spore Initiative",
+      "E": "2024",
+      "F": "https://spore-initiative.org/de/programm-in-berlin/besuchen-und-mitmachen/spore-hosts-planetary-design-reclaiming-futures",
+      "G": "Köm + Özdemir 'Lines of Displacement' atölye"
+    },
+    {
+      "A": "14.04",
+      "B": "77/13 Political Art and Resistance in Turkey",
+      "C": "nGbK Berlin",
+      "D": "nGbK / Architecture For All",
+      "E": "2015",
+      "F": "https://www.academia.edu/25349806/77_13_Politische_Kunst_im_Widerstand_in_der_Tu_rkei",
+      "G": "Diyarbakır sanat sahnesi bölümü (Özmen, Tekin)"
+    },
+    {
+      "A": "14.05",
+      "B": "16. Venedik Mimarlık Bienali - Türkiye Pavyonu (Vardiya)",
+      "C": "Venedik",
+      "D": "Kerem Piker (küratör), Yelta Köm asistan küratör",
+      "E": "2018",
+      "F": "https://www.labiennale.org/en/architecture/2018",
+      "G": "Türkiye'nin resmi pavyonu"
+    },
+    {
+      "A": "14.06",
+      "B": "Disobedient Objects",
+      "C": "V&A Museum, London",
+      "D": "V&A",
+      "E": "2014–2015",
+      "F": "https://www.vam.ac.uk/exhibitions/disobedient-objects",
+      "G": "#occupygezi + Architecture For All"
+    },
+    {
+      "A": "14.07",
+      "B": "PƎRⱯ Reverse: Exercises in Spaces and Texts",
+      "C": "Pera Museum, İstanbul",
+      "D": "Pera + Bauhaus-Weimar + HfK Bremen",
+      "E": "2024",
+      "F": "https://www.peramuzesi.org.tr/",
+      "G": "Köm katılımı"
+    },
+    {
+      "A": "14.08",
+      "B": "Timeless Curiosities",
+      "C": "İstanbul Modern",
+      "D": "İstanbul Modern",
+      "E": "2024",
+      "F": "https://www.istanbulmodern.org/",
+      "G": "Köm katılımı"
+    },
+    {
+      "A": "14.09",
+      "B": "Chicago Architecture Biennial 2019",
+      "C": "Chicago",
+      "D": "Architecture For All ile",
+      "E": "2019",
+      "F": "https://chicagoarchitecturebiennial.org/",
+      "G": "Architecture For All / Köm katılımı"
+    },
+    {
+      "A": "14.10",
+      "B": "Loading (sanatçı kolektif mekanı)",
+      "C": "Diyarbakır",
+      "D": "Şener Özmen, Erkan Özgen, Cengiz Tekin, Deniz Aktaş",
+      "E": "2017–present",
+      "F": "https://hyperallergic.com/diyarbakirs-art-scene-and-the-voice-of-kurdish-resistance/",
+      "G": "Hasankeyf/Dicle temalı sürekli program"
+    },
+    {
+      "A": "14.11",
+      "B": "MAXXI Rome - 'Istanbul. Passion, Joy, Fury'",
+      "C": "Rome",
+      "D": "Architecture For All ile",
+      "E": "2015",
+      "F": "https://www.maxxi.art/en/",
+      "G": "Köm dahil Architecture For All katkısı"
+    },
+    {
+      "A": "14.12",
+      "B": "transmediale vorspiel at Silent Green",
+      "C": "Berlin",
+      "D": "transmediale",
+      "E": "2023",
+      "F": "https://transmediale.de/",
+      "G": "Köm katılımı"
+    }
+  ],
+  "15_Tarihi": [
+    {
+      "A": "ID",
+      "B": "Başlık",
+      "C": "Tip",
+      "D": "Üretici",
+      "E": "Tarih",
+      "F": "Doğrudan Link",
+      "G": "Notlar"
+    },
+    {
+      "A": "15.01",
+      "B": "Albert Gabriel 'Voyages archéologiques dans la Turquie Orientale' (1940) tam metin",
+      "C": "Tarihsel akademik foto/çizim",
+      "D": "Albert Gabriel / De Boccard, Paris",
+      "E": "1940",
+      "F": "https://gallica.bnf.fr/ark:/12148/bpt6k3328419q",
+      "G": "Gallica/BnF tam tarama; sistematik fotografik baseline"
+    },
+    {
+      "A": "15.02",
+      "B": "SALT Research arşivi - Hasankeyf/Hisn Kayfa Osmanlı dönemi",
+      "C": "Tarihsel foto/kartpostal",
+      "D": "Çeşitli Osmanlı/Levanten fotoğrafçılar",
+      "E": "geç 19. - erken 20. yy",
+      "F": "https://archives.saltresearch.org/discover?query=hasankeyf",
+      "G": "SALT'ın online görsel arşivi"
+    },
+    {
+      "A": "15.03",
+      "B": "SALT Research - 'Hisn Kayfa' arama",
+      "C": "Tarihsel arşiv",
+      "D": "SALT",
+      "E": "geç 19. yy+",
+      "F": "https://archives.saltresearch.org/discover?query=hisn+kayfa",
+      "G": "Eski isim ile arama"
+    },
+    {
+      "A": "15.04",
+      "B": "Library of Congress - Hasankeyf tarihi fotoğraflar",
+      "C": "Tarihsel foto",
+      "D": "ABD Kongre Kütüphanesi",
+      "E": "20. yy",
+      "F": "https://www.loc.gov/search/?q=hasankeyf",
+      "G": "Library of Congress online arama"
+    },
+    {
+      "A": "15.05",
+      "B": "Atatürk Kitaplığı - tarihi Hasankeyf görselleri",
+      "C": "Tarihsel arşiv",
+      "D": "İBB Atatürk Kitaplığı",
+      "E": "20. yy",
+      "F": "https://katalog.ibb.gov.tr/",
+      "G": "Türkçe arama gerekli"
+    },
+    {
+      "A": "15.06",
+      "B": "Wikimedia Commons - 'Old photographs of Hasankeyf' kategorisi",
+      "C": "Tarihsel foto",
+      "D": "Wikimedia kullanıcıları",
+      "E": "geç 19.-20. yy",
+      "F": "https://commons.wikimedia.org/wiki/Category:Hasankeyf",
+      "G": "Eski seyahat fotoğrafları dahil ana kategori"
+    },
+    {
+      "A": "15.07",
+      "B": "Wikipedia - 'Hasankeyf' tarihsel fotoğraf seçkisi",
+      "C": "Görsel seçki",
+      "D": "Wikipedia",
+      "E": "current",
+      "F": "https://en.wikipedia.org/wiki/Hasankeyf",
+      "G": "Vikipedi sayfasındaki tarihi imajlar"
+    },
+    {
+      "A": "15.08",
+      "B": "Royal Geographical Society - Gertrude Bell dönemi seyahat fotoğrafları (genel bölge)",
+      "C": "Tarihsel seyahat foto",
+      "D": "Gertrude Bell vd.",
+      "E": "1900–1920s",
+      "F": "https://www.rgs.org/collections/",
+      "G": "Hasankeyf-spesifik onaylanmadı; bölgesel"
+    },
+    {
+      "A": "15.09",
+      "B": "Newcastle University - Gertrude Bell Online Archive",
+      "C": "Akademik tarihsel arşiv",
+      "D": "Newcastle Univ / Gertrude Bell",
+      "E": "1900–1920s",
+      "F": "https://gertrudebell.ncl.ac.uk/",
+      "G": "Mezopotamya seyahat fotoğrafları"
+    },
+    {
+      "A": "15.10",
+      "B": "Smithsonian Magazine 'Endangered Site: Hasankeyf' (Andrew Curry, 2009) - submersion öncesi son major foto-essay",
+      "C": "Foto-essay (modern öncesi)",
+      "D": "Andrew Curry / Smithsonian",
+      "E": "Mar 2009",
+      "F": "https://www.smithsonianmag.com/travel/endangered-site-the-city-of-hasankeyf-turkey-51947364/",
+      "G": "Modern öncesi yıkım baseline"
+    },
+    {
+      "A": "15.11",
+      "B": "Hasankeyf Kaymakamlığı - tarihi tanıtım broşürleri (pre-2015)",
+      "C": "Devlet broşür",
+      "D": "T.C. Hasankeyf Kaymakamlığı",
+      "E": "1990s–2010s",
+      "F": "http://www.hasankeyf.gov.tr/",
+      "G": "Yıkım öncesi turizm tanıtımı"
+    },
+    {
+      "A": "15.12",
+      "B": "Coşkun Aral arşivi (sanatçı kişisel site)",
+      "C": "Belgesel foto",
+      "D": "Coşkun Aral",
+      "E": "1980s+",
+      "F": "https://coskunaral.com/",
+      "G": "Türk foto-gazetecilik klasiği"
+    },
+    {
+      "A": "15.13",
+      "B": "İzzet Keribar kişisel site - Hasankeyf serisi",
+      "C": "Manzara foto",
+      "D": "İzzet Keribar",
+      "E": "1990s–2015",
+      "F": "http://www.izzetkeribar.com/",
+      "G": "Submersion öncesi major Türk fotoğrafçı"
+    }
+  ]
+}
