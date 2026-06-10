@@ -21,6 +21,12 @@ function yearOf(d) {
   return m ? parseInt(m[0], 10) : null;
 }
 
+// Preview image for an entry (page screenshot from the research archive).
+// images_manifest.js defines window.ATLAS_IMAGES = { "1.01": "images/1_01.jpg", ... }
+function previewFor(entry) {
+  return (window.ATLAS_IMAGES && window.ATLAS_IMAGES[entry.id]) || null;
+}
+
 // All non-header entries
 const ALL_ENTRIES = ATLAS.entries.filter(e => !e.header);
 const HEADERS = ATLAS.entries.filter(e => e.header);
@@ -376,6 +382,7 @@ function EntryRow({ entry, selected, onSelect, showSection }) {
 // ---------- Detail panel ----------
 function DetailPanel({ entry, onClose }) {
   const section = ATLAS.sections.find(s => s.id === entry.section);
+  const preview = previewFor(entry);
   return (
     <aside className="detail" role="dialog" aria-modal="true" aria-label={`Record ${entry.id}`}>
       <div className="detail-bar">
@@ -388,13 +395,26 @@ function DetailPanel({ entry, onClose }) {
       </div>
       <div className="detail-body">
         <div className="detail-thumb">
-          <image-slot
-            id={slotIdFor(entry)}
-            shape="rect"
-            fit="cover"
-            placeholder="Drop a screenshot or image here"
-            style={{width: "100%", height: "100%", display: "block"}}
-          ></image-slot>
+          {preview ? (
+            <image-slot
+              key={entry.id}
+              id={slotIdFor(entry)}
+              shape="rect"
+              fit="cover"
+              src={preview}
+              placeholder="Drop a screenshot or image here"
+              style={{width: "100%", height: "100%", display: "block"}}
+            ></image-slot>
+          ) : (
+            <image-slot
+              key={entry.id}
+              id={slotIdFor(entry)}
+              shape="rect"
+              fit="cover"
+              placeholder="Drop a screenshot or image here"
+              style={{width: "100%", height: "100%", display: "block"}}
+            ></image-slot>
+          )}
         </div>
         <h2 className="detail-title">{entry.title}</h2>
         {entry.title_tr && entry.title_tr !== entry.title && (
