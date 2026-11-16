@@ -135,6 +135,7 @@ $('src').innerHTML=['Yerleşim noktaları ve diğer adlar: GeoNames, Türkiye d�
 
 /* ---------- dizin ve analiz ---------- */
 const bars=(el,rows,red)=>{const mx=Math.max(...rows.map(r=>r[1]),1);$(el).innerHTML=rows.map(r=>'<span>'+esc(r[0])+'</span><i'+(red?' class="r"':'')+' style="width:'+(100*r[1]/mx).toFixed(1)+'%"></i><span>'+(r[2]||r[1])+'</span>').join('');};
+bars('a-suyil',[[2017,9.4],[2018,7.9],[2019,19.8],[2020,81.9],[2021,61.8],[2022,81.8],[2023,76.2],[2024,84.1]].map(r=>[String(r[0]),r[1],'%'+Math.round(r[1])+' · yaklaşık '+Math.round(318*r[1]/100)+' km²']),true);
 bars('a-su',[['Dicle',174],['Garzan',47],['Botan Çayı',44],['Gökçesu Çayı',17],['Batman Çayı',17],['Zorava Çayı',14],['Başur Çayı',11],['İnli Çayı',10],['Diğer',109]].map(r=>[r[0],r[1],r[1]+' km']));
 bars('a-yol',[['Üçüncül yol',134],['Arazi yolu',71],['İkincil yol',54],['Köy içi yol',17],['Ana yol',19],['Diğer',11]].map(r=>[r[0],r[1],r[1]+' km']));
 let KOY=[];
