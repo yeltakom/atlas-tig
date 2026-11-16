@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Dicle Vadisi Atlası: Ilısu ve Hasankeyf, önce ve sonra</title>
+<meta name="description" content="Ilısu Barajı'nın Dicle vadisinde su altında bıraktığı yerleşimler, yollar, tarım alanları ve arkeolojik alanlar. Uydu görüntüleriyle önce ve sonra karşılaştırması.">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>Dicle Vadisi Atlası</b><span>Ilısu ve Hasankeyf, önce ve sonra</span></div>
+  <nav id="nav" aria-label="Bölümler">
+    <a href="#giris">Giriş</a><a href="#katmanlar">Katmanlar</a><a href="#yerlesimler">Yerleşimler</a><a href="#analiz">Analiz</a><a href="#kronoloji">Kronoloji</a><a href="#kaynaklar">Kaynaklar</a>
+  </nav>
+</header>
+
+<main class="app">
+  <section class="mapwrap" aria-label="Harita">
+    <div id="maps">
+      <div id="mapA" class="map"></div>
+      <div id="mapB" class="map"></div>
+      <div id="split" role="slider" aria-label="Önce ve sonra ayırıcı" tabindex="0"><i></i></div>
+      <div class="tag tagA"><label for="imA">Sol</label><select id="imA"></select></div>
+      <div class="tag tagB"><label for="imB">Sağ</label><select id="imB"></select></div>
+      <div class="mode"><button type="button" id="m-kars" aria-pressed="true">Karşılaştır</button><button type="button" id="m-tek" aria-pressed="false">Tek harita</button></div>
+    </div>
+  </section>
+
+  <aside class="side">
+    <section id="p-giris" class="panel">
+      <p class="eyebrow">Visibility and Erasure · Çalışma sürümü 0.1 · 16.11.2026</p>
+      <h1>Bir vadinin önce ve sonrası</h1>
+      <p>Ilısu Barajı 2019 yazında su tutmaya başladı. Bu atlas, Dicle ve kollarında su altında kalan yerleşimleri, yolları, tarım alanlarını ve arkeolojik alanları aynı haritada, uydu görüntüleriyle birlikte gösterir.</p>
+      <p>Haritadaki ayırıcıyı sağa sola sürükle. Sol ve sağ taraf için 1985'ten bugüne farklı yılları seçebilirsin. Bir noktaya dokununca adı, diğer adları ve kaynağı açılır.</p>
+      <p class="warn"><b>Bu bir çalışma sürümüdür.</b> Yerleşim listesi bir mekânsal hesabın sonucudur, doğrulanmış resmi liste değildir. Ayrıntı Kaynaklar bölümünde.</p>
+      <h2>Yerler</h2>
+      <div id="tur" class="chips"></div>
+      <h2>Bir bakışta</h2>
+      <div id="ozet" class="nums"></div>
+    </section>
+
+    <section id="p-katmanlar" class="panel" hidden>
+      <h1>Katmanlar</h1>
+      <h2>Veri katmanları</h2>
+      <div id="katlist" class="katlist"></div>
+      <h2>Uydu görüntüsü ve altlık</h2>
+      <p class="small">Sol ve sağ taraf için ayrı ayrı seçilir. Haritanın üstündeki menülerle aynıdır.</p>
+      <div id="imlist" class="imlist"></div>
+    </section>
+
+    <section id="p-yerlesimler" class="panel" hidden>
+      <h1>Yerleşimler</h1>
+      <div class="filters">
+        <input id="ara" type="search" placeholder="Ad ya da eski ad ara" aria-label="Yerleşim ara">
+        <select id="f-il" aria-label="İl"><option value="">Bütün iller</option></select>
+        <select id="f-r" aria-label="Göle göre konum"><option value="gol_icinde">Göl sınırı içinde</option><option value="kiyi_1km">Kıyıdan 1 km içinde</option><option value="kiyi_3km">1 ile 3 km arası</option><option value="">Hepsi</option></select>
+      </div>
+      <p class="small" id="say"></p>
+      <ul id="liste" class="liste"></ul>
+    </section>
+
+    <section id="p-analiz" class="panel" hidden>
+      <h1>Analiz</h1>
+      <h2>Göl sınırı içindeki yerleşimler, illere göre</h2><div id="a-il" class="bars"></div>
+      <h2>Arazi yüksekliği dağılımı</h2><p class="small">Göl sınırı içindeki yerleşim noktalarının dolum öncesi arazi yüksekliği. Normal su kotu 525 m.</p><div id="a-h" class="bars"></div>
+      <h2>Göl içinde kalan su yolları</h2><div id="a-su" class="bars"></div>
+      <h2>Göl içinde kalan yollar</h2><p class="small">Ağustos 2022 haritasında hâlâ çizili duran yolların göl sınırı içindeki uzunluğu.</p><div id="a-yol" class="bars"></div>
+      <h2>Göl içinde kalan arazi kullanımı</h2><p class="small">Haritalanmış alanlar. Gerçek kayıp bundan büyüktür, çünkü her tarla çizilmiş değil.</p><div id="a-arazi" class="bars"></div>
+      <h2>Kaç yerleşim etkilendi? Kaynaklar uyuşmuyor</h2>
+      <p class="small">Aynı baraj için yayımlanmış sayılar. Fark, neyin yerleşim sayıldığına ve boşaltılmış köylerin sayıma girip girmediğine bağlı.</p>
+      <table class="tbl" id="a-say"></table>
+    </section>
+
+    <section id="p-kronoloji" class="panel" hidden>
+      <h1>Kronoloji</h1>
+      <p class="small">Uydu yılı olan satırlara dokununca sağ taraftaki görüntü o yıla geçer.</p>
+      <ol id="kron" class="kron"></ol>
+    </section>
+
+    <section id="p-kaynaklar" class="panel" hidden>
+      <h1>Yöntem ve kaynaklar</h1>
+      <h2>Yöntem</h2>
+      <p>Göl sınırı poligonu, yerleşim noktaları ve harita katmanlarıyla kesiştirildi. Her yerleşim için sınırın içinde mi, değilse sınıra kaç metre uzakta olduğu hesaplandı. Yollar ve su yolları için sınır içinde kalan uzunluk, alanlar için içeride kalan pay hesaplandı.</p>
+      <h2>Sınırlar</h2>
+      <ul>
+        <li>Yerleşim koordinatları eski topoğrafik haritalardan derlenmiştir, bir kısmı 1 km'ye kadar kayabilir.</li>
+        <li>Aynı köy iki ayrı adla iki kez geçebilir. Mezralar ve terk edilmiş yerler de sayılır.</li>
+        <li>Diğer adlar derleme veridir. Dil ve köken bilgisi içermez.</li>
+        <li>Göl sınırı katmanının kaynağı belirsizdir. Hesaplanan alanı 318 km², resmi rakam 313 km².</li>
+        <li>Yol ve arazi katmanları gönüllü haritalamaya dayanır, eksiktir.</li>
+        <li>Yüksek çözünürlüklü arşiv görüntülerinde tarih, görüntünün çekim tarihi değil yayın tarihidir.</li>
+      </ul>
+      <h2>Veri kaynakları</h2>
+      <ul id="src"></ul>
+      <h2>Künye</h2>
+      <p>Yelta Köm, doktora araştırması, Bauhaus-Universität Weimar. Atlas çalışma sürümüdür, atıf yapmadan önce yazara danışın.</p>
+    </section>
+  </aside>
+</main>
+
+<script src="vendor/maplibre-gl.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
