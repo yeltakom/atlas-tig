@@ -3,7 +3,7 @@
 (async function(){
 const {A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT}=window.__atlas;
 const J=u=>fetch(u).then(r=>r.json());
-const [OL,AN,KO]=await Promise.all([J('data/olaylar.json'),J('data/anitlar.geojson'),J('data/korpus.json')]);
+const [OL,AN,KO,KAM]=await Promise.all([J('data/olaylar.json'),J('data/anitlar.geojson'),J('data/korpus.json'),J('data/kamulastirma_2016.geojson')]);
 const mob=()=>window.innerWidth<=860;
 const toMap=()=>{if(mob())window.scrollTo({top:0,behavior:'smooth'});};
 const AY=['','Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
@@ -28,6 +28,8 @@ const NL=[
  {id:'anit-eski',type:'circle',source:'anit',filter:['==',['get','tur'],'eski'],paint:{'circle-radius':6,'circle-color':RED,'circle-stroke-color':'#fff','circle-stroke-width':1.6}},
  {id:'anit-yeni',type:'circle',source:'anit',filter:['==',['get','tur'],'yeni'],paint:{'circle-radius':6,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':1.6}},
  {id:'anit-lab',type:'symbol',source:'anit',filter:['in',['get','tur'],['literal',['eski','yeni']]],minzoom:13.2,layout:{'text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.8,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#fff','text-halo-color':'#000','text-halo-width':1.5}},
+ {id:'kam',type:'circle',source:'kam',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#ffd400','circle-stroke-width':2.2}},
+ {id:'kam-lab',type:'symbol',source:'kam',minzoom:10.5,layout:{visibility:'none','text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.9,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#ffd400','text-halo-color':'#000','text-halo-width':1.5}},
  {id:'olay',type:'circle',source:'olay',layout:{visibility:'none'},paint:{'circle-radius':4,'circle-color':['match',['get','serit'],'kasaba',RED,'devlet','#8a8a86','#fff'],'circle-stroke-color':'#000','circle-stroke-width':1}},
  {id:'sec',type:'circle',source:'sec',paint:{'circle-radius':15,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#fff','circle-stroke-width':2.5}},
  {id:'sec2',type:'circle',source:'sec',paint:{'circle-radius':19,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':RED,'circle-stroke-width':1.5}}
@@ -35,14 +37,17 @@ const NL=[
 const NG=[
  {id:'g-anit',ad:'Anıtlar: eski yer, yeni yer, taşınma hattı',alt:'Kırmızı eski yer, beyaz yeni yer',renk:RED,layers:['anit-hat','anit-eski','anit-yeni','anit-lab'],on:true},
  {id:'g-anity',ad:'Yerinde kalan kazı alanları ve yapılar',alt:'Kırmızı göl sınırı içinde, siyah dışında',renk:'#111',layers:['anit-yerinde'],on:true},
+ {id:'g-kam',ad:'2016 acele kamulaştırma kararındaki köyler',alt:'Haber kaynaklı 48 köyden konumu bulunan '+KAM.features.length+' köy',renk:'#ffd400',layers:['kam','kam-lab'],on:false},
  {id:'g-olay',ad:'Olay yerleri',alt:'Konumu bilinen olaylar',renk:'#fff',layers:['olay'],on:false}
 ];
-new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();}).then(()=>[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('sec',{type:'geojson',data:EMPTY});
+new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();}).then(()=>[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('kam',{type:'geojson',data:KAM});m.addSource('sec',{type:'geojson',data:EMPTY});
   NL.forEach(l=>m.addLayer(JSON.parse(JSON.stringify(l))));
-  ['anit-eski','anit-yeni','anit-yerinde','olay'].forEach(id=>{m.on('click',id,e=>{const p=e.features[0].properties;id==='olay'?selEvent(OL.find(o=>o.id===p.id),true):anitCard(p.ad,p.tur);});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');});}));
+  ['anit-eski','anit-yeni','anit-yerinde','olay','kam'].forEach(id=>{m.on('click',id,e=>{const p=e.features[0].properties;id==='kam'?kamCard(p,e.features[0].geometry.coordinates):id==='olay'?selEvent(OL.find(o=>o.id===p.id),true):anitCard(p.ad,p.tur);});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');});}));
 const kl=$('katlist');NG.forEach(g=>{GROUPS.push(g);const l=document.createElement('label');l.innerHTML='<input type="checkbox" id="'+g.id+'"'+(g.on?' checked':'')+'><i style="background:'+g.renk+'"></i><span>'+esc(g.ad)+'</span><small>'+esc(g.alt)+'</small>';kl.insertBefore(l,kl.firstChild);
   l.querySelector('input').onchange=e=>{g.on=e.target.checked;[A,B].forEach(m=>g.layers.forEach(id=>m.getLayer(id)&&m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));};});
 const setSel=c=>[A,B].forEach(m=>m.getSource('sec')&&m.getSource('sec').setData(c?{type:'Feature',properties:{},geometry:{type:'Point',coordinates:c}}:EMPTY));
+const KR={gol_icinde:'göl sınırının içinde',kiyi_1km:'kıyıdan 1 km içinde',kiyi_3km:'kıyıdan 1 ile 3 km arası',uzak:'kıyıdan 3 km\'den uzak'};
+function kamCard(p,c){showCard({head:'<div><p class="eyebrow">Acele kamulaştırma, 2016</p><h3>'+esc(p.ad)+'</h3></div>',body:dl([['İl, ilçe',esc(p.il)+', '+esc(p.ilce)],['Göle göre',KR[p.gol_iliskisi]],['Kaynak','Enerji Günlüğü, 14.10.2016 Resmî Gazete haberi'],['Konum','GeoNames ad eşleşmesi']])+'<p class="not">Karar köyün kendisini değil, göl altında kalacak köy yollarının taşınması için bazı taşınmazları kapsar.'+(p.aday>1?' Bu adla '+p.aday+' kayıt var, göle en yakın olanı seçildi. Konum belirsiz.':'')+'</p>'});setSel(c);}
 const setIm=(a,b)=>{if(a&&imById[a]){setImagery('A',a);$('imA').value=a;}if(b&&imById[b]){setImagery('B',b);$('imB').value=b;}};
 
 /* ---------- zaman çizgisi ---------- */
@@ -132,11 +137,11 @@ const DOS=[
   yontem:'Yol ve su yolu çizgilerinin göl sınırı içinde kalan uzunluğu hesaplandı.',
   acik:'Hangi köyler arasında yol süresinin ne kadar uzadığı, yani ağ analizi henüz yapılmadı. Yol verisi gönüllü haritalamaya dayanır, eksiktir.',
   kaynak:'OpenStreetMap, Ağustos 2022; soL Haber 2019; Köm ve Özdemir 2023.',git:[['Yol ve su grafikleri','#analiz'],['Katmanlar','#katmanlar']]},
- {no:'05',ad:'Kamulaştırma ve hak sahipliği',soru:'Devlet kimi saydı, kimi saymadı?',sayi:'710 / 2.120',view:[41.417,37.7314,14],im:['w10','w41468'],on:['g-gol'],
-  bulgu:['2016 sonbaharında acele kamulaştırma kararı çıktı. Derlenen bilgiye göre karar 50 köyde 990 parseli kapsıyor. Adı belirlenebilen 48 köy: Batman 16, Diyarbakır 5, Siirt 21, Şırnak 6.','Hasankeyf\'te 2.120 hak sahipliği başvurusundan 710\'u kabul edildi, 1.415\'i reddedildi.','Yeni Hasankeyf için konut sayısı kaynaklara göre 698, 710, 875 olarak değişiyor.'],
-  yontem:'Sayılar yayımlanmış rapor ve açıklamalardan derlendi.',
-  acik:'Kararın Resmî Gazete metni henüz görülmedi, tarihi kaynaklarda 26 Eylül ve Ekim 2016 olarak geçiyor. Kamulaştırılan köyler harita katmanı olarak hazırlanıyor.',
-  kaynak:'HYG 2017; Özdemirkol 2023; Hasankeyf Kaymakamlığı; Eroğlu 2022.',git:[['Olaylar','#olaylar']]},
+ {no:'05',ad:'Kamulaştırma ve hak sahipliği',soru:'Devlet kimi saydı, kimi saymadı?',sayi:'710 / 2.120',view:null,im:['s2017','s2021'],on:['g-kam','g-koyin'],
+  bulgu:['26 Eylül 2016 tarihli acele kamulaştırma kararı 14 Ekim 2016\'da yayımlandı. Haberlere göre 4 ilde 50 köyde 990 parseli kapsıyor. Karar, göl altında kalacak köy yollarının taşınması içindir.','Haberde adı geçen 48 köy: Beşiri 12, Gercüş 2, Hasankeyf 2, Bismil 5, Siirt Merkez 14, Kurtalan 3, Eruh 4, Güçlükonak 6.','48 köyün '+KAM.features.length+' tanesi haritada bulundu. Bunların '+KAM.features.filter(f=>f.properties.gol_iliskisi==='gol_icinde').length+' tanesi göl sınırının içinde, '+KAM.features.filter(f=>f.properties.gol_iliskisi==='kiyi_1km').length+' tanesi kıyıdan 1 km içinde.','Listede Mardin ve Dargeçit köyleri yok. Bu liste su altında kalan köylerin listesi değildir.','Hasankeyf\'te 2.120 hak sahipliği başvurusundan 710\'u kabul edildi, 1.415\'i reddedildi. Yeni Hasankeyf için konut sayısı kaynaklara göre 698, 710, 875 olarak değişiyor.'],
+  yontem:'Köy adları haberden alındı, yer adı veritabanıyla eşleştirildi. Aynı adla birden çok kayıt varsa göle en yakın olanı seçildi.',
+  acik:'Kararın Resmî Gazete metni henüz görülmedi. Haber 50 köy diyor, adı sayılan 48. Beş köy haritada bulunamadı: Doğanpazarı, Kungeçit, Demirkaya, Kaleboğaz, Kayakgölü. Ad eşleşmesi belirsiz olan köylerin kartında not var.',
+  kaynak:'Enerji Günlüğü ve Haberler.com, Ekim 2016; HYG 2017; Özdemirkol 2023; Hasankeyf Kaymakamlığı; Eroğlu 2022; GeoNames.',git:[['Olaylar','#olaylar'],['Katmanlar','#katmanlar']]},
  {no:'06',ad:'Görüntü rejimi: kim neyi gösterdi?',soru:'Devletin tanıtım görüntüsü ile karşı kayıtların arşivi.',sayi:String(KO.length),view:null,im:null,on:[],
   bulgu:['Arşivde '+KO.length+' kayıt var, '+kats.length+' kümede. En büyük kümeler: '+kats.map(k=>[k,KO.filter(x=>x.kat===k).length]).sort((a,b)=>b[1]-a[1]).slice(0,4).map(r=>r[0]+' '+r[1]).join(', ')+'.','Tarihi bilinen kayıtların '+KO.filter(k=>k.yil>=2017&&k.yil<=2020).length+' tanesi 2017 ile 2020 arasında, yani taşıma ve dolum yıllarında üretildi.','Her kayıtta üretici, tarih, tür ve kaynağa bağlantı var.'],
   yontem:'Kayıtlar araştırmanın görsel korpusundan gelir. Kümeler üreticiye ve bağlama göre kuruldu.',
