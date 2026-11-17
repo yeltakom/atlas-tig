@@ -122,8 +122,8 @@ const fitAll=()=>A.fitBounds([[40.76,37.49],[42.09,38.02]],{padding:20,duration:
 TUR.forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t[0];b.onclick=()=>{t[1]?A.flyTo({center:[t[1][0],t[1][1]],zoom:t[1][2],duration:1400}):fitAll();if(window.innerWidth<=860)window.scrollTo({top:0,behavior:'smooth'});};$('tur').appendChild(b);});
 
 /* ---------- bölümler ---------- */
-const PAN=['giris','katmanlar','yerlesimler','analiz','kronoloji','kaynaklar'];
-function route(){let h=location.hash.replace('#','');if(!PAN.includes(h))h='giris';PAN.forEach(p=>{$('p-'+p).hidden=p!==h;});document.querySelectorAll('#nav a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+h));}
+const PAN=['dosyalar','olaylar','yerlesimler','anitlar','arsiv','katmanlar','analiz','kaynaklar'];
+function route(){let h=location.hash.replace('#','');if(!PAN.includes(h))h='dosyalar';PAN.forEach(p=>{$('p-'+p).hidden=p!==h;});document.querySelectorAll('#nav a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+h));}
 window.addEventListener('hashchange',route);route();
 
 /* ---------- kronoloji, sayılar, kaynaklar ---------- */
@@ -161,5 +161,5 @@ function draw(){const q=$('ara').value.trim().toLocaleLowerCase('tr'),il=$('f-il
 /* ---------- başlat ---------- */
 let ready=0;const start=()=>{if(++ready<2)return;[A,B].forEach(addData);setImagery('A',cur.A);setImagery('B',cur.B);fitAll();};
 A.on('load',start);B.on('load',start);
-window.__atlas={A,B,setImagery};
+window.__atlas={A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT};
 })();

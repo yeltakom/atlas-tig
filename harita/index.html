@@ -12,9 +12,9 @@
 </head>
 <body>
 <header class="top">
-  <div class="brand"><b>Dicle Vadisi Atlası</b><span>Ilısu ve Hasankeyf, önce ve sonra</span></div>
+  <div class="brand"><b>Dicle Vadisi Atlası</b><span>Ilısu Barajı ve Hasankeyf: araştırma platformu</span></div>
   <nav id="nav" aria-label="Bölümler">
-    <a href="#giris">Giriş</a><a href="#katmanlar">Katmanlar</a><a href="#yerlesimler">Yerleşimler</a><a href="#analiz">Analiz</a><a href="#kronoloji">Kronoloji</a><a href="#kaynaklar">Kaynaklar</a>
+    <a href="#dosyalar">Dosyalar</a><a href="#olaylar">Olaylar</a><a href="#yerlesimler">Yerleşimler</a><a href="#anitlar">Anıtlar</a><a href="#arsiv">Görsel arşiv</a><a href="#katmanlar">Katmanlar</a><a href="#analiz">Analiz</a><a href="#kaynaklar">Yöntem</a>
   </nav>
 </header>
 
@@ -28,19 +28,54 @@
       <div class="tag tagB"><label for="imB">Sağ</label><select id="imB"></select></div>
       <div class="mode"><button type="button" id="m-kars" aria-pressed="true">Karşılaştır</button><button type="button" id="m-tek" aria-pressed="false">Tek harita</button></div>
     </div>
+    <div id="zc" aria-label="Zaman çizgisi"><div id="zc-lab"></div><div id="zc-in"></div></div>
   </section>
 
-  <aside class="side">
-    <section id="p-giris" class="panel">
-      <p class="eyebrow">Visibility and Erasure · Çalışma sürümü 0.1 · 16.11.2026</p>
-      <h1>Bir vadinin önce ve sonrası</h1>
-      <p>Ilısu Barajı 2019 yazında su tutmaya başladı. Bu atlas, Dicle ve kollarında su altında kalan yerleşimleri, yolları, tarım alanlarını ve arkeolojik alanları aynı haritada, uydu görüntüleriyle birlikte gösterir.</p>
-      <p>Haritadaki ayırıcıyı sağa sola sürükle. Sol ve sağ taraf için 1985'ten bugüne farklı yılları seçebilirsin. Bir noktaya dokununca adı, diğer adları ve kaynağı açılır.</p>
-      <p class="warn"><b>Bu bir çalışma sürümüdür.</b> Yerleşim listesi bir mekânsal hesabın sonucudur, doğrulanmış resmi liste değildir. Ayrıntı Kaynaklar bölümünde.</p>
-      <h2>Yerler</h2>
-      <div id="tur" class="chips"></div>
-      <h2>Bir bakışta</h2>
-      <div id="ozet" class="nums"></div>
+  <aside class="side" id="side">
+    <section id="kart" class="kart" hidden></section>
+    <section id="p-dosyalar" class="panel">
+      <div id="d-liste">
+        <p class="eyebrow">Visibility and Erasure · Çalışma sürümü 0.2 · 17.11.2026</p>
+        <h1>Bir vadinin su altında bırakılması</h1>
+        <p>Ilısu Barajı 19 Temmuz 2019'da su tutmaya başladı. Bu platform, Dicle vadisinde ne olduğunu yedi dosyada toplar. Her dosya bir soru sorar, haritayı o soruya göre kurar, bulguyu, yöntemi, kaynağı ve hâlâ açık olan soruyu yan yana gösterir.</p>
+        <p class="warn"><b>Çalışma sürümü.</b> Haritadaki sonuçlar hesaba dayanır, yerinde doğrulanmamıştır. Her kayıtta kaynağı yazar.</p>
+        <div id="ozet" class="nums"></div>
+        <h2>Dosyalar</h2>
+        <div id="dos" class="dos"></div>
+        <h2>Yerler</h2>
+        <div id="tur" class="chips"></div>
+      </div>
+      <div id="d-detay" hidden></div>
+    </section>
+
+    <section id="p-olaylar" class="panel" hidden>
+      <h1>Olaylar</h1>
+      <p class="small">1954'ten bugüne tarihli ve kaynaklı kayıtlar. Bir olaya dokununca harita o yere ve o yılın görüntüsüne geçer. Aynı kayıtlar haritanın altındaki zaman çizgisinde durur.</p>
+      <div id="o-serit" class="chips"></div>
+      <ol id="o-liste" class="kron"></ol>
+      <ol id="kron" hidden></ol>
+    </section>
+
+    <section id="p-anitlar" class="panel" hidden>
+      <h1>Anıtlar</h1>
+      <p class="small">Hasankeyf'te taşınan, kısmen taşınan ve yerinde bırakılan yapılar. Kırmızı nokta eski yer, beyaz nokta yeni yer, çizgi taşınma hattı.</p>
+      <div id="an-ozet" class="nums"></div>
+      <h2>Taşınma mesafesi, kuş uçuşu</h2><div id="an-mes" class="bars"></div>
+      <h2>Taşınan ve bırakılan yapılar</h2><ul id="an-liste" class="liste"></ul>
+      <h2>Yerinde kalan alanlar ve yapılar</h2><ul id="an-yer" class="liste"></ul>
+    </section>
+
+    <section id="p-arsiv" class="panel" hidden>
+      <h1>Görsel arşiv</h1>
+      <p class="small">Baraj ve Hasankeyf üzerine üretilmiş görüntülerin kaydı: devletin tanıtım filmleri, basın fotoğrafları, aktivist ve sanatçı işleri, uydu görüntüleri. Küçük görseller yalnızca tanıma amaçlıdır, hakları üreticilerine aittir.</p>
+      <div class="filters">
+        <input id="k-ara" type="search" placeholder="Başlık, üretici ya da not ara" aria-label="Arşivde ara">
+        <select id="k-kat" aria-label="Küme"><option value="">Bütün kümeler</option></select>
+        <select id="k-don" aria-label="Dönem"><option value="">Bütün yıllar</option><option value="0-2005">2005 ve öncesi</option><option value="2006-2016">2006 ile 2016</option><option value="2017-2018">2017 ile 2018</option><option value="2019-2020">2019 ile 2020</option><option value="2021-2100">2021 ve sonrası</option></select>
+      </div>
+      <p class="small" id="k-say"></p>
+      <div id="k-grid" class="grid"></div>
+      <button type="button" id="k-daha" class="btn">Daha fazla göster</button>
     </section>
 
     <section id="p-katmanlar" class="panel" hidden>
@@ -71,15 +106,12 @@
       <h2>Göl içinde kalan su yolları</h2><div id="a-su" class="bars"></div>
       <h2>Göl içinde kalan yollar</h2><p class="small">Ağustos 2022 haritasında hâlâ çizili duran yolların göl sınırı içindeki uzunluğu.</p><div id="a-yol" class="bars"></div>
       <h2>Göl içinde kalan arazi kullanımı</h2><p class="small">Haritalanmış alanlar. Gerçek kayıp bundan büyüktür, çünkü her tarla çizilmiş değil.</p><div id="a-arazi" class="bars"></div>
+      <h2>Görsel arşiv, kümelere göre</h2><div id="a-kkat" class="bars"></div>
+      <h2>Görsel arşiv, dönemlere göre</h2><p class="small">Tarihi bilinen kayıtlar.</p><div id="a-kdon" class="bars"></div>
+      <h2>Olaylar, şeritlere göre</h2><div id="a-oser" class="bars"></div>
       <h2>Kaç yerleşim etkilendi? Kaynaklar uyuşmuyor</h2>
       <p class="small">Aynı baraj için yayımlanmış sayılar. Fark, neyin yerleşim sayıldığına ve boşaltılmış köylerin sayıma girip girmediğine bağlı.</p>
       <table class="tbl" id="a-say"></table>
-    </section>
-
-    <section id="p-kronoloji" class="panel" hidden>
-      <h1>Kronoloji</h1>
-      <p class="small">Uydu yılı olan satırlara dokununca sağ taraftaki görüntü o yıla geçer.</p>
-      <ol id="kron" class="kron"></ol>
     </section>
 
     <section id="p-kaynaklar" class="panel" hidden>
@@ -93,6 +125,9 @@
         <li>Diğer adlar derleme veridir. Dil ve köken bilgisi içermez.</li>
         <li>Göl sınırı katmanının kaynağı belirsizdir. Hesaplanan alanı 318 km², resmi rakam 313 km².</li>
         <li>Yol ve arazi katmanları gönüllü haritalamaya dayanır, eksiktir.</li>
+        <li>Anıt konumları gönüllü haritalamadan alınmıştır, yerinde doğrulanmamıştır.</li>
+        <li>Olay tarihleri yayımlanmış kaynaklardan derlenmiştir. Kaynakların uyuşmadığı yerde kayıtta not vardır.</li>
+        <li>Görüşmeler ve araştırmacının saha konumları, onay süreci tamamlanana kadar yayımlanmaz.</li>
         <li>Yüksek çözünürlüklü arşiv görüntülerinde tarih, görüntünün çekim tarihi değil yayın tarihidir.</li>
       </ul>
       <h2>Veri kaynakları</h2>
@@ -105,5 +140,6 @@
 
 <script src="vendor/maplibre-gl.js"></script>
 <script src="app.js"></script>
+<script src="platform.js"></script>
 </body>
 </html>
