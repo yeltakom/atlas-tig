@@ -37,13 +37,12 @@ const NG=[
  {id:'g-anity',ad:'Yerinde kalan kazı alanları ve yapılar',alt:'Kırmızı göl sınırı içinde, siyah dışında',renk:'#111',layers:['anit-yerinde'],on:true},
  {id:'g-olay',ad:'Olay yerleri',alt:'Konumu bilinen olaylar',renk:'#fff',layers:['olay'],on:false}
 ];
-await new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();});
-[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('sec',{type:'geojson',data:EMPTY});
+new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();}).then(()=>[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('sec',{type:'geojson',data:EMPTY});
   NL.forEach(l=>m.addLayer(JSON.parse(JSON.stringify(l))));
-  ['anit-eski','anit-yeni','anit-yerinde','olay'].forEach(id=>{m.on('click',id,e=>{const p=e.features[0].properties;id==='olay'?selEvent(OL.find(o=>o.id===p.id),true):anitCard(p.ad,p.tur);});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');});});
+  ['anit-eski','anit-yeni','anit-yerinde','olay'].forEach(id=>{m.on('click',id,e=>{const p=e.features[0].properties;id==='olay'?selEvent(OL.find(o=>o.id===p.id),true):anitCard(p.ad,p.tur);});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');});}));
 const kl=$('katlist');NG.forEach(g=>{GROUPS.push(g);const l=document.createElement('label');l.innerHTML='<input type="checkbox" id="'+g.id+'"'+(g.on?' checked':'')+'><i style="background:'+g.renk+'"></i><span>'+esc(g.ad)+'</span><small>'+esc(g.alt)+'</small>';kl.insertBefore(l,kl.firstChild);
-  l.querySelector('input').onchange=e=>{g.on=e.target.checked;[A,B].forEach(m=>g.layers.forEach(id=>m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));};});
-const setSel=c=>[A,B].forEach(m=>m.getSource('sec').setData(c?{type:'Feature',properties:{},geometry:{type:'Point',coordinates:c}}:EMPTY));
+  l.querySelector('input').onchange=e=>{g.on=e.target.checked;[A,B].forEach(m=>g.layers.forEach(id=>m.getLayer(id)&&m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));};});
+const setSel=c=>[A,B].forEach(m=>m.getSource('sec')&&m.getSource('sec').setData(c?{type:'Feature',properties:{},geometry:{type:'Point',coordinates:c}}:EMPTY));
 const setIm=(a,b)=>{if(a&&imById[a]){setImagery('A',a);$('imA').value=a;}if(b&&imById[b]){setImagery('B',b);$('imB').value=b;}};
 
 /* ---------- zaman çizgisi ---------- */
