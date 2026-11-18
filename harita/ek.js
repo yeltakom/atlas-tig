@@ -94,6 +94,11 @@ $('gun-k').onclick=()=>{gk=gk.includes('721')?'MODIS_Terra_CorrectedReflectance_
 $('gun-x').onclick=()=>{durdur();gun.hidden=true;setIm(null,'s2021');};
 $('imB').addEventListener('change',e=>{if(e.target.value==='modis'){gun.hidden=false;$('gun-t').textContent=trh(iso(gms));}else{durdur();gun.hidden=true;}});
 
+/* ---------- üç boyutlu arazi ---------- */
+let ucb=false;const DEMU='https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
+$('m-3b').onclick=()=>{ucb=!ucb;$('m-3b').setAttribute('aria-pressed',ucb);[A,B].forEach(m=>{try{if(ucb){if(!m.getSource('dem'))m.addSource('dem',{type:'raster-dem',tiles:[DEMU],encoding:'terrarium',tileSize:256,maxzoom:13,attribution:'Arazi: Mapzen Terrain Tiles, AWS Open Data'});m.setTerrain({source:'dem',exaggeration:1.5});m.dragRotate.enable();m.touchZoomRotate.enableRotation();if(m.touchPitch)m.touchPitch.enable();}else{m.setTerrain(null);m.dragRotate.disable();m.touchZoomRotate.disableRotation();}}catch(err){console.warn('3b',err);}});
+  A.easeTo(ucb?{pitch:60,bearing:-20,duration:1200}:{pitch:0,bearing:0,duration:800});};
+
 /* ---------- görünümü PNG olarak kaydet ---------- */
 $('kaydet').onclick=()=>{try{const ca=A.getCanvas(),cb=B.getCanvas(),w=ca.width,h=ca.height,dpr=w/ca.clientWidth,tek=$('maps').classList.contains('tek'),bar=Math.round(40*dpr);
   const c=document.createElement('canvas');c.width=w;c.height=h+bar;const x=c.getContext('2d');x.fillStyle='#000';x.fillRect(0,0,c.width,c.height);x.drawImage(ca,0,0);

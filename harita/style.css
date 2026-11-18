@@ -38,6 +38,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,#s
 .mode{position:absolute;left:8px;bottom:40px;z-index:6;display:flex;border:1.5px solid var(--pink);border-radius:var(--r);overflow:hidden}
 .mode button{font-family:var(--disp);font-size:10.5px;border:0;background:var(--ground);color:var(--pink);padding:7px 9px;cursor:pointer}
 .mode button[aria-pressed="true"]{background:var(--pink);color:var(--purple)}
+.mode button+button{border-left:1px solid var(--pink)}
 #maps.tek #mapB,#maps.tek #split,#maps.tek .tagB{display:none}
 .side{overflow:auto;min-height:0;scrollbar-width:thin;scrollbar-color:var(--pink) #000}
 .panel{padding:18px 18px 44px;display:flex;flex-direction:column;gap:10px}

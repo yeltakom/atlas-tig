@@ -67,7 +67,7 @@ const GROUPS=[
 const CLICKABLE=['koy-in','koy-k1','koy-k3','ark','geo','kamu','iz','derinlik','kopru','arazi'];
 
 function baseStyle(){return {version:8,glyphs:'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',sources:{},layers:[{id:'zemin',type:'background',paint:{'background-color':'#e9e9e6'}}]};}
-function mk(el){const m=new maplibregl.Map({container:el,style:baseStyle(),center:[41.45,37.76],zoom:9.2,minZoom:7,maxZoom:17.5,attributionControl:false,dragRotate:false,pitchWithRotate:false,preserveDrawingBuffer:true});m.touchZoomRotate.disableRotation();return m;}
+function mk(el){const m=new maplibregl.Map({container:el,style:baseStyle(),center:[41.45,37.76],zoom:9.2,minZoom:7,maxZoom:17.5,attributionControl:false,dragRotate:false,maxPitch:75,preserveDrawingBuffer:true});m.touchZoomRotate.disableRotation();return m;}
 const A=mk('mapA'),B=mk('mapB');const maps={A,B};
 B.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
 A.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-right');
@@ -99,7 +99,7 @@ function popup(m,f,ll){const p=f.properties,L=f.layer.id;let h='';
   if(pop)pop.remove();pop=new maplibregl.Popup({closeButton:true,maxWidth:'280px'}).setLngLat(f.geometry.type==='Point'?f.geometry.coordinates:ll).setHTML(h).addTo(m);}
 
 /* ---------- iki haritayı eşle, ayırıcı ---------- */
-let lock=false;const sync=(a,b)=>a.on('move',()=>{if(lock)return;lock=true;b.jumpTo({center:a.getCenter(),zoom:a.getZoom()});lock=false;});
+let lock=false;const sync=(a,b)=>a.on('move',()=>{if(lock)return;lock=true;b.jumpTo({center:a.getCenter(),zoom:a.getZoom(),bearing:a.getBearing(),pitch:a.getPitch()});lock=false;});
 sync(A,B);sync(B,A);
 const box=$('maps'),sp=$('split');let split=.5;
 const setSplit=v=>{split=Math.max(.03,Math.min(.97,v));box.style.setProperty('--split',(split*100)+'%');sp.setAttribute('aria-valuenow',Math.round(split*100));};
