@@ -8,8 +8,8 @@
 <title>Dicle Vadisi Atlası: üç boyutlu anlatı</title>
 <meta name="description" content="Ilısu Barajı'nın Dicle vadisini su altında bırakması, üç boyutlu arazi üzerinde bölüm bölüm.">
 <link rel="stylesheet" href="vendor/maplibre-gl.css">
-<link rel="stylesheet" href="style.css?v=6">
-<link rel="stylesheet" href="hikaye.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="hikaye.css?v=7">
 </head>
 <body class="hikaye">
 <div id="hmap" aria-label="Üç boyutlu harita"></div>
@@ -22,12 +22,12 @@
   <div class="hs"><div><b id="h-kot">0</b><span>su kotu, metre</span></div><div><b id="h-alan">0</b><span>su yüzeyi, km²</span></div><div><b id="h-hacim">0</b><span>hacim, milyar m³</span></div><div><b id="h-koy">0</b><span>su altındaki yerleşim noktası</span></div></div>
   <svg viewBox="0 0 220 56" role="img" aria-label="Su kotuna göre su yüzeyi eğrisi"><polyline id="h-yol" fill="none" stroke="#552d7f" stroke-width="2" points=""/><circle id="h-nok" r="4.5" fill="#f00" cx="4" cy="52"/></svg>
   <div class="hr"><button type="button" id="h-oy">Oynat</button><span id="h-min"></span><input type="range" id="h-r" aria-label="Su kotu"><span>525 m</span></div>
-  <p>Model. Dolum öncesi arazi yüksekliği yaklaşık 60 metrelik karelerle okunur, düşeyde birkaç metre yanılabilir. Tarihi değil kotu gösterir.</p>
+  <p id="h-not">Model. Dolum öncesi arazi yüksekliği yaklaşık 60 metrelik karelerle okunur, düşeyde birkaç metre yanılabilir. Tarihi değil kotu gösterir.</p>
 </div>
 <pre id="kam" hidden></pre>
 <main id="bolumler"></main>
 <ol id="ray" aria-label="Bölümler"></ol>
 <script src="vendor/maplibre-gl.js"></script>
-<script src="hikaye.js?v=6"></script>
+<script src="hikaye.js?v=7"></script>
 </body>
 </html>

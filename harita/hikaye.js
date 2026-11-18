@@ -45,6 +45,16 @@ const B=[
   cam:{center:[41.45,37.75],zoom:9.6,pitch:45,bearing:10},im:'s2024',kat:['gol','koy'],su:0,son:true}
 ];
 
+/* ---------- bölüm kartları ve gezinme ---------- */
+const bol=$('bolumler'),ray=$('ray');
+B.forEach((b,i)=>{const s=document.createElement('section');s.className='bl';s.dataset.i=i;
+  s.innerHTML='<div class="bk'+(i===0?' kapak':'')+'"><p class="eyebrow">'+esc(b.e)+'</p>'+(i===0?'<h1>'+esc(b.t)+'</h1>':'<h2>'+esc(b.t)+'</h2>')+'<p>'+esc(b.m)+'</p>'+(b.k?'<p class="kay">Kaynak: '+esc(b.k)+'</p>':'')+
+   (b.son?'<div class="row"><a class="btn" href="index.html#dosyalar">Dosyalar</a><a class="btn" href="index.html#olaylar">Olaylar</a><a class="btn" href="index.html#yerlesimler">Yerleşimler</a><a class="btn" href="index.html#anitlar">Anıtlar</a><a class="btn" href="index.html#kutuphane">Kütüphane</a><a class="btn" href="index.html#kaynaklar">Yöntem</a></div>':'')+
+   (i<B.length-1?'<button type="button" class="ileri" data-i="'+(i+1)+'">'+(i===0?'Başla':'Sonraki')+'</button>':'')+'</div>';
+  bol.appendChild(s);
+  const li=document.createElement('li'),bt=document.createElement('button');bt.type='button';bt.textContent=i===0?'·':String(i);bt.title=b.t;bt.setAttribute('aria-label',b.t);bt.onclick=()=>s.scrollIntoView({behavior:'smooth'});li.appendChild(bt);ray.appendChild(li);});
+bol.querySelectorAll('.ileri').forEach(b=>b.onclick=()=>bol.children[+b.dataset.i].scrollIntoView({behavior:'smooth'}));
+
 /* ---------- harita ---------- */
 const map=new maplibregl.Map({container:'hmap',style:{version:8,glyphs:'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',sources:{},layers:[{id:'zemin',type:'background',paint:{'background-color':'#000'}}]},
   center:B[0].cam.center,zoom:B[0].cam.zoom-(mob()?.9:0),pitch:B[0].cam.pitch,bearing:B[0].cam.bearing,maxPitch:78,minZoom:7,maxZoom:17,attributionControl:{compact:true},interactive:true});
@@ -128,6 +138,7 @@ async function model(){
   const P=[];for(let v=M.min;v<=525;v+=1){const s=olc(v);P.push([v,s.alan]);}M.egri=P;const mxA=P[P.length-1][1]||1;
   $('h-yol').setAttribute('points',P.map(p=>(4+(p[0]-M.min)/(525-M.min)*212).toFixed(1)+','+(52-p[1]/mxA*46).toFixed(1)).join(' '));
   const r=$('h-r');r.min=M.min;r.max=525;r.step=.5;r.value=M.min;$('h-min').textContent=M.min+' m';
+  const s5=olc(525);$('h-not').textContent='Model 525 metrede '+fmt(s5.alan,0)+' km² su yüzeyi ve '+fmt(s5.hacim,1)+' milyar m³ hacim veriyor. Resmî rakamlar 313 km² ve 10,41 milyar m³. Arazi yaklaşık 60 metrelik karelerle okunur, model tarihi değil kotu gösterir.';
   window.__hikaye=Object.assign(window.__hikaye||{},{M,olc});
 }
 const ub=(arr,v,n)=>{let lo=0,hi=n;while(lo<hi){const m=(lo+hi)>>1;arr[m]<=v?lo=m+1:hi=m;}return lo;};
@@ -150,15 +161,6 @@ function suAyar(su){anim++;const hud=$('hud');
 $('h-r').oninput=e=>{anim++;ciz(+e.target.value);};
 $('h-oy').onclick=()=>yuksel(M.min,525,14000);
 
-/* ---------- bölüm kartları ve gezinme ---------- */
-const bol=$('bolumler'),ray=$('ray');
-B.forEach((b,i)=>{const s=document.createElement('section');s.className='bl';s.dataset.i=i;
-  s.innerHTML='<div class="bk'+(i===0?' kapak':'')+'"><p class="eyebrow">'+esc(b.e)+'</p>'+(i===0?'<h1>'+esc(b.t)+'</h1>':'<h2>'+esc(b.t)+'</h2>')+'<p>'+esc(b.m)+'</p>'+(b.k?'<p class="kay">Kaynak: '+esc(b.k)+'</p>':'')+
-   (b.son?'<div class="row"><a class="btn" href="index.html#dosyalar">Dosyalar</a><a class="btn" href="index.html#olaylar">Olaylar</a><a class="btn" href="index.html#yerlesimler">Yerleşimler</a><a class="btn" href="index.html#anitlar">Anıtlar</a><a class="btn" href="index.html#kutuphane">Kütüphane</a><a class="btn" href="index.html#kaynaklar">Yöntem</a></div>':'')+
-   (i<B.length-1?'<button type="button" class="ileri" data-i="'+(i+1)+'">'+(i===0?'Başla':'Sonraki')+'</button>':'')+'</div>';
-  bol.appendChild(s);
-  const li=document.createElement('li'),bt=document.createElement('button');bt.type='button';bt.textContent=i===0?'·':String(i);bt.title=b.t;bt.setAttribute('aria-label',b.t);bt.onclick=()=>s.scrollIntoView({behavior:'smooth'});li.appendChild(bt);ray.appendChild(li);});
-bol.querySelectorAll('.ileri').forEach(b=>b.onclick=()=>bol.children[+b.dataset.i].scrollIntoView({behavior:'smooth'}));
 let cur=-1,dongu=null,surukle=null;
 function go(i,zorla){if(i===cur&&!zorla)return;cur=i;const b=B[i];
   [...ray.children].forEach((li,k)=>li.firstChild.setAttribute('aria-current',k===i));[...bol.children].forEach((s,k)=>s.classList.toggle('etkin',k===i));
