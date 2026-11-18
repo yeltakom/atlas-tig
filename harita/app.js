@@ -3,7 +3,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const RED='#e2001a';
+const RED='#ff0000',PINK='#ffaee6',CYAN='#5df0e6',PURPLE='#552d7f';
 
 /* ---------- uydu görüntüleri ve altlıklar ---------- */
 const EOX=y=>({id:'s'+y,ad:y+' · Sentinel-2 yıllık mozaik (10 m)',yil:y,max:14,tiles:['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-'+y+'_3857/default/g/{z}/{y}/{x}.jpg'],att:'Sentinel-2 cloudless, EOX IT Services GmbH (Copernicus Sentinel verisi '+y+')'});
@@ -15,6 +15,7 @@ const IM=[GIBS(1985),GIBS(1990),GIBS(2000),EOX(2016),EOX(2017),EOX(2018),EOX(201
   {id:'osm',ad:'Harita · OpenStreetMap',max:19,tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],att:'© OpenStreetMap katkıcıları'},
   {id:'topo',ad:'Harita · topoğrafya',max:16,tiles:['https://a.tile.opentopomap.org/{z}/{x}/{y}.png'],att:'© OpenStreetMap katkıcıları, SRTM. Stil © OpenTopoMap (CC BY-SA)'},
   {id:'bos',ad:'Altlık yok',tiles:null}];
+IM.push({id:'kabartma',ad:'Kabartma · arazi gölgelendirmesi',max:15,tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}'],att:'Esri World Hillshade (Esri, USGS, NASA)'});
 const imById=Object.fromEntries(IM.map(i=>[i.id,i]));
 const cur={A:'s2018',B:'s2021'};
 
@@ -25,13 +26,13 @@ const lab=(id,source,filter,extra)=>Object.assign({id,type:'symbol',source,filte
 const REF={type:'FeatureCollection',features:[['Batman',41.1322,37.8874],['Siirt',41.95,37.9333],['Bismil',40.659,37.8469],['Hasankeyf (eski yer)',41.4133,37.7147],['Yeni Hasankeyf',41.417,37.7314],['Ilısu Barajı',41.85,37.5286],['Kurtalan',41.7028,37.9267],['Dargeçit',41.7178,37.5461],['Beşiri',41.2917,37.9203],['Gercüş',41.3844,37.5681]].map(r=>({type:'Feature',properties:{ad:r[0]},geometry:{type:'Point',coordinates:[r[1],r[2]]}}))};
 const LAYERS=[
  {id:'yolbag',type:'line',source:'yolbag',paint:{'line-color':'#fff','line-opacity':.45,'line-width':['match',['get','sinif'],'primary',1.6,'trunk',1.8,'motorway',2,'secondary',1.1,.7]}},
- {id:'gol-fill',type:'fill',source:'gol',paint:{'fill-color':RED,'fill-opacity':.14}},
+ {id:'gol-fill',type:'fill',source:'gol',paint:{'fill-color':CYAN,'fill-opacity':.13}},
  {id:'arazi',type:'fill',source:'arazi',filter:['all',['in',['get','sinif'],['literal',['farm','orchard','cemetery','residential']]],['!=',['get','gol_iliskisi'],'kiyi_1500m']],paint:{'fill-color':['match',['get','sinif'],'farm','#b7e04a','orchard','#3fbf6f','cemetery','#c9a6ff','#ffffff'],'fill-opacity':.42,'fill-outline-color':'#000'}},
  {id:'su',type:'line',source:'su',paint:{'line-color':'#5cc8ff','line-width':['case',['==',['get','ad'],'Dicle Nehri'],2.6,['==',['get','sinif'],'river'],1.6,.9],'line-opacity':.95}},
  {id:'yolin',type:'line',source:'yolin',filter:['>=',['get','oran'],.3],paint:{'line-color':'#ffd400','line-width':['match',['get','sinif'],'primary',2.4,'trunk',2.4,'secondary',2,'tertiary',1.5,1],'line-dasharray':[2,1.5]}},
  {id:'kopru',type:'circle',source:'yolin',filter:['==',['get','kopru'],true],paint:{'circle-radius':3,'circle-color':'#ffd400','circle-stroke-color':'#000','circle-stroke-width':1}},
- {id:'gol-line',type:'line',source:'gol',paint:{'line-color':RED,'line-width':1.6}},
- {id:'isi',type:'heatmap',source:'koy',filter:['==',['get','gol_iliskisi'],'gol_icinde'],maxzoom:13,paint:{'heatmap-radius':['interpolate',['linear'],['zoom'],8,18,12,60],'heatmap-opacity':.7,'heatmap-color':['interpolate',['linear'],['heatmap-density'],0,'rgba(0,0,0,0)',.25,'rgba(255,220,0,.5)',.6,'rgba(255,120,0,.75)',1,'rgba(226,0,26,.9)']}},
+ {id:'gol-line',type:'line',source:'gol',paint:{'line-color':CYAN,'line-width':1.8}},
+ {id:'isi',type:'heatmap',source:'koy',filter:['==',['get','gol_iliskisi'],'gol_icinde'],maxzoom:13,paint:{'heatmap-radius':['interpolate',['linear'],['zoom'],8,18,12,60],'heatmap-opacity':.7,'heatmap-color':['interpolate',['linear'],['heatmap-density'],0,'rgba(0,0,0,0)',.25,'rgba(255,220,0,.5)',.6,'rgba(255,120,0,.75)',1,'rgba(255,174,230,.95)']}},
  {id:'iz',type:'circle',source:'iz',paint:{'circle-radius':['interpolate',['linear'],['get','alan_ha'],0.3,6,10,12,55,22],'circle-color':'rgba(255,255,255,0)','circle-stroke-color':'#fff','circle-stroke-width':1.6}},
  {id:'derinlik',type:'circle',source:'koy',filter:['all',['==',['get','gol_iliskisi'],'gol_icinde'],['has','yukseklik'],['<=',['get','yukseklik'],525]],paint:{'circle-radius':['interpolate',['linear'],['-',525,['get','yukseklik']],0,4,20,8,50,14,80,22],'circle-color':['interpolate',['linear'],['-',525,['get','yukseklik']],0,'#9fd8ff',25,'#2f8fe0',50,'#0b4fa8',80,'#041c5c'],'circle-opacity':.85,'circle-stroke-color':'#fff','circle-stroke-width':1}},
  {id:'geo',type:'circle',source:'geo',filter:['in',['get','sinif'],['literal',['S.RUIN','S.CAVE','S.BDG','S.MSQE','S.CH']]],paint:{'circle-radius':3,'circle-color':'#ff9a2e','circle-stroke-color':'#000','circle-stroke-width':.8}},
@@ -39,16 +40,16 @@ const LAYERS=[
  {id:'kamu',type:'circle',source:'osm',filter:['in',['get','sinif'],['literal',['school','graveyard','town_hall']]],paint:{'circle-radius':3.5,'circle-color':'#c9a6ff','circle-stroke-color':'#000','circle-stroke-width':1}},
  {id:'koy-k3',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'kiyi_3km'],paint:{'circle-radius':3,'circle-color':'#bbb','circle-stroke-color':'#000','circle-stroke-width':.8}},
  {id:'koy-k1',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'kiyi_1km'],paint:{'circle-radius':4,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':1.4}},
- {id:'koy-in',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'gol_icinde'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],8,3.5,13,6],'circle-color':RED,'circle-stroke-color':'#fff','circle-stroke-width':1.4}},
+ {id:'koy-in',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'gol_icinde'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],8,3.5,13,6],'circle-color':PINK,'circle-stroke-color':PURPLE,'circle-stroke-width':1.8}},
  lab('ark-lab','osm',['in',['get','sinif'],['literal',['archaeological','ruins']]],{top:{minzoom:11.5},layout:{'text-font':FONTR,'text-size':11},paint:{'text-color':'#ffd9a8'}}),
  lab('koy-k1-lab','koy',['==',['get','gol_iliskisi'],'kiyi_1km'],{top:{minzoom:11.5},layout:{'text-font':FONTR,'text-size':11}}),
- lab('koy-in-lab','koy',['==',['get','gol_iliskisi'],'gol_icinde'],{top:{minzoom:10.3},paint:{'text-color':'#fff','text-halo-color':RED,'text-halo-width':1.6}}),
+ lab('koy-in-lab','koy',['==',['get','gol_iliskisi'],'gol_icinde'],{top:{minzoom:10.3},paint:{'text-color':'#fff','text-halo-color':PURPLE,'text-halo-width':1.8}}),
  lab('ref-lab','ref',['all'],{layout:{'text-size':13,'text-offset':[0,0],'text-anchor':'center','text-transform':'uppercase','text-letter-spacing':.06},paint:{'text-halo-width':1.8}})
 ];
 const GROUPS=[
- {id:'g-gol',ad:'Göl sınırı',alt:'Baraj gölünün azami kıyı çizgisi',renk:RED,sek:'ln',layers:['gol-line'],on:true},
- {id:'g-golf',ad:'Göl alanı dolgusu',alt:'Eski görüntülerin üzerinde su altında kalacak alanı gösterir',renk:'rgba(226,0,26,.3)',sek:'sq',layers:['gol-fill'],on:true},
- {id:'g-koyin',ad:'Göl sınırı içindeki yerleşimler',alt:'Nokta göl poligonunun içine düşüyor',renk:RED,layers:['koy-in','koy-in-lab'],on:true},
+ {id:'g-gol',ad:'Göl sınırı',alt:'Baraj gölünün azami kıyı çizgisi',renk:CYAN,sek:'ln',layers:['gol-line'],on:true},
+ {id:'g-golf',ad:'Göl alanı dolgusu',alt:'Eski görüntülerin üzerinde su altında kalacak alanı gösterir',renk:'rgba(93,240,230,.35)',sek:'sq',layers:['gol-fill'],on:true},
+ {id:'g-koyin',ad:'Göl sınırı içindeki yerleşimler',alt:'Nokta göl poligonunun içine düşüyor',renk:PINK,layers:['koy-in','koy-in-lab'],on:true},
  {id:'g-koyk1',ad:'Kıyı yerleşimleri, 1 km',alt:'Kıyı çizgisine 1 km ve daha yakın',renk:'#fff',layers:['koy-k1','koy-k1-lab'],on:true},
  {id:'g-koyk3',ad:'Çevre yerleşimler, 1 ile 3 km',renk:'#bbb',layers:['koy-k3'],on:false},
  {id:'g-su',ad:'Nehir ve çaylar',alt:'Dicle ve kolları, göl içinde kalan dereler',renk:'#5cc8ff',sek:'ln',layers:['su'],on:true},
@@ -66,7 +67,7 @@ const GROUPS=[
 const CLICKABLE=['koy-in','koy-k1','koy-k3','ark','geo','kamu','iz','derinlik','kopru','arazi'];
 
 function baseStyle(){return {version:8,glyphs:'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',sources:{},layers:[{id:'zemin',type:'background',paint:{'background-color':'#e9e9e6'}}]};}
-function mk(el){const m=new maplibregl.Map({container:el,style:baseStyle(),center:[41.45,37.76],zoom:9.2,minZoom:7,maxZoom:17.5,attributionControl:false,dragRotate:false,pitchWithRotate:false});m.touchZoomRotate.disableRotation();return m;}
+function mk(el){const m=new maplibregl.Map({container:el,style:baseStyle(),center:[41.45,37.76],zoom:9.2,minZoom:7,maxZoom:17.5,attributionControl:false,dragRotate:false,pitchWithRotate:false,preserveDrawingBuffer:true});m.touchZoomRotate.disableRotation();return m;}
 const A=mk('mapA'),B=mk('mapB');const maps={A,B};
 B.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
 A.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-right');
@@ -88,6 +89,7 @@ const REL={gol_icinde:'Göl sınırının içinde',kiyi_1km:'Kıyıdan 1 km içi
 const SINIF={archaeological:'Arkeolojik alan',ruins:'Harabe',attraction:'Höyük ya da ziyaret yeri',school:'Okul',graveyard:'Mezarlık',town_hall:'Muhtarlık ya da belediye',farm:'Tarla',orchard:'Meyve bahçesi',cemetery:'Mezarlık',residential:'Konut alanı','S.RUIN':'Harabe kaydı','S.CAVE':'Mağara kaydı','S.BDG':'Köprü kaydı','S.MSQE':'Cami kaydı','S.CH':'Kilise kaydı'};
 function altNames(p){const n=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ı/g,'i').toLowerCase().replace(/[^a-z]/g,'');const seen=new Set([n(p.ad||'')]),out=[];String(p.diger||'').split(',').forEach(a=>{a=a.trim();const k=n(a);if(a&&!seen.has(k)){seen.add(k);out.push(a);}});return out.slice(0,5);}
 function popup(m,f,ll){const p=f.properties,L=f.layer.id;let h='';
+  if((L.startsWith('koy')||L==='derinlik')&&window.__atlas.koyCard)window.__atlas.koyCard(p,f.geometry.coordinates,true);
   if(L.startsWith('koy')||L==='derinlik'){const al=altNames(p);h='<b>'+esc(p.ad)+'</b>'+(al.length?'<span>Diğer adlar: '+esc(al.join(', '))+'</span>':'')+'<span>'+esc(p.il)+' · '+REL[p.gol_iliskisi]+(p.gol_iliskisi==='gol_icinde'?'':' ('+p.uzaklik_m+' m)')+'</span>'+(p.yukseklik!=null?'<span>Arazi yüksekliği '+p.yukseklik+' m'+(p.gol_iliskisi==='gol_icinde'&&p.yukseklik<=525?' · tahmini su derinliği '+(525-p.yukseklik)+' m':'')+'</span>':'')+'<span>Kaynak: GeoNames</span>';}
   else if(L==='iz'){h='<b>'+esc(p.ad||'Adsız yerleşim izi')+'</b><span>Haritalanmış konut alanı: '+p.alan_ha+' hektar, '+p.poligon+' parça</span><span>'+REL[p.gol_iliskisi]+'</span><span>Kaynak: OpenStreetMap 2022, ad en yakın GeoNames kaydından</span>';}
   else if(L==='saha'){h='<b>'+esc(p.ad)+'</b><span>Saha işareti · '+(p.konum==='gol_icinde'?'göl sınırının içinde':'göl sınırının dışında')+'</span>';}
@@ -122,7 +124,7 @@ const fitAll=()=>A.fitBounds([[40.76,37.49],[42.09,38.02]],{padding:20,duration:
 TUR.forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t[0];b.onclick=()=>{t[1]?A.flyTo({center:[t[1][0],t[1][1]],zoom:t[1][2],duration:1400}):fitAll();if(window.innerWidth<=860)window.scrollTo({top:0,behavior:'smooth'});};$('tur').appendChild(b);});
 
 /* ---------- bölümler ---------- */
-const PAN=['dosyalar','olaylar','yerlesimler','anitlar','arsiv','katmanlar','analiz','kaynaklar'];
+const PAN=['dosyalar','olaylar','yerlesimler','anitlar','arsiv','katmanlar','kutuphane','analiz','kaynaklar'];
 function route(){let h=location.hash.replace('#','');if(!PAN.includes(h))h='dosyalar';PAN.forEach(p=>{$('p-'+p).hidden=p!==h;});document.querySelectorAll('#nav a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+h));}
 window.addEventListener('hashchange',route);route();
 
@@ -161,5 +163,5 @@ function draw(){const q=$('ara').value.trim().toLocaleLowerCase('tr'),il=$('f-il
 /* ---------- başlat ---------- */
 let ready=0;const start=()=>{if(++ready<2)return;[A,B].forEach(addData);setImagery('A',cur.A);setImagery('B',cur.B);fitAll();};
 A.on('load',start);B.on('load',start);
-window.__atlas={A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT};
+window.__atlas={A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN,PURPLE,maps,cur,IM,REL,altNames,popup,koy:()=>KOY,draw};
 })();

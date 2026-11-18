@@ -8,13 +8,13 @@
 <title>Dicle Vadisi Atlası: Ilısu ve Hasankeyf, önce ve sonra</title>
 <meta name="description" content="Ilısu Barajı'nın Dicle vadisinde su altında bıraktığı yerleşimler, yollar, tarım alanları ve arkeolojik alanlar. Uydu görüntüleriyle önce ve sonra karşılaştırması.">
 <link rel="stylesheet" href="vendor/maplibre-gl.css">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="top">
   <div class="brand"><b>Dicle Vadisi Atlası</b><span>Ilısu Barajı ve Hasankeyf: araştırma platformu</span></div>
   <nav id="nav" aria-label="Bölümler">
-    <a href="#dosyalar">Dosyalar</a><a href="#olaylar">Olaylar</a><a href="#yerlesimler">Yerleşimler</a><a href="#anitlar">Anıtlar</a><a href="#arsiv">Görsel arşiv</a><a href="#katmanlar">Katmanlar</a><a href="#analiz">Analiz</a><a href="#kaynaklar">Yöntem</a>
+    <a href="#dosyalar">Dosyalar</a><a href="#olaylar">Olaylar</a><a href="#yerlesimler">Yerleşimler</a><a href="#anitlar">Anıtlar</a><a href="#arsiv">Görsel arşiv</a><a href="#kutuphane">Kütüphane</a><a href="#katmanlar">Katmanlar</a><a href="#analiz">Analiz</a><a href="#kaynaklar">Yöntem</a>
   </nav>
 </header>
 
@@ -26,7 +26,8 @@
       <div id="split" role="slider" aria-label="Önce ve sonra ayırıcı" tabindex="0"><i></i></div>
       <div class="tag tagA"><label for="imA">Sol</label><select id="imA"></select></div>
       <div class="tag tagB"><label for="imB">Sağ</label><select id="imB"></select></div>
-      <div class="mode"><button type="button" id="m-kars" aria-pressed="true">Karşılaştır</button><button type="button" id="m-tek" aria-pressed="false">Tek harita</button></div>
+      <div class="mode"><button type="button" id="m-kars" aria-pressed="true">Karşılaştır</button><button type="button" id="m-tek" aria-pressed="false">Tek harita</button><button type="button" id="kaydet" title="Bu görünümü PNG olarak indir">PNG</button></div>
+      <div id="gun" hidden><button type="button" id="gun-oy" aria-label="Oynat ya da durdur">Oynat</button><input type="range" id="gun-r" min="0" max="760" step="1" value="48" aria-label="Tarih"><b id="gun-t"></b><button type="button" id="gun-k" title="Doğal renk ile su vurgulu görüntü arasında geç">Renk</button><button type="button" id="gun-x" aria-label="Kapat">Kapat</button></div>
     </div>
     <div id="zc" aria-label="Zaman çizgisi"><div id="zc-lab"></div><div id="zc-in"></div></div>
   </section>
@@ -35,9 +36,9 @@
     <section id="kart" class="kart" hidden></section>
     <section id="p-dosyalar" class="panel">
       <div id="d-liste">
-        <p class="eyebrow">Visibility and Erasure · Çalışma sürümü 0.2 · 17.11.2026</p>
+        <p class="eyebrow">Visibility and Erasure · Çalışma sürümü 0.3 · 18.11.2026</p>
         <h1>Bir vadinin su altında bırakılması</h1>
-        <p>Ilısu Barajı 19 Temmuz 2019'da su tutmaya başladı. Bu platform, Dicle vadisinde ne olduğunu yedi dosyada toplar. Her dosya bir soru sorar, haritayı o soruya göre kurar, bulguyu, yöntemi, kaynağı ve hâlâ açık olan soruyu yan yana gösterir.</p>
+        <p>Ilısu Barajı 19 Temmuz 2019'da su tutmaya başladı. Bu platform, Dicle vadisinde ne olduğunu dosyalar hâlinde toplar. Her dosya bir soru sorar, haritayı o soruya göre kurar, bulguyu, yöntemi, kaynağı ve hâlâ açık olan soruyu yan yana gösterir.</p>
         <p class="warn"><b>Çalışma sürümü.</b> Haritadaki sonuçlar hesaba dayanır, yerinde doğrulanmamıştır. Her kayıtta kaynağı yazar.</p>
         <div id="ozet" class="nums"></div>
         <h2>Dosyalar</h2>
@@ -78,6 +79,15 @@
       <button type="button" id="k-daha" class="btn">Daha fazla göster</button>
     </section>
 
+    <section id="p-kutuphane" class="panel" hidden>
+      <h1>Kütüphane</h1>
+      <p class="small">Araştırmanın dayandığı belgeler, köy listeleri, tarihi haritalar, arşivler, görüntü kaynakları ve benzer projeler. Her kayıtta kaynağa bağlantı ve erişim durumu yazar. Bulunamayan birincil belgeler de listededir.</p>
+      <div id="ku-tur" class="chips"></div>
+      <div class="filters"><input id="ku-ara" type="search" placeholder="Başlık, kurum ya da not ara" aria-label="Kütüphanede ara"></div>
+      <p class="small" id="ku-say"></p>
+      <ul id="ku-liste" class="liste"></ul>
+    </section>
+
     <section id="p-katmanlar" class="panel" hidden>
       <h1>Katmanlar</h1>
       <h2>Veri katmanları</h2>
@@ -106,6 +116,12 @@
       <h2>Göl içinde kalan su yolları</h2><div id="a-su" class="bars"></div>
       <h2>Göl içinde kalan yollar</h2><p class="small">Ağustos 2022 haritasında hâlâ çizili duran yolların göl sınırı içindeki uzunluğu.</p><div id="a-yol" class="bars"></div>
       <h2>Göl içinde kalan arazi kullanımı</h2><p class="small">Haritalanmış alanlar. Gerçek kayıp bundan büyüktür, çünkü her tarla çizilmiş değil.</p><div id="a-arazi" class="bars"></div>
+      <h2>Köy nüfusu, 2007 ile 2024 arası</h2><p class="small" id="a-nufus-not"></p><div id="a-nufus" class="bars"></div>
+      <h2>2019'dan 2024'e en çok nüfus kaybeden yerleşimler</h2><p class="small">Göl sınırı içindeki ve kıyıdan 1 km içindeki yerleşimler. 2019 nüfusu 30 ve üstü olanlar.</p><div id="a-kayip" class="bars"></div>
+      <h2>Kayıtlı yer adları</h2><p class="small">Göl çevresindeki 260 yerleşimden kaçının başka dilde adı kayıtlı.</p><div id="a-ad" class="bars"></div>
+      <h2>Arkeolojik alanlar, duruma göre</h2><div id="a-ark" class="bars"></div>
+      <h2>Yıllık elektrik üretimi</h2><div id="a-uretim" class="bars"></div>
+      <h2>Yayımlanmış sayılar: kişi, hane, konut</h2><p class="small">Aynı baraj için farklı kaynakların verdiği sayılar. Her satırda neyin sayıldığı ve kaynağı yazar.</p><table class="tbl" id="a-sayi"></table>
       <h2>Görsel arşiv, kümelere göre</h2><div id="a-kkat" class="bars"></div>
       <h2>Görsel arşiv, dönemlere göre</h2><p class="small">Tarihi bilinen kayıtlar.</p><div id="a-kdon" class="bars"></div>
       <h2>Olaylar, şeritlere göre</h2><div id="a-oser" class="bars"></div>
@@ -125,6 +141,9 @@
         <li>Diğer adlar derleme veridir. Dil ve köken bilgisi içermez.</li>
         <li>Göl sınırı katmanının kaynağı belirsizdir. Hesaplanan alanı 318 km², resmi rakam 313 km².</li>
         <li>Yol ve arazi katmanları gönüllü haritalamaya dayanır, eksiktir.</li>
+        <li>Kürtçe, Ermenice ve Arapça adlar ile köy nüfusları Wikidata kayıtlarından alınmıştır, birincil kaynaktan doğrulanmamıştır.</li>
+        <li>Arkeolojik alanların bir kısmının konumu yaklaşıktır, kartında yazar.</li>
+        <li>Günlük MODIS görüntüsü 250 metre çözünürlüklüdür, bulutlu günlerde yer görünmez.</li>
         <li>Anıt konumları gönüllü haritalamadan alınmıştır, yerinde doğrulanmamıştır.</li>
         <li>Olay tarihleri yayımlanmış kaynaklardan derlenmiştir. Kaynakların uyuşmadığı yerde kayıtta not vardır.</li>
         <li>Görüşmeler ve araştırmacının saha konumları, onay süreci tamamlanana kadar yayımlanmaz.</li>
@@ -139,7 +158,8 @@
 </main>
 
 <script src="vendor/maplibre-gl.js"></script>
-<script src="app.js?v=4"></script>
-<script src="platform.js?v=4"></script>
+<script src="app.js?v=5"></script>
+<script src="platform.js?v=5"></script>
+<script src="ek.js?v=5"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* Dicle Vadisi Atlası 0.2: dosyalar, olaylar ve zaman çizgisi, anıtlar, görsel arşiv.
    app.js'ten sonra yüklenir; A, B, setImagery, turnOn, bars, $, esc, imById, fitAll oradan gelir. */
-(async function(){
-const {A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT}=window.__atlas;
+window.__atlas.platformReady=(async function(){
+const T=window.__atlas;const {A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN}=T;const ORANGE='#ff8a1f';
 const J=u=>fetch(u).then(r=>r.json());
 const [OL,AN,KO,KAM]=await Promise.all([J('data/olaylar.json'),J('data/anitlar.geojson'),J('data/korpus.json'),J('data/kamulastirma_2016.geojson')]);
 const mob=()=>window.innerWidth<=860;
@@ -16,23 +16,23 @@ const km=(a,b)=>{const R=6371,r=Math.PI/180,dy=(b[1]-a[1])*r,dx=(b[0]-a[0])*r,h=
 
 /* ---------- kayıt kartı ---------- */
 const kart=$('kart');
-function showCard(html){kart.innerHTML='<div class="kh">'+html.head+'<button type="button" id="k-kapat" aria-label="Kartı kapat">Kapat</button></div>'+html.body;kart.hidden=false;$('k-kapat').onclick=()=>{kart.hidden=true;setSel(null);};if(!mob())$('side').scrollTo({top:0,behavior:'smooth'});else kart.scrollIntoView({behavior:'smooth',block:'start'});}
+function showCard(html,ns){kart.innerHTML='<div class="kh">'+html.head+'<button type="button" id="k-kapat" aria-label="Kartı kapat">Kapat</button></div>'+html.body;kart.hidden=false;$('k-kapat').onclick=()=>{kart.hidden=true;setSel(null);};if(!mob())$('side').scrollTo({top:0,behavior:'smooth'});else if(!ns)kart.scrollIntoView({behavior:'smooth',block:'start'});}
 const dl=rows=>'<dl>'+rows.filter(r=>r[1]).map(r=>'<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>').join('')+'</dl>';
 
 /* ---------- harita katmanları ---------- */
 const OLG={type:'FeatureCollection',features:OL.filter(o=>o.yer).map(o=>({type:'Feature',properties:{id:o.id,ad:o.ad,serit:o.serit},geometry:{type:'Point',coordinates:o.yer}}))};
 const EMPTY={type:'FeatureCollection',features:[]};
 const NL=[
- {id:'anit-hat',type:'line',source:'anit',filter:['==',['get','tur'],'hat'],paint:{'line-color':'#fff','line-width':1.4,'line-dasharray':[1.5,1.5]}},
+ {id:'anit-hat',type:'line',source:'anit',filter:['==',['get','tur'],'hat'],paint:{'line-color':PINK,'line-width':1.6,'line-dasharray':[1.5,1.5]}},
  {id:'anit-yerinde',type:'circle',source:'anit',filter:['==',['get','tur'],'yerinde'],minzoom:11,paint:{'circle-radius':3.5,'circle-color':['case',['get','gol'],RED,'#111'],'circle-stroke-color':'#fff','circle-stroke-width':1}},
  {id:'anit-eski',type:'circle',source:'anit',filter:['==',['get','tur'],'eski'],paint:{'circle-radius':6,'circle-color':RED,'circle-stroke-color':'#fff','circle-stroke-width':1.6}},
  {id:'anit-yeni',type:'circle',source:'anit',filter:['==',['get','tur'],'yeni'],paint:{'circle-radius':6,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':1.6}},
  {id:'anit-lab',type:'symbol',source:'anit',filter:['in',['get','tur'],['literal',['eski','yeni']]],minzoom:13.2,layout:{'text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.8,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#fff','text-halo-color':'#000','text-halo-width':1.5}},
  {id:'kam',type:'circle',source:'kam',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#ffd400','circle-stroke-width':2.2}},
  {id:'kam-lab',type:'symbol',source:'kam',minzoom:10.5,layout:{visibility:'none','text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.9,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#ffd400','text-halo-color':'#000','text-halo-width':1.5}},
- {id:'olay',type:'circle',source:'olay',layout:{visibility:'none'},paint:{'circle-radius':4,'circle-color':['match',['get','serit'],'kasaba',RED,'devlet','#8a8a86','#fff'],'circle-stroke-color':'#000','circle-stroke-width':1}},
+ {id:'olay',type:'circle',source:'olay',layout:{visibility:'none'},paint:{'circle-radius':4,'circle-color':['match',['get','serit'],'kasaba',PINK,'devlet',ORANGE,'karsi',CYAN,'#fff'],'circle-stroke-color':'#000','circle-stroke-width':1}},
  {id:'sec',type:'circle',source:'sec',paint:{'circle-radius':15,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#fff','circle-stroke-width':2.5}},
- {id:'sec2',type:'circle',source:'sec',paint:{'circle-radius':19,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':RED,'circle-stroke-width':1.5}}
+ {id:'sec2',type:'circle',source:'sec',paint:{'circle-radius':19,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':PINK,'circle-stroke-width':1.5}}
 ];
 const NG=[
  {id:'g-anit',ad:'Anıtlar: eski yer, yeni yer, taşınma hattı',alt:'Kırmızı eski yer, beyaz yeni yer',renk:RED,layers:['anit-hat','anit-eski','anit-yeni','anit-lab'],on:true},
@@ -40,11 +40,12 @@ const NG=[
  {id:'g-kam',ad:'2016 acele kamulaştırma kararındaki köyler',alt:'Haber kaynaklı 48 köyden konumu bulunan '+KAM.features.length+' köy',renk:'#ffd400',layers:['kam','kam-lab'],on:false},
  {id:'g-olay',ad:'Olay yerleri',alt:'Konumu bilinen olaylar',renk:'#fff',layers:['olay'],on:false}
 ];
-new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();}).then(()=>[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('kam',{type:'geojson',data:KAM});m.addSource('sec',{type:'geojson',data:EMPTY});
+const mapReady=new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();});
+mapReady.then(()=>[A,B].forEach(m=>{m.addSource('anit',{type:'geojson',data:{type:'FeatureCollection',features:AN.features.filter(f=>f.geometry)}});m.addSource('olay',{type:'geojson',data:OLG});m.addSource('kam',{type:'geojson',data:KAM});m.addSource('sec',{type:'geojson',data:EMPTY});
   NL.forEach(l=>m.addLayer(JSON.parse(JSON.stringify(l))));
   ['anit-eski','anit-yeni','anit-yerinde','olay','kam'].forEach(id=>{m.on('click',id,e=>{const p=e.features[0].properties;id==='kam'?kamCard(p,e.features[0].geometry.coordinates):id==='olay'?selEvent(OL.find(o=>o.id===p.id),true):anitCard(p.ad,p.tur);});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');});}));
-const kl=$('katlist');NG.forEach(g=>{GROUPS.push(g);const l=document.createElement('label');l.innerHTML='<input type="checkbox" id="'+g.id+'"'+(g.on?' checked':'')+'><i style="background:'+g.renk+'"></i><span>'+esc(g.ad)+'</span><small>'+esc(g.alt)+'</small>';kl.insertBefore(l,kl.firstChild);
-  l.querySelector('input').onchange=e=>{g.on=e.target.checked;[A,B].forEach(m=>g.layers.forEach(id=>m.getLayer(id)&&m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));};});
+const kl=$('katlist');const addGroup=g=>{GROUPS.push(g);const l=document.createElement('label');l.innerHTML='<input type="checkbox" id="'+g.id+'"'+(g.on?' checked':'')+'><i style="background:'+g.renk+'"></i><span>'+esc(g.ad)+'</span><small>'+esc(g.alt)+'</small>';kl.insertBefore(l,kl.firstChild);
+  l.querySelector('input').onchange=e=>{g.on=e.target.checked;[A,B].forEach(m=>g.layers.forEach(id=>m.getLayer(id)&&m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));};};NG.forEach(addGroup);
 const setSel=c=>[A,B].forEach(m=>m.getSource('sec')&&m.getSource('sec').setData(c?{type:'Feature',properties:{},geometry:{type:'Point',coordinates:c}}:EMPTY));
 const KR={gol_icinde:'göl sınırının içinde',kiyi_1km:'kıyıdan 1 km içinde',kiyi_3km:'kıyıdan 1 ile 3 km arası',uzak:'kıyıdan 3 km\'den uzak'};
 function kamCard(p,c){showCard({head:'<div><p class="eyebrow">Acele kamulaştırma, 2016</p><h3>'+esc(p.ad)+'</h3></div>',body:dl([['İl, ilçe',esc(p.il)+', '+esc(p.ilce)],['Göle göre',KR[p.gol_iliskisi]],['Kaynak','Enerji Günlüğü, 14.10.2016 Resmî Gazete haberi'],['Konum','GeoNames ad eşleşmesi']])+'<p class="not">Karar köyün kendisini değil, göl altında kalacak köy yollarının taşınması için bazı taşınmazları kapsar.'+(p.aday>1?' Bu adla '+p.aday+' kayıt var, göle en yakın olanı seçildi. Konum belirsiz.':'')+'</p>'});setSel(c);}
@@ -83,7 +84,7 @@ ANIT.forEach(a=>{if(a.eski&&a.yeni)a.km=km(a.eski,a.yeni);});
 const AK={tasindi:'Taşındı',kismi:'Kısmen taşındı',birakildi:'Yerinde bırakıldı, su altında',celiski:'Kaynaklar çelişiyor',yerinde:'Yerinde'};
 function anitCard(ad,tur){const a=byAd[ad];if(!a)return;const p=a.p,c=a[tur]||a.eski||a.yeni||a.yerinde;
   showCard({head:'<div><p class="eyebrow">Anıt kaydı</p><h3>'+esc(ad)+'</h3></div>',
-   body:dl([['Durum',AK[p.akibet]+(p.akibet==='yerinde'?(p.gol?', göl sınırının içinde':', göl sınırının dışında'):'')],['Yapım',esc(p.yapim)],['Taşıma',esc(p.tarih)],['Mesafe',a.km?a.km.toFixed(2).replace('.',',')+' km, kuş uçuşu':''],['Kaynak',esc(p.kaynak)]])+(p.not?'<p class="not">'+esc(p.not)+'</p>':'')+
+   body:dl([['Durum',AK[p.akibet]+(p.akibet==='yerinde'?(p.gol?', göl sınırının içinde':', göl sınırının dışında'):'')],['Yapım',esc(p.yapim)],['Taşıma',esc(p.tarih)],['Mesafe',a.km?a.km.toFixed(2).replace('.',',')+' km, kuş uçuşu':''],['Kaynak',esc(p.kaynak)]])+(p.not?'<p class="not">'+esc(p.not)+'</p>':'')+(T.anitHook?T.anitHook(ad):'')+
    '<div class="row">'+(a.eski?'<button type="button" id="a-e">Eski yer</button>':'')+(a.yeni?'<button type="button" id="a-y">Yeni yer</button>':'')+(a.eski&&a.yeni?'<button type="button" id="a-b">İkisi birlikte</button>':'')+'</div>'});
   const fl=k=>{A.flyTo({center:k,zoom:16,duration:1200});setSel(k);toMap();};
   if(a.eski)$('a-e').onclick=()=>{setIm('w13045','w41468');fl(a.eski);};if(a.yeni)$('a-y').onclick=()=>{setIm('w13045','w41468');fl(a.yeni);};
@@ -152,11 +153,11 @@ const DOS=[
   yontem:'',acik:'Fotoğrafların yer eşleştirmesi ve görüşme onayları sürüyor.',kaynak:'Araştırmacının saha arşivi.',git:[]}
 ];
 const dl_=$('d-liste'),dd=$('d-detay');
-DOS.forEach(d=>{const b=document.createElement('button');b.type='button';b.innerHTML='<b>'+d.no+'</b><span>'+esc(d.ad)+'</span><strong>'+esc(d.sayi)+'</strong><em>'+esc(d.soru)+'</em>';b.onclick=()=>openDos(d);$('dos').appendChild(b);});
+const dosBtn=d=>{const b=document.createElement('button');b.type='button';b.innerHTML='<b>'+d.no+'</b><span>'+esc(d.ad)+'</span><strong>'+esc(d.sayi)+'</strong><em>'+esc(d.soru)+'</em>';b.onclick=()=>openDos(d);$('dos').appendChild(b);};DOS.forEach(dosBtn);const addDos=d=>{DOS.push(d);dosBtn(d);};
 function openDos(d){dl_.hidden=true;dd.hidden=false;kart.hidden=true;setSel(null);
-  dd.innerHTML='<div class="row"><button type="button" class="btn" id="d-geri">Bütün dosyalar</button></div><p class="eyebrow">Dosya '+d.no+'</p><h1>'+esc(d.ad)+'</h1><p>'+esc(d.soru)+'</p><h2>Bulgular</h2><ul>'+d.bulgu.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+(d.yontem?'<h2>Yöntem</h2><p>'+esc(d.yontem)+'</p>':'')+'<h2>Açık sorular</h2><p class="acik">'+esc(d.acik)+'</p><h2>Kaynak</h2><p class="small">'+esc(d.kaynak)+'</p>'+(d.git.length?'<h2>Kayıtlar</h2><div class="row">'+d.git.map(g=>'<a class="btn" href="'+g[1]+'">'+esc(g[0])+'</a>').join('')+'</div>':'');
-  $('d-geri').onclick=()=>{dd.hidden=true;dl_.hidden=false;};
+  dd.innerHTML='<div class="row"><button type="button" class="btn" id="d-geri">Bütün dosyalar</button></div><p class="eyebrow">Dosya '+d.no+'</p><h1>'+esc(d.ad)+'</h1><p>'+esc(d.soru)+'</p><h2>Bulgular</h2><ul>'+d.bulgu.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>'+(d.yontem?'<h2>Yöntem</h2><p>'+esc(d.yontem)+'</p>':'')+'<h2>Açık sorular</h2><p class="acik">'+esc(d.acik)+'</p><h2>Kaynak</h2><p class="small">'+esc(d.kaynak)+'</p>'+(d.ek?d.ek():'')+(d.git.length?'<h2>Kayıtlar</h2><div class="row">'+d.git.map(g=>'<a class="btn" href="'+g[1]+'">'+esc(g[0])+'</a>').join('')+'</div>':'');
+  $('d-geri').onclick=()=>{dd.hidden=true;dl_.hidden=false;};if(d.sonra)d.sonra();
   d.on.forEach(turnOn);if(d.im)setIm(d.im[0],d.im[1]);if(d.view)A.flyTo({center:[d.view[0],d.view[1]],zoom:d.view[2],duration:1400});else if(d.im)fitAll();
   if(!mob())$('side').scrollTo({top:0});}
-window.__atlas=Object.assign(window.__atlas||{},{OL,ANIT,KO,DOS,selEvent,openDos});
+Object.assign(T,{OL,ANIT,YER,KO,DOS,KAM,selEvent,openDos,showCard,dl,setSel,setIm,toMap,mob,addGroup,mapReady,addDos,imFor,km,trh,anitCard});
 })().catch(e=>console.error('platform',e));

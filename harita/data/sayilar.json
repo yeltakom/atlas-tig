@@ -1,0 +1,164 @@
+[
+ {
+  "sayi": "12.000-16.000",
+  "birim": "kisi",
+  "ne_sayiyor": "Balfour Beatty'nin ilk etkilenen nüfus tahmini",
+  "kaynak": "The Corner House brifingi, 6.9.2000",
+  "yil": 2000,
+  "url": "http://www.thecornerhouse.org.uk/resource/leaked-report-reveals-major-problems-ilisu-resettlement",
+  "tur": "stk"
+ },
+ {
+  "sayi": "36.000'e kadar",
+  "birim": "kisi",
+  "ne_sayiyor": "DTI raporunun (Aralık 1999) verdiği üst sınır",
+  "kaynak": "DTI raporu, The Corner House brifingindeki aktarımla",
+  "yil": 1999,
+  "url": "http://www.thecornerhouse.org.uk/resource/leaked-report-reveals-major-problems-ilisu-resettlement",
+  "tur": "resmi"
+ },
+ {
+  "sayi": "47.000-78.000",
+  "birim": "kisi",
+  "ne_sayiyor": "Yeniden yerleşim planındaki eksik sayım düzeltildiğinde etkilenen nüfus",
+  "kaynak": "Kudat'ın İsviçre ihracat kredi kuruluşu için RAP incelemesi, The Corner House aktarımıyla",
+  "yil": 2000,
+  "url": "http://www.thecornerhouse.org.uk/resource/leaked-report-reveals-major-problems-ilisu-resettlement",
+  "tur": "akademik"
+ },
+ {
+  "sayi": "70.000'e kadar",
+  "birim": "kisi",
+  "ne_sayiyor": "Önceki tahminlerin 2-3 katı, olası üst değer",
+  "kaynak": "The Corner House brifingi, 6.9.2000",
+  "yil": 2000,
+  "url": "http://www.thecornerhouse.org.uk/resource/leaked-report-reveals-major-problems-ilisu-resettlement",
+  "tur": "stk"
+ },
+ {
+  "sayi": "12.000-78.000",
+  "birim": "kisi",
+  "ne_sayiyor": "Doğrudan yerinden edilecek kişiler, kaynaklardaki alt ve üst uç",
+  "kaynak": "Eberlein ve ark., Water Alternatives 3(2): 291-312",
+  "yil": 2010,
+  "url": "https://www.academia.edu/72489212/The_Ilisu_dam_in_Turkey_and_the_role_of_Export_Credit_Agencies_and_NGO_networks",
+  "tur": "akademik"
+ },
+ {
+  "sayi": "199",
+  "birim": "yerlesim",
+  "ne_sayiyor": "Rezervuarın su altında bırakacağı toplam yerleşim",
+  "kaynak": "Eberlein ve ark., Water Alternatives 3(2): 291-312",
+  "yil": 2010,
+  "url": "https://www.academia.edu/72489212/The_Ilisu_dam_in_Turkey_and_the_role_of_Export_Credit_Agencies_and_NGO_networks",
+  "tur": "akademik"
+ },
+ {
+  "sayi": "183",
+  "birim": "yerlesim",
+  "ne_sayiyor": "Taslak RAP'ta sayılan yerleşim; üçte birinden azı anket kapsamında",
+  "kaynak": "Taslak RAP, Kudat incelemesi ve The Corner House aktarımıyla",
+  "yil": 2000,
+  "url": "http://www.thecornerhouse.org.uk/resource/leaked-report-reveals-major-problems-ilisu-resettlement",
+  "tur": "resmi"
+ },
+ {
+  "sayi": "78.000",
+  "birim": "kisi",
+  "ne_sayiyor": "Yerinden edilenler",
+  "kaynak": "Corporate Watch",
+  "yil": null,
+  "url": "https://corporatewatch.org/save-hasankeyf-stop-the-ilisu-dam-2/",
+  "tur": "stk"
+ },
+ {
+  "sayi": "30.000",
+  "birim": "kisi",
+  "ne_sayiyor": "Yerinden edilenlere ek olarak etkilenen göçerler; çoğu resmî sayımın dışında",
+  "kaynak": "Corporate Watch",
+  "yil": null,
+  "url": "https://corporatewatch.org/save-hasankeyf-stop-the-ilisu-dam-2/",
+  "tur": "stk"
+ },
+ {
+  "sayi": "52",
+  "birim": "yerlesim",
+  "ne_sayiyor": "Su altında kalan köy",
+  "kaynak": "MEIJSS 2021 (öğrenci dergisi, düşük güvenilirlik)",
+  "yil": 2021,
+  "url": "https://meijss.org/wp-content/uploads/2021/03/MEIJSS-1-8.pdf",
+  "tur": "akademik"
+ },
+ {
+  "sayi": "108",
+  "birim": "yerlesim",
+  "ne_sayiyor": "Etkilenen köy",
+  "kaynak": "MEIJSS 2021 (öğrenci dergisi, düşük güvenilirlik)",
+  "yil": 2021,
+  "url": "https://meijss.org/wp-content/uploads/2021/03/MEIJSS-1-8.pdf",
+  "tur": "akademik"
+ },
+ {
+  "sayi": "990",
+  "birim": "parsel",
+  "ne_sayiyor": "Köy yollarının rölekasyonu için acele kamulaştırılacak parsel, 4 ilde. Rezervuar kamulaştırmasının tamamı değil",
+  "kaynak": "2016/9271 sayılı karar, AA haberi (Habertürk)",
+  "yil": 2016,
+  "url": "https://yerel-haberler.haberturk.com/ankara-haberleri/acele-kamulastirma-karari-9720144",
+  "tur": "resmi"
+ },
+ {
+  "sayi": "48",
+  "birim": "yerlesim",
+  "ne_sayiyor": "2016/9271 sayılı kararın ekinde adı geçen köy, basın aktarımına göre. Resmî ekle karşılaştırılmadı",
+  "kaynak": "Enerji Günlüğü, 14.10.2016",
+  "yil": 2016,
+  "url": "https://www.enerjigunlugu.net/ilisu-baraji-ve-hes-icin-acele-kamulastirma-yapilacak-20140h.htm",
+  "tur": "basin"
+ },
+ {
+  "sayi": "875",
+  "birim": "konut",
+  "ne_sayiyor": "Yeni Hasankeyf'te yapılan konut",
+  "kaynak": "Eroğlu 2022, Dicle'nin Gizli Hazinesi Ilısu (takdim yazısı)",
+  "yil": 2022,
+  "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf",
+  "tur": "resmi"
+ },
+ {
+  "sayi": "154",
+  "birim": "diger",
+  "ne_sayiyor": "Yeni Hasankeyf'te yapılan işyeri",
+  "kaynak": "Eroğlu 2022, Dicle'nin Gizli Hazinesi Ilısu (takdim yazısı)",
+  "yil": 2022,
+  "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf",
+  "tur": "resmi"
+ },
+ {
+  "sayi": "30.000 TL",
+  "birim": "diger",
+  "ne_sayiyor": "Yeni Ilısu: aile başına ev için ödenen yaklaşık tazminat",
+  "kaynak": "Corporate Watch",
+  "yil": null,
+  "url": "https://corporatewatch.org/save-hasankeyf-stop-the-ilisu-dam-2/",
+  "tur": "stk"
+ },
+ {
+  "sayi": "60.000 TL",
+  "birim": "diger",
+  "ne_sayiyor": "Yeni Ilısu: araziye ek olarak ödenen tazminat",
+  "kaynak": "Corporate Watch",
+  "yil": null,
+  "url": "https://corporatewatch.org/save-hasankeyf-stop-the-ilisu-dam-2/",
+  "tur": "stk"
+ },
+ {
+  "sayi": "80.000 TL",
+  "birim": "diger",
+  "ne_sayiyor": "Yeni Ilısu: yeni konutların bedeli; tazminatla karşılaştırma için",
+  "kaynak": "Corporate Watch",
+  "yil": null,
+  "url": "https://corporatewatch.org/save-hasankeyf-stop-the-ilisu-dam-2/",
+  "tur": "stk"
+ }
+]

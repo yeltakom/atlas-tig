@@ -1,0 +1,130 @@
+[
+ {
+  "ad": "Gertrude Bell Archive, Album S: Hasankeyf (\"Hassan Kef\")",
+  "kurum": "Newcastle University",
+  "donem": "26-29 Nisan 1911",
+  "icerik": "Kale, Orta Kapı'nın kitabesi, Er-Rızk Camii, Cami el-Müluk minaresi, köprü ayakları, Dicle'den geçiş",
+  "kayit_no": "GB/3/1/19/1 (albüm). Örnek öğe GB/3/1/19/1/73, eski referans S_073",
+  "adet": "raporda belirtilmedi",
+  "lisans": "Lisans şartları bu araştırmada okunamadı; sitenin Terms sayfası kontrol edilmeli. Bell 1926'da öldüğü için eserler büyük olasılıkla kamu malı, sayısal görüntülerin kullanım koşulunu kurum belirliyor.",
+  "url": "https://gertrudebell.ncl.ac.uk/a/gb-3-1-19-1",
+  "not": "IIIF manifesti var. Kayıtlarda koordinat alanı bulunuyor, haritaya yerleştirmeyi kolaylaştırır. Hasankeyf başlıklarının taksonomi sayfası: https://gertrudebell.ncl.ac.uk/taxonomy/term/1739 . Kaynak listesinde ayrıca https://gertrudebell.ncl.ac.uk/p/GB-3-1-17-2-5 geçiyor, içeriği raporda açıklanmadı."
+ },
+ {
+  "ad": "Gertrude Bell Archive, öğe: \"Citadel - Fragments Of Arabic Inscription On Plaster Wall\"",
+  "kurum": "Newcastle University",
+  "donem": "Nisan 1911",
+  "icerik": "Hasankeyf kalesi, sıva duvarda Arapça kitabe parçaları",
+  "kayit_no": "GB/3/1/19/1/73 (eski S_073)",
+  "adet": "1",
+  "lisans": "Yukarıdaki albümle aynı, teyit edilmeli",
+  "url": "https://gertrudebell.ncl.ac.uk/p/gb-3-1-19-1-73",
+  "not": "Raporda adı geçen tek tekil kayıt."
+ },
+ {
+  "ad": "Albert Gabriel fotoğrafları",
+  "kurum": "",
+  "donem": "1932",
+  "icerik": "Hasankeyf anıtları",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "Telif kapsamında, 2042'ye kadar korumalı",
+  "url": "https://aktuelarkeoloji.com.tr/kategori/bir-uygarlik/gertrude-bell-ve-abert-gabriel-in-fotograflarinda-hasankeyf",
+  "not": "Bağlantı, Bell ve Gabriel koleksiyonlarını karşılaştıran Aktüel Arkeoloji yazısına gider. Fotoğraflar haritaya gömülmemeli, yalnızca bağlantı verilmeli."
+ },
+ {
+  "ad": "Kiepert, Karte von Kleinasien paftaları",
+  "kurum": "Library of Congress, NYPL, Stanford",
+  "donem": "1902-1916",
+  "icerik": "Tarihi harita paftaları (C VI Diarbekir, D VI Nisibin)",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "Kamu malı",
+  "url": "https://www.loc.gov/resource/g7430m.gct00325/?sp=23",
+  "not": "Ayrıntı tarihi haritalar listesinde."
+ },
+ {
+  "ad": "Wikimedia Commons (Hasankeyf kategorileri)",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "Flickr Creative Commons",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "Europeana",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "SALT Araştırma",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "Max von Oppenheim koleksiyonu",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "Creswell arşivi",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ },
+ {
+  "ad": "Houshamadyan",
+  "kurum": "",
+  "donem": "",
+  "icerik": "",
+  "kayit_no": "",
+  "adet": "",
+  "lisans": "",
+  "url": "",
+  "not": "Bu araştırmada taranamadı. Adet, lisans ve bağlantı bilgisi yok.",
+  "taranamadi": true
+ }
+]

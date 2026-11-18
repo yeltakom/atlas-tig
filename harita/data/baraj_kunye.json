@@ -1,0 +1,241 @@
+{
+ "teknik": [
+  {
+   "ozellik": "Yükseklik (temelden)",
+   "deger": "135 m",
+   "kaynak": "Batman Valiliği; DSİ",
+   "url": "https://www.batman.gov.tr/ilisu-baraji-ve-hes"
+  },
+  {
+   "ozellik": "Kret kotu",
+   "deger": "530,00 m",
+   "kaynak": "Batman Valiliği",
+   "url": "https://www.batman.gov.tr/ilisu-baraji-ve-hes"
+  },
+  {
+   "ozellik": "Kret uzunluğu",
+   "deger": "1.820 m",
+   "kaynak": "Sözcü; İngilizce Vikipedi",
+   "url": "https://www.sozcu.com.tr/2020/gundem/ilisu-baraji-nerede-ilisu-baraji-haritadaki-konumu-ve-tarihcesi-5824234/",
+   "not": "Yerel basındaki 1.775 m ile çelişir."
+  },
+  {
+   "ozellik": "Kret uzunluğu",
+   "deger": "1.775 m",
+   "kaynak": "Yerel basın",
+   "url": "",
+   "not": "1.820 m ile çelişir. Bağlantı raporda verilmedi."
+  },
+  {
+   "ozellik": "Gövde hacmi",
+   "deger": "24 milyon m³",
+   "kaynak": "DSİ",
+   "url": "",
+   "not": "43,9 milyon m³ ile çelişir, birim farkı olabilir."
+  },
+  {
+   "ozellik": "Gövde hacmi",
+   "deger": "43,9 milyon m³",
+   "kaynak": "İngilizce Vikipedi",
+   "url": "https://en.wikipedia.org/wiki/Il%C4%B1su_Dam",
+   "not": "24 milyon m³ ile çelişir, birim farkı olabilir."
+  },
+  {
+   "ozellik": "Depolama hacmi",
+   "deger": "10,41 milyar m³",
+   "kaynak": "Batman Valiliği",
+   "url": "https://www.batman.gov.tr/ilisu-baraji-ve-hes",
+   "not": "Kaynak eşleşmesi raporun tablo sırasına göre yapıldı."
+  },
+  {
+   "ozellik": "Depolama hacmi",
+   "deger": "10,5 milyar m³",
+   "kaynak": "Enerji Atlası",
+   "url": "https://www.enerjiatlasi.com/hidroelektrik/ilisu-baraji.html",
+   "not": "Kaynak eşleşmesi raporun tablo sırasına göre yapıldı."
+  },
+  {
+   "ozellik": "Depolama hacmi",
+   "deger": "10,6 milyar m³",
+   "kaynak": "Türkçe Vikipedi",
+   "url": "https://tr.wikipedia.org/wiki/Il%C4%B1su_Baraj%C4%B1_ve_Hidroelektrik_Santrali",
+   "not": "Kaynak eşleşmesi raporun tablo sırasına göre yapıldı."
+  },
+  {
+   "ozellik": "Aktif hacim",
+   "deger": "7,46 milyar m³",
+   "kaynak": "2005 EIA",
+   "url": ""
+  },
+  {
+   "ozellik": "Ölü hacim",
+   "deger": "2,95 milyar m³",
+   "kaynak": "2005 EIA",
+   "url": ""
+  },
+  {
+   "ozellik": "Göl alanı",
+   "deger": "313 km²",
+   "kaynak": "Batman Valiliği",
+   "url": "https://www.batman.gov.tr/ilisu-baraji-ve-hes"
+  },
+  {
+   "ozellik": "Göl alanı",
+   "deger": "318 km²",
+   "kaynak": "Açılış haberi",
+   "url": "",
+   "not": "Bağlantı raporda açıkça eşleştirilmedi."
+  },
+  {
+   "ozellik": "Maksimum su kotu",
+   "deger": "526,82 m",
+   "kaynak": "Türkçe Vikipedi",
+   "url": "https://tr.wikipedia.org/wiki/Il%C4%B1su_Baraj%C4%B1_ve_Hidroelektrik_Santrali"
+  },
+  {
+   "ozellik": "Kurulu güç",
+   "deger": "6 x 200 MW = 1.200 MW",
+   "kaynak": "DSİ; Enerji Atlası",
+   "url": "https://www.enerjiatlasi.com/hidroelektrik/ilisu-baraji.html"
+  },
+  {
+   "ozellik": "Kurulu güç (EÜAŞ kaydı)",
+   "deger": "1.208,6 MWe",
+   "kaynak": "EÜAŞ, Enerji Atlası aktarımıyla",
+   "url": "https://www.enerjiatlasi.com/hidroelektrik/ilisu-baraji.html"
+  },
+  {
+   "ozellik": "Yıllık üretim, proje değeri",
+   "deger": "4.120 GWh",
+   "kaynak": "DSİ",
+   "url": ""
+  },
+  {
+   "ozellik": "Yıllık üretim, 2005 EIA değeri",
+   "deger": "3.833 GWh",
+   "kaynak": "2005 EIA",
+   "url": ""
+  },
+  {
+   "ozellik": "Temel atma",
+   "deger": "5.8.2006",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "İnşaatın fiilen başlaması",
+   "deger": "2008",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "Kapakların kapanması",
+   "deger": "Haziran 2018 (Irak'ın talebiyle ertelendi)",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "Su tutmanın başlaması",
+   "deger": "19.7.2019",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "İlk türbin",
+   "deger": "19.5.2020",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "Resmî açılış",
+   "deger": "6.11.2021",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "ozellik": "Ad değişikliği",
+   "deger": "Haziran 2020: Ilısu Prof. Dr. Veysel Eroğlu Barajı",
+   "kaynak": "İTÜ haberi, 9.6.2020",
+   "url": "https://arsiv-haberler.itu.edu.tr/haberdetay/2020/06/09/i-tu-lu-prof-dr-veysel-eroglunun-adi-ilisu-barajina-verildi",
+   "not": "Resmî Gazete kararı bulunamadı, tören konuşmasıyla duyuruldu."
+  }
+ ],
+ "uretim": [
+  {
+   "yil": 2023,
+   "gwh": 2076,
+   "kaynak": "Enerji Atlası",
+   "url": "https://www.enerjiatlasi.com/hidroelektrik/ilisu-baraji.html",
+   "not": "Gerçekleşen yıllık üretim."
+  },
+  {
+   "yil": "2020-2024",
+   "gwh": 11200,
+   "kaynak": "Raporda kaynak eşleşmesi belirsiz: Enerji Atlası ya da Eroğlu 2022",
+   "url": "",
+   "not": "Dönem toplamı: 11,2 milyar kWh. Yıllık değer değil."
+  },
+  {
+   "yil": "19.05.2020 - Temmuz 2022",
+   "gwh": 4600,
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf",
+   "not": "Dönem toplamı: 4,6 milyar kWh. Yıllık değer değil."
+  }
+ ],
+ "su_seviyesi": [],
+ "su_seviyesi_kaynaklari": [
+  {
+   "ad": "DAHITI (DGFI, Münih Teknik Üniversitesi)",
+   "url": "https://dahiti.dgfi.tum.de/en/",
+   "not": "Altimetriye dayalı seviye, yüzey alanı ve hacim değişimi. Ücretsiz, kayıt gerekli. Ilısu'nun hedef listesinde olup olmadığı doğrulanmadı."
+  },
+  {
+   "ad": "Hydroweb",
+   "url": "",
+   "not": "Ilısu için seri olup olmadığı doğrulanmadı."
+  },
+  {
+   "ad": "G-REALM",
+   "url": "",
+   "not": "Ilısu için seri olup olmadığı doğrulanmadı."
+  },
+  {
+   "ad": "DSİ günlük göl kotu",
+   "url": "",
+   "not": "Kamuya açık bir seri bulunamadı."
+  }
+ ],
+ "asagi_havza": [
+  {
+   "baslik": "Kapakların kapanması Irak'ın talebiyle ertelendi",
+   "not": "Kapakların kapanması Haziran 2018 için öngörülmüştü, Irak'ın talebiyle ertelendi. Su tutma 19.7.2019'da başladı.",
+   "kaynak": "Eroğlu 2022",
+   "url": "https://assets.ctfassets.net/dq9b2d58kdrp/3NSY78vCy5c8TTOyl1O1gS/74d50d16619e0af0172837dac9e63283/Diclenin-Gizli-Hazinesi-Ilisu-Baraji.pdf"
+  },
+  {
+   "baslik": "Gerçekleşen üretim proje değerinin altında",
+   "not": "Gerçekleşen üretim yılda yaklaşık 2,1 ile 2,4 TWh, proje değeri 4,12 TWh. Farkın kuraklık ve Irak'a bırakılan sudan kaynaklanabileceği bir yorumdur, doğrulayan kaynak bulunamadı.",
+   "kaynak": "Enerji Atlası; DSİ (rapor karşılaştırması)",
+   "url": "https://www.enerjiatlasi.com/hidroelektrik/ilisu-baraji.html"
+  },
+  {
+   "baslik": "Cizre Barajı",
+   "not": "Resmî söylemde Ilısu'nun Cizre Barajı'nın yapılabilirliğine imkân sağladığı ve onunla 1 milyon dekar alanın sulanacağı geçiyor. Cizre Barajı planlama aşamasında.",
+   "kaynak": "Resmî söylem (raporda belirli kaynak gösterilmedi)",
+   "url": ""
+  },
+  {
+   "baslik": "Yukarı Dicle'deki diğer barajlar",
+   "not": "Batman, Dicle, Kralkızı, Garzan, Alkumru ve diğer barajların koordinatları ile işletmeye alınma yılları araştırmada doğrulanmadı.",
+   "kaynak": "Araştırma raporu",
+   "url": ""
+  },
+  {
+   "baslik": "Lessons Not Learned: Turkey's Ilisu Dam",
+   "not": "Save the Tigris kampanyasının değerlendirmesi. İçeriği raporda ayrıntılı aktarılmadı.",
+   "kaynak": "Save the Tigris",
+   "url": "https://savethetigris.org/lessons-not-learned-turkeys-ilisu-dam/"
+  }
+ ]
+}

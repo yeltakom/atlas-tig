@@ -1,0 +1,129 @@
+[
+ {
+  "ad": "Hasankeyf Matters",
+  "yapan": "Hasankeyf Matters",
+  "yil": "2017 (örnek yazı)",
+  "tur": "sorusturma",
+  "yontem": "Kampanya blogu. Tarihli birincil tanıklıklar ve teknik eleştiri, örneğin Zeynel Bey taşıma testinin eleştirisi.",
+  "bulgu": "Zeynel Bey Türbesi için test yükü 750 t, tahmin \"approximately 900 tons\".",
+  "url": "http://www.hasankeyfmatters.com/2017/05/failed-test-run-shows-impossibility-of.html"
+ },
+ {
+  "ad": "Lessons Not Learned: Turkey's Ilisu Dam",
+  "yapan": "Save the Tigris",
+  "yil": "",
+  "tur": "sorusturma",
+  "yontem": "Kampanya raporu",
+  "bulgu": "",
+  "url": "https://savethetigris.org/lessons-not-learned-turkeys-ilisu-dam/"
+ },
+ {
+  "ad": "BankTrack proje sayfası: Ilisu dam",
+  "yapan": "BankTrack",
+  "yil": "",
+  "tur": "sorusturma",
+  "yontem": "Finansörler üzerinden proje dosyası",
+  "bulgu": "",
+  "url": "https://www.banktrack.org/project/ilisu_dam"
+ },
+ {
+  "ad": "The Ilisu dam in Turkey and the role of Export Credit Agencies and NGO networks",
+  "yapan": "Eberlein, Drillisch, Ayboğa, Wenidoppler",
+  "yil": "2010",
+  "tur": "makale",
+  "yontem": "Water Alternatives 3(2): 291-312. İhracat kredi kuruluşları ve sivil toplum ağlarının belgeye dayalı incelemesi.",
+  "bulgu": "Rezervuar toplam 199 yerleşimi su altında bırakacak; doğrudan yerinden edilecekler 12.000 ile 78.000 arası; kredi kuruluşları 2009'da çekildi.",
+  "url": "https://www.academia.edu/72489212/The_Ilisu_dam_in_Turkey_and_the_role_of_Export_Credit_Agencies_and_NGO_networks"
+ },
+ {
+  "ad": "Archaeology affected by the Ilısu Dam in Turkey",
+  "yapan": "A. Tuba Ökse ve ekibi",
+  "yil": "2008",
+  "tur": "makale",
+  "yontem": "Antiquity Project Gallery 82(317). Yüzey araştırmaları ve kurtarma kazılarının envanteri.",
+  "bulgu": "500 arkeolojik alan tespit edildi, 20'sinde kurtarma kazısı yapıldı. Araştırmalar baraj yerinin kendisini de içeren bazı bölgeleri kapsamadı.",
+  "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BB872C0B4298AD197A0AEF186DFE9767/S2978855200903858a.pdf/archaeology-affected-by-the-ilisu-dam-in-turkey.pdf"
+ },
+ {
+  "ad": "Ilısu Barajı Etkileşim Sahasındaki Dicle Nehri Havzası'nın Diyarbakır, Batman ve Siirt il sınırları içindeki jeomorfolojik peyzajı",
+  "yapan": "Aktüel Arkeoloji (Ökse)",
+  "yil": "",
+  "tur": "makale",
+  "yontem": "Kazı alanlarının jeomorfolojik bağlamı",
+  "bulgu": "",
+  "url": "https://aktuelarkeoloji.com.tr/kategori/arkeoloji/ilisu-baraji-etkilesim-sahasindaki-dicle-nehri-havzasi-nin-diyarbakir-batman-ve-siirt-il-sinirlari-icindeki-jeomorfolojik-peyzaji"
+ },
+ {
+  "ad": "Yliki Gölü örneği: Sentinel-2 ve Sentinel-3 ile su seviyesi ve hacim",
+  "yapan": "Remote Sensing dergisi",
+  "yil": "2022",
+  "tur": "makale",
+  "yontem": "Sentinel-2 su alanı serisi ile Sentinel-3 altimetrisinin birleştirilmesi. Ilısu'ya uyarlanabilir.",
+  "bulgu": "",
+  "url": "https://doi.org/10.3390/rs14081860"
+ },
+ {
+  "ad": "Önerilen yöntem: JRC GSW transitions, Sentinel-2 NDWI ve MNDWI zaman serisi, altimetri ve hipsometri",
+  "yapan": "Araştırma raporunun önerisi",
+  "yil": "",
+  "tur": "veri",
+  "yontem": "Sentinel-2 alan serisi sayısal yükseklik modeliyle birleştirilerek seviye ve hacim yeniden kurulur; DAHITI tipi altimetri ile karşılaştırılır.",
+  "bulgu": "Ilısu dolumunu ölçen hakemli bir NDWI ya da InSAR makalesi bulunamadı. Bu bir literatür boşluğu.",
+  "url": "https://dahiti.dgfi.tum.de/en/"
+ },
+ {
+  "ad": "High-resolution mapping of global surface water and its long-term changes (JRC Global Surface Water)",
+  "yapan": "Pekel vd.",
+  "yil": "2016",
+  "tur": "veri",
+  "yontem": "Nature 540:418-422. Landsat arşivinden 1984 sonrası yüzey suyu haritası.",
+  "bulgu": "",
+  "url": "",
+  "doi": "10.1038/nature20584"
+ },
+ {
+  "ad": "The CORONA Atlas Project: Orthorectification of CORONA Satellite Imagery and Regional-Scale Archaeological Exploration in the Near East",
+  "yapan": "Casana ve Cothren",
+  "yil": "2013",
+  "tur": "makale",
+  "yontem": "CORONA görüntülerinin ortorektifikasyonu ve bölgesel arkeolojik keşif",
+  "bulgu": "",
+  "url": "https://www.researchgate.net/publication/295699300_The_CORONA_Atlas_Project_Orthorectification_of_CORONA_Satellite_Imagery_and_Regional-Scale_Archaeological_Exploration_in_the_Near_East"
+ },
+ {
+  "ad": "A review of the CORONA Atlas of the Middle East (Beta)",
+  "yapan": "",
+  "yil": "",
+  "tur": "makale",
+  "yontem": "CORONA Atlası'nın incelemesi; 1967 ve 1970 tarihli kareler örnek olarak geçiyor.",
+  "bulgu": "",
+  "url": "https://www.researchgate.net/publication/236617671_A_review_of_the_CORONA_Atlas_of_the_Middle_East_Beta"
+ },
+ {
+  "ad": "CAST Corona Clicker (QGIS eklentisi)",
+  "yapan": "ishibaro",
+  "yil": "",
+  "tur": "veri",
+  "yontem": "CORONA karelerinin dizinini ve kaba sınır kutularını kullanıp görüntüleri hızlı WMTS katmanı olarak yükler.",
+  "bulgu": "",
+  "url": "https://github.com/ishibaro/CAST-corona-clicker"
+ },
+ {
+  "ad": "wayback-core",
+  "yapan": "Esri",
+  "yil": "",
+  "tur": "veri",
+  "yontem": "Açık kaynak kütüphane. getMetadata(point, zoom, releaseNumber) ile Wayback sürümünün gerçek çekim tarihini verir.",
+  "bulgu": "",
+  "url": "https://github.com/Esri/wayback-core"
+ },
+ {
+  "ad": "State of Displacement: Entangled Topographies (İstanbul Bienali 2022)",
+  "yapan": "",
+  "yil": "2022",
+  "tur": "sanat",
+  "yontem": "Karşı haritalama projesi olabilir. Raporda yalnızca Drive'da görüldüğü, açılmadığı yazıyor.",
+  "bulgu": "",
+  "url": ""
+ }
+]
