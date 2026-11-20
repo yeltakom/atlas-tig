@@ -3,7 +3,8 @@
 (async function(){
 const T=window.__atlas; await T.platformReady;
 const {A,B,$,esc,bars,imById,fitAll,FONT,PINK,CYAN,PURPLE,RED,showCard,dl,setSel,setIm,toMap,mob,addGroup,mapReady,addDos,cur,REL,altNames,turnOn,setImagery,KAM,trh}=T;
-const ORANGE='#ff8a1f';
+const ORANGE='#ffffff';
+const ik=(id,source,filter,img,size,gizli)=>({id,type:'symbol',source,filter:filter||['all'],layout:Object.assign({'icon-image':img,'icon-size':size||1,'icon-allow-overlap':true,'icon-ignore-placement':true},gizli?{visibility:'none'}:{})});
 const J=u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null);
 const FILES=['arkeoloji.geojson','yeni_yerlesimler.geojson','barajlar.geojson','anit_ek.json','belgeler.json','sayilar.json','koy_adlari.json','baraj_kunye.json','listeler.json','goruntu_kaynaklari.json','tarihi_haritalar.json','foto_arsivleri.json','benzer_projeler.json','wikidata_yerlesim.json','wayback_cekim.json','saha_isaretleri.geojson'];
 const [ARK,YY,BRJ,AEK,BLG,SAYI,KAD,KUN,LST,GOR,THR,FOT,BNZ,WD,WBC,SAHA]=await Promise.all(FILES.map(f=>J('data/'+f)));
@@ -30,18 +31,18 @@ mapReady.then(()=>{[A,B].forEach(m=>{
   const before=m.getLayer('yolbag')?'yolbag':undefined;
   [['jrc-t','transitions'],['jrc-o','occurrence']].forEach(([id,k])=>{m.addSource(id,{type:'raster',tiles:[JRC+k+'/{z}/{x}/{y}.png'],tileSize:256,maxzoom:13,attribution:'Source: EC JRC/Google'});m.addLayer({id,type:'raster',source:id,layout:{visibility:'none'},paint:{'raster-opacity':.9}},before);});
   const hit=(id,fn)=>{m.on('click',id,e=>{const f=e.features[0];fn(f.properties,f.geometry.coordinates.slice());});m.on('mouseenter',id,()=>m.getCanvas().style.cursor='pointer');m.on('mouseleave',id,()=>m.getCanvas().style.cursor='');};
-  if(ARK){m.addSource('kazi',{type:'geojson',data:pts(ARK)});m.addLayer({id:'kazi',type:'circle',source:'kazi',paint:{'circle-radius':6.5,'circle-color':ORANGE,'circle-stroke-color':'#000','circle-stroke-width':1.8}});m.addLayer(lab('kazi-lab','kazi',ORANGE,9.6));hit('kazi',kaziCard);}
-  if(YY){m.addSource('yy',{type:'geojson',data:pts(YY)});m.addLayer({id:'yy',type:'circle',source:'yy',paint:{'circle-radius':7,'circle-color':CYAN,'circle-stroke-color':'#000','circle-stroke-width':1.8}});m.addLayer(lab('yy-lab','yy',CYAN,9));hit('yy',yyCard);}
-  if(BRJ){m.addSource('brj',{type:'geojson',data:pts(BRJ)});m.addLayer({id:'brj',type:'circle',source:'brj',layout:{visibility:'none'},paint:{'circle-radius':8,'circle-color':'#fff','circle-stroke-color':RED,'circle-stroke-width':2.5}});m.addLayer(Object.assign(lab('brj-lab','brj','#fff',7),{layout:Object.assign(lab('x','brj','#fff',7).layout,{visibility:'none'})}));hit('brj',brjCard);}
-  if(SAHA){m.addSource('saha',{type:'geojson',data:SAHA});m.addLayer({id:'saha',type:'circle',source:'saha',layout:{visibility:'none'},paint:{'circle-radius':5,'circle-color':'#ff3df0','circle-stroke-color':'#fff','circle-stroke-width':1.5}});m.addLayer(Object.assign(lab('saha-lab','saha','#ffd0fb',11),{layout:Object.assign(lab('x','saha','#fff',11).layout,{visibility:'none'})}));
+  if(ARK){m.addSource('kazi',{type:'geojson',data:pts(ARK)});m.addLayer(ik('kazi','kazi',null,'ucgen',1));m.addLayer(lab('kazi-lab','kazi',ORANGE,9.6));hit('kazi',kaziCard);}
+  if(YY){m.addSource('yy',{type:'geojson',data:pts(YY)});m.addLayer(ik('yy','yy',null,'kare-bos',1.15));m.addLayer(lab('yy-lab','yy',CYAN,9));hit('yy',yyCard);}
+  if(BRJ){m.addSource('brj',{type:'geojson',data:pts(BRJ)});m.addLayer({id:'brj',type:'circle',source:'brj',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'#000','circle-stroke-color':'#fff','circle-stroke-width':3}});m.addLayer(Object.assign(lab('brj-lab','brj','#fff',7),{layout:Object.assign(lab('x','brj','#fff',7).layout,{visibility:'none'})}));hit('brj',brjCard);}
+  if(SAHA){m.addSource('saha',{type:'geojson',data:SAHA});m.addLayer(ik('saha','saha',null,'kare',.7,true));m.addLayer(Object.assign(lab('saha-lab','saha','#fff',11),{layout:Object.assign(lab('x','saha','#fff',11).layout,{visibility:'none'})}));
     hit('saha',(p,c)=>{showCard({head:'<div><p class="eyebrow">Saha işareti, yalnızca yerel kopyada</p><h3>'+esc(p.ad)+'</h3></div>',body:dl([['Konum',p.konum==='gol_icinde'?'Göl sınırının içinde':'Göl sınırının dışında']])});setSel(c);});}
 });});
-if(SAHA)addGroup({id:'g-saha',ad:'Saha işaretleri',alt:'Araştırmacının kendi yer işaretleri, yayında yok',renk:'#ff3df0',layers:['saha','saha-lab'],on:false});
+if(SAHA)addGroup({id:'g-saha',ad:'Saha işaretleri',alt:'Araştırmacının kendi yer işaretleri, yayında yok',renk:'#fff',layers:['saha','saha-lab'],on:false});
 if(BRJ)addGroup({id:'g-brj',ad:'Yukarı Dicle barajları',alt:pts(BRJ).features.length+' barajın konumu işaretli, '+BRJ.features.length+' kayıt',renk:'#fff',layers:['brj','brj-lab'],on:false});
 if(YY)addGroup({id:'g-yy',ad:'Yeni yerleşimler',alt:'Yerinden edilenler için kurulan yerleşimler',renk:CYAN,layers:['yy','yy-lab'],on:true});
 if(ARK)addGroup({id:'g-kazi',ad:'Kurtarma kazıları ve arkeolojik alanlar',alt:pts(ARK).features.length+' alanın konumu işaretli, '+ARK.features.length+' kayıt',renk:ORANGE,layers:['kazi','kazi-lab'],on:true});
-addGroup({id:'g-jrco',ad:'Tematik: su görülme sıklığı, 1984 ile 2021',alt:'Koyu mavi her zaman su, açık mavi ara sıra su. Kaynak: EC JRC/Google',renk:'#3b6cff',layers:['jrc-o'],on:false});
-addGroup({id:'g-jrct',ad:'Tematik: su yüzeyi geçişleri, 1984 ile 2021',alt:'Yeşil yeni kalıcı su, yani baraj gölü. Mavi eskiden beri kalıcı su, yani nehir. Kaynak: EC JRC/Google',renk:'#22b14c',layers:['jrc-t'],on:false});
+addGroup({id:'g-jrco',ad:'Tematik: su görülme sıklığı, 1984 ile 2021',alt:'Koyu mavi her zaman su, açık mavi ara sıra su. Kaynak: EC JRC/Google',renk:'#8a8a8a',layers:['jrc-o'],on:false});
+addGroup({id:'g-jrct',ad:'Tematik: su yüzeyi geçişleri, 1984 ile 2021',alt:'Yeşil yeni kalıcı su, yani baraj gölü. Mavi eskiden beri kalıcı su, yani nehir. Kaynak: EC JRC/Google',renk:'#8a8a8a',layers:['jrc-t'],on:false});
 
 /* ---------- yerleşim kaydı ---------- */
 const KADm={};(KAD||[]).forEach(k=>{const n=nrm(k.resmi_ad);(KADm[n]=KADm[n]||[]).push(k);});
@@ -52,7 +53,7 @@ function koyCard(p,c,haritadan){const w=WD&&WD.k[p.id],al=altNames(p),ka=KADm[nr
   const eski=ka.flatMap(k=>k.eski_adlar.map(e=>esc(e.ad)+(e.dil&&e.dil!=='belirtilmemiş'?' ('+esc(e.dil)+')':'')));
   const pop=w?w.pop:[];let ph='';
   if(pop.length>2){const mx=Math.max(...pop.map(x=>x[1]),1),p19=pop.find(x=>x[0]===2019);
-    ph='<div class="spark" role="img" aria-label="Yıllara göre nüfus">'+pop.map(x=>'<i'+(x[0]>=2020?' class="s"':'')+' style="height:'+Math.max(2,100*x[1]/mx).toFixed(0)+'%" title="'+x[0]+': '+x[1]+'"></i>').join('')+'</div><div class="sparkx"><span>'+pop[0][0]+': '+sayi(pop[0][1])+'</span><span>'+(p19?'2019: '+sayi(p19[1]):'')+'</span><span>'+pop[pop.length-1][0]+': '+sayi(pop[pop.length-1][1])+'</span></div><p style="font-size:11.5px">Nüfus, yıllara göre. Kırmızı sütunlar su geldikten sonraki yıllar. Kaynak: Wikidata.</p>';}
+    ph='<div class="spark" role="img" aria-label="Yıllara göre nüfus">'+pop.map(x=>'<i'+(x[0]>=2020?' class="s"':'')+' style="height:'+Math.max(2,100*x[1]/mx).toFixed(0)+'%" title="'+x[0]+': '+x[1]+'"></i>').join('')+'</div><div class="sparkx"><span>'+pop[0][0]+': '+sayi(pop[0][1])+'</span><span>'+(p19?'2019: '+sayi(p19[1]):'')+'</span><span>'+pop[pop.length-1][0]+': '+sayi(pop[pop.length-1][1])+'</span></div><p style="font-size:11.5px">Nüfus, yıllara göre. Taralı sütunlar su geldikten sonraki yıllar. Kaynak: Wikidata.</p>';}
   const t13=tile(c[0],c[1],13),t15=tile(c[0],c[1],15);
   const E=y=>'https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-'+y+'_3857/default/g/13/'+t13.y+'/'+t13.x+'.jpg';
   const W=r=>'https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/'+r+'/15/'+t15.y+'/'+t15.x;
@@ -155,7 +156,7 @@ const liste=(id,items,fn)=>'<ul class="liste" id="'+id+'">'+items.map((x,i)=>'<l
 const bagla=(id,items,fn)=>{const u=$(id);if(u)u.querySelectorAll('button').forEach(b=>b.onclick=()=>fn(items[+b.dataset.i]));};
 if(ARK){const fs=ARK.features,n=fs.length,ko=pts(ARK).features.length,c={};fs.forEach(f=>{const d=f.properties.durum||'bilinmiyor';c[d]=(c[d]||0)+1;});
  addDos({no:'08',ad:'Kurtarma kazıları: su altındaki arkeoloji',soru:'Baraj alanında hangi alanlar kazıldı, hangilerinin akıbeti biliniyor?',sayi:String(n),view:null,im:['s2018','s2022'],on:['g-kazi','g-ark'],
-  bulgu:['Derlenen yayınlarda baraj gölü alanında adı geçen '+n+' arkeolojik alan ve kurtarma kazısı var. '+ko+' tanesinin konumu haritada işaretli.','Duruma göre: '+Object.entries(c).map(e=>(DUR[e[0]]||e[0]).toLocaleLowerCase('tr')+' '+e[1]).join(', ')+'.','Alanların çoğunda dönem, kazı yılı ve su altı durumu derlenen kaynaklarda yazmıyor. Kartlarda boş kalan alanlar bu yüzden boş.','Turuncu büyük noktalar bu dosyanın alanlarıdır. Turuncu küçük noktalar 2022 haritasındaki arkeolojik alan kayıtlarıdır.'],
+  bulgu:['Derlenen yayınlarda baraj gölü alanında adı geçen '+n+' arkeolojik alan ve kurtarma kazısı var. '+ko+' tanesinin konumu haritada işaretli.','Duruma göre: '+Object.entries(c).map(e=>(DUR[e[0]]||e[0]).toLocaleLowerCase('tr')+' '+e[1]).join(', ')+'.','Alanların çoğunda dönem, kazı yılı ve su altı durumu derlenen kaynaklarda yazmıyor. Kartlarda boş kalan alanlar bu yüzden boş.','Üçgenler bu dosyanın alanlarıdır. Küçük siyah noktalar 2022 haritasındaki arkeolojik alan kayıtlarıdır.'],
   yontem:'Alan listesi araştırma raporunda derlenen yayınlardan alındı. Kaynakta koordinat yoksa konum atlasın harita katmanlarındaki aynı adlı kayıttan alındı ve yaklaşık olarak işaretlendi.',
   acik:'Alanların su altında kalıp kalmadığı yayınlardan değil, göl sınırı hesabından geliyor. Kazı raporlarıyla tek tek doğrulanmalı. Yaklaşık konumlar 1 ile 2 km kayabilir.',
   kaynak:'Araştırma raporu, 17.11.2026; Ökse ve diğerleri 2008; OpenStreetMap; GeoNames.',git:[['Kütüphane','#kutuphane'],['Katmanlar','#katmanlar']],

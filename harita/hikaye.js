@@ -6,7 +6,15 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const qs=new URLSearchParams(location.search);
 const DEM=qs.get('dem')||'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
-const PINK='#ffaee6',CYAN='#5df0e6',PURPLE='#552d7f',ORANGE='#ff8a1f',RED='#ff0000';
+const PINK='#ffffff',CYAN='#ffffff',PURPLE='#000000',ORANGE='#ffffff',RED='#ffffff';
+function ikon(m){const mk=(ad,fn)=>{const s=32,c=document.createElement('canvas');c.width=c.height=s;const x=c.getContext('2d');fn(x,s);const d=x.getImageData(0,0,s,s);if(!m.hasImage(ad))m.addImage(ad,{width:s,height:s,data:new Uint8Array(d.data.buffer)},{pixelRatio:2});};
+ const cz=(x,yol,dolgu,cizgi,w)=>{x.beginPath();yol();x.closePath();if(dolgu){x.fillStyle=dolgu;x.fill();}x.lineWidth=w||3;x.strokeStyle=cizgi;x.stroke();};
+ mk('ucgen',(x,s)=>cz(x,()=>{x.moveTo(s/2,4);x.lineTo(s-4,s-5);x.lineTo(4,s-5);},'#fff','#000'));
+ mk('kare',(x,s)=>cz(x,()=>{x.rect(6,6,s-12,s-12);},'#fff','#000'));
+ mk('kare-bos',(x,s)=>{cz(x,()=>{x.rect(6,6,s-12,s-12);},null,'#000',8);cz(x,()=>{x.rect(6,6,s-12,s-12);},null,'#fff',4);});
+ mk('elmas',(x,s)=>{const p=()=>{x.moveTo(s/2,4);x.lineTo(s-4,s/2);x.lineTo(s/2,s-4);x.lineTo(4,s/2);};cz(x,p,null,'#000',8);cz(x,p,null,'#fff',4);});
+ mk('carpi',(x,s)=>{const l=(w,c)=>{x.beginPath();x.moveTo(7,7);x.lineTo(s-7,s-7);x.moveTo(s-7,7);x.lineTo(7,s-7);x.lineWidth=w;x.strokeStyle=c;x.stroke();};l(10,'#000');l(5,'#fff');});}
+const ik=(id,source,filter,img,size,gizli)=>({id,type:'symbol',source,filter:filter||['all'],layout:Object.assign({'icon-image':img,'icon-size':size||1,'icon-allow-overlap':true,'icon-ignore-placement':true},gizli?{visibility:'none'}:{})});
 const FONT=['Open Sans Bold'];
 const mob=()=>window.innerWidth<=860;
 const fmt=(v,d)=>v.toFixed(d).replace('.',',');
@@ -23,21 +31,21 @@ const B=[
   cam:{center:[41.43,37.74],zoom:9.7,pitch:55,bearing:-18},im:'s2018',kat:['gol'],su:null},
  {t:'Vadi',e:'01 · 2018, sudan önce',m:'Dicle, Bismil\'den Ilısu\'ya dar bir vadide akıyordu. Batman Çayı, Garzan ve Botan ona bu vadide karışıyordu. Bu atlasın hesabına göre bugünkü göl sınırının içinde Dicle\'nin 174 kilometresi, kollarıyla birlikte 443 kilometre nehir ve çay kaldı.',k:'Göl sınırı katmanı; OpenStreetMap, Ağustos 2022.',
   cam:{center:[41.22,37.795],zoom:10.9,pitch:62,bearing:82},im:'s2018',kat:['nehir'],su:null},
- {t:'Yerleşimler',e:'02 · kıyıdaki köyler',m:'Pembe noktalar, bugünkü göl sınırının içine düşen 73 yerleşim noktası. Beyaz noktalar kıyıya bir kilometreden yakın olanlar. Yayımlanmış sayılar 69 ile 199 arasında değişiyor, çünkü kaynaklar mezraları ve önceden boşaltılmış köyleri farklı sayıyor.',k:'GeoNames; yayımlanmış sayılar için atlasın Analiz bölümü.',
+ {t:'Yerleşimler',e:'02 · kıyıdaki köyler',m:'Beyaz noktalar, bugünkü göl sınırının içine düşen 73 yerleşim noktası. Siyah noktalar kıyıya bir kilometreden yakın olanlar. Yayımlanmış sayılar 69 ile 199 arasında değişiyor, çünkü kaynaklar mezraları ve önceden boşaltılmış köyleri farklı sayıyor.',k:'GeoNames; yayımlanmış sayılar için atlasın Analiz bölümü.',
   cam:{center:[41.62,37.80],zoom:10.7,pitch:58,bearing:-32},im:'s2018',kat:['gol','nehir','koy','kiyi'],su:null},
- {t:'Hasankeyf',e:'03 · eski kent',m:'Kale kayalığı ve aşağı şehir nehrin güney yakasında duruyordu. Kent 1978 ve 1981\'de iki aşamada sit alanı ilan edildi. Kırmızı noktalar, sonradan taşınan ya da yerinde bırakılan yapıların eski yerleri.',k:'HYG 2019, s. 30; OpenStreetMap.',
+ {t:'Hasankeyf',e:'03 · eski kent',m:'Kale kayalığı ve aşağı şehir nehrin güney yakasında duruyordu. Kent 1978 ve 1981\'de iki aşamada sit alanı ilan edildi. Çarpılar, sonradan taşınan ya da yerinde bırakılan yapıların eski yerleri.',k:'HYG 2019, s. 30; OpenStreetMap.',
   cam:{center:[41.4115,37.7128],zoom:14.7,pitch:66,bearing:172},im:'w2014',kat:['anit-eski','anit-yer'],su:null},
  {t:'Baraj',e:'04 · 2006 ile 2018 arası',m:'Temel 5 Ağustos 2006\'da atıldı. Almanya, Avusturya ve İsviçre kredi kuruluşları 7 Temmuz 2009\'da çekildi, inşaat yerli finansmanla sürdü. Gövde 2018\'de tamamlandı. Yüksekliği 135 metre, normal su kotu 525 metre.',k:'Özdemirkol 2023; Eberlein ve diğerleri 2010; Eroğlu 2022.',
   cam:{center:[41.8485,37.531],zoom:13.5,pitch:64,bearing:-38},im:'w2018',kat:['gol','baraj'],su:null},
- {t:'Taşıma',e:'05 · 2017 ile 2019 arası',m:'Zeynel Bey Türbesi 12 Mayıs 2017\'de taşındı. Ardından başka yapılar ve yapı parçaları yaklaşık iki kilometre kuzeydoğudaki Kültür Park\'a götürüldü. Pembe çizgiler taşınma hatları. Köprünün ayakları yerinde bırakıldı. 10 Ağustos 2017\'de kale kayalıkları patlatıldı, mağaralar dolduruldu.',k:'Eroğlu 2022; HYG 2019, s. 17; Anadolu Ajansı.',
+ {t:'Taşıma',e:'05 · 2017 ile 2019 arası',m:'Zeynel Bey Türbesi 12 Mayıs 2017\'de taşındı. Ardından başka yapılar ve yapı parçaları yaklaşık iki kilometre kuzeydoğudaki Kültür Park\'a götürüldü. Kesik çizgiler taşınma hatları, çarpı eski yer, kare yeni yer. Köprünün ayakları yerinde bırakıldı. 10 Ağustos 2017\'de kale kayalıkları patlatıldı, mağaralar dolduruldu.',k:'Eroğlu 2022; HYG 2019, s. 17; Anadolu Ajansı.',
   cam:{center:[41.4175,37.7205],zoom:14.1,pitch:62,bearing:38},im:'w2019',kat:['anit-hat','anit-eski','anit-yeni'],su:null},
- {t:'Su yükseliyor',e:'06 · 19 Temmuz 2019',m:'Kapaklar kapandı. Kamuoyuna önce test denildi. Bu görüntü bir modeldir: vadinin dolum öncesi arazi yüksekliğine göre, su kotu yükseldikçe göl sınırının içinde nerelerin su altında kaldığını gösterir. Tarihi değil kotu izler. Alttaki çubukla kotu kendin değiştirebilirsin.',k:'Arazi: Mapzen Terrain Tiles, SRTM. Göl sınırı katmanı. Model bu atlasın hesabıdır.',
+ {t:'Su yükseliyor',e:'06 · 19 Temmuz 2019',m:'Kapaklar kapandı. Kamuoyuna önce test denildi. Bu görüntü bir modeldir: vadinin dolum öncesi arazi yüksekliğine göre, su kotu yükseldikçe göl sınırının içinde nerelerin su altında kaldığını siyahla gösterir. Tarihi değil kotu izler. Alttaki çubukla kotu kendin değiştirebilirsin.',k:'Arazi: Mapzen Terrain Tiles, SRTM. Göl sınırı katmanı. Model bu atlasın hesabıdır.',
   cam:{center:[41.47,37.745],zoom:10.1,pitch:58,bearing:18},im:'s2018',kat:['gol','koy'],su:{from:'min',to:525,ms:16000}},
  {t:'Su Hasankeyf\'e ulaşıyor',e:'07 · Ekim 2019 ile 2020 başı',m:'8 Ekim 2019\'da eski kent güvenlik çemberine alındı. 4 Kasım\'da çarşı yıkıldı, 1955\'ten beri kullanılan eski Batman yolu kapandı. Su 2020 başında aşağı şehre ulaştı. Modelde nehir bu noktada yaklaşık 476 metrede, su kotu 525 metrede.',k:'soL Haber 2019; Hasankeyf Koordinasyonu 2019; NASA Earth Observatory 2020.',
   cam:{center:[41.412,37.7145],zoom:14.3,pitch:64,bearing:150},im:'w2014',kat:['gol','anit-eski','anit-yer'],su:{from:470,to:525,ms:12000}},
  {t:'Uydudan, yıl yıl',e:'08 · 2018 ile 2022 arası',m:'Aynı vadi, Sentinel-2 uydusunun yıllık mozaiklerinde. Görüntü 2018\'den 2022\'ye kendiliğinden ilerler. 2019 mozaiği ağırlıklı olarak dolum öncesi karelerden oluşur. Görüntü, dolum öncesi arazinin üzerine giydirildiği için su yamaçlara tırmanıyor gibi görünür.',k:'Sentinel-2 cloudless, EOX IT Services GmbH.',
   cam:{center:[41.50,37.76],zoom:10.3,pitch:50,bearing:-5},im:'s2018',kat:['gol'],su:0,dongu:['s2018','s2019','s2020','s2021','s2022']},
- {t:'Su altında kalanlar',e:'09 · bugün',m:'Göl sınırının içinde 73 yerleşim noktası, derlenen yayınlarda adı geçen 29 arkeolojik alan ve kurtarma kazısı, 2022 haritasında hâlâ çizili duran 306 kilometre yol var. Turuncu noktalar arkeolojik alanlar. Bu sayılar hesaba dayanır, doğrulanmış bir liste değildir.',k:'GeoNames; OpenStreetMap, Ağustos 2022; araştırma raporu, 17.11.2026.',
+ {t:'Su altında kalanlar',e:'09 · bugün',m:'Göl sınırının içinde 73 yerleşim noktası, derlenen yayınlarda adı geçen 29 arkeolojik alan ve kurtarma kazısı, 2022 haritasında hâlâ çizili duran 306 kilometre yol var. Üçgenler arkeolojik alanlar. Bu sayılar hesaba dayanır, doğrulanmış bir liste değildir.',k:'GeoNames; OpenStreetMap, Ağustos 2022; araştırma raporu, 17.11.2026.',
   cam:{center:[41.72,37.76],zoom:10.9,pitch:60,bearing:-58},im:'s2022',kat:['gol','koy','kazi'],su:525},
  {t:'Yeni Hasankeyf',e:'10 · yeniden yerleşim',m:'Yeni kent, eskisinin yaklaşık iki kilometre kuzeyinde kuruldu. Konut sayısı kaynaklara göre 698 ile 875 arasında değişiyor. 2.120 hak sahipliği başvurusundan 710\'u kabul edildi, 1.415\'i reddedildi. Taşınan yapılar kentin doğusundaki parkta yan yana duruyor.',k:'HYG 2017; Hasankeyf Kaymakamlığı; Eroğlu 2022.',
   cam:{center:[41.4215,37.7325],zoom:14.2,pitch:60,bearing:-24},im:'w2024',kat:['gol','anit-yeni','yy'],su:0},
@@ -61,7 +69,7 @@ const map=new maplibregl.Map({container:'hmap',style:{version:8,glyphs:'https://
 const HAND=['scrollZoom','boxZoom','dragRotate','dragPan','keyboard','doubleClickZoom','touchZoomRotate','touchPitch'];
 const serbest=on=>{HAND.forEach(h=>map[h]&&(on?map[h].enable():map[h].disable()));document.body.classList.toggle('serbest',on);$('serbest').textContent=on?'Anlatıya dön':'Serbest gez';$('serbest').setAttribute('aria-pressed',on);if(on)map.stop();else go(cur,true);};
 HAND.forEach(h=>map[h]&&map[h].disable());
-await new Promise(r=>map.on('load',r));
+await new Promise(r=>map.on('load',r));ikon(map);
 const [GOL,SUY,KOY,ANIT,ARK,YY]=await Promise.all(['gol','suyollari','yerlesimler','anitlar','arkeoloji','yeni_yerlesimler'].map(f=>J('data/'+f+'.geojson')));
 const pts=fc=>({type:'FeatureCollection',features:(fc?fc.features:[]).filter(f=>f.geometry)});
 
@@ -70,7 +78,7 @@ let arazi=false;
 try{map.addSource('dem',{type:'raster-dem',tiles:[DEM],encoding:'terrarium',tileSize:256,maxzoom:13,attribution:'Arazi: Mapzen Terrain Tiles (SRTM ve diğerleri), AWS Open Data'});
   map.addSource('dem2',{type:'raster-dem',tiles:[DEM],encoding:'terrarium',tileSize:256,maxzoom:13});
   map.setTerrain({source:'dem',exaggeration:1.5});arazi=true;
-  if(map.setSky)map.setSky({'sky-color':'#07030f','horizon-color':'#2a1640','fog-color':'#0b0613','fog-ground-blend':.55,'horizon-fog-blend':.6,'sky-horizon-blend':.9,'atmosphere-blend':.5});
+  if(map.setSky)map.setSky({'sky-color':'#000000','horizon-color':'#3a3a3a','fog-color':'#0d0d0d','fog-ground-blend':.55,'horizon-fog-blend':.6,'sky-horizon-blend':.9,'atmosphere-blend':.5});
 }catch(e){console.warn('arazi yok',e);}
 if(arazi)map.addLayer({id:'golge',type:'hillshade',source:'dem2',paint:{'hillshade-exaggeration':.32,'hillshade-shadow-color':'#000','hillshade-highlight-color':'#fff','hillshade-accent-color':'#000'}});
 else map.addLayer({id:'golge',type:'background',paint:{'background-color':'#000','background-opacity':0}});
@@ -92,16 +100,16 @@ const ALL=true;
 const L={
  gol:[{id:'gol',type:'line',source:'gol',paint:{'line-color':CYAN,'line-width':1.8}}],
  nehir:[{id:'nehir',type:'line',source:'suy',filter:['==',['get','sinif'],'river'],paint:{'line-color':CYAN,'line-width':['case',['==',['get','ad'],'Dicle Nehri'],3,1.6],'line-opacity':.9}}],
- kiyi:[{id:'kiyi',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'kiyi_1km'],paint:{'circle-radius':3.5,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':1.2}}],
+ kiyi:[{id:'kiyi',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'kiyi_1km'],paint:{'circle-radius':3.5,'circle-color':'#000','circle-stroke-color':'#fff','circle-stroke-width':1.3}}],
  koy:[{id:'koy',type:'circle',source:'koy',filter:['==',['get','gol_iliskisi'],'gol_icinde'],paint:{'circle-radius':['interpolate',['linear'],['zoom'],8,3.5,13,6.5],'circle-color':PINK,'circle-stroke-color':PURPLE,'circle-stroke-width':1.8}},
       lab('koy-lab','koy',['==',['get','gol_iliskisi'],'gol_icinde'],'#fff',10.4)],
  'anit-hat':[{id:'anit-hat',type:'line',source:'anit',filter:['==',['get','tur'],'hat'],paint:{'line-color':PINK,'line-width':2.2,'line-dasharray':[1.5,1.2]}}],
  'anit-yer':[{id:'anit-yer',type:'circle',source:'anit',filter:['==',['get','tur'],'yerinde'],paint:{'circle-radius':4,'circle-color':['case',['get','gol'],RED,'#111'],'circle-stroke-color':'#fff','circle-stroke-width':1.2}}],
- 'anit-eski':[{id:'anit-eski',type:'circle',source:'anit',filter:['==',['get','tur'],'eski'],paint:{'circle-radius':7,'circle-color':RED,'circle-stroke-color':'#fff','circle-stroke-width':2}},lab('anit-eski-lab','anit',['==',['get','tur'],'eski'],'#fff',12.5)],
- 'anit-yeni':[{id:'anit-yeni',type:'circle',source:'anit',filter:['==',['get','tur'],'yeni'],paint:{'circle-radius':7,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':2}},lab('anit-yeni-lab','anit',['==',['get','tur'],'yeni'],'#fff',13.2)],
- kazi:[{id:'kazi',type:'circle',source:'kazi',paint:{'circle-radius':6,'circle-color':ORANGE,'circle-stroke-color':'#000','circle-stroke-width':1.8}},lab('kazi-lab','kazi',['all'],ORANGE,10.4,11)],
- yy:[{id:'yy',type:'circle',source:'yy',paint:{'circle-radius':8,'circle-color':CYAN,'circle-stroke-color':'#000','circle-stroke-width':2}},lab('yy-lab','yy',['all'],CYAN,9,12.5)],
- baraj:[{id:'baraj',type:'circle',source:'baraj',paint:{'circle-radius':8,'circle-color':'#fff','circle-stroke-color':RED,'circle-stroke-width':3}},lab('baraj-lab','baraj',['all'],'#fff',8,13)]
+ 'anit-eski':[ik('anit-eski','anit',['==',['get','tur'],'eski'],'carpi',1.15),lab('anit-eski-lab','anit',['==',['get','tur'],'eski'],'#fff',12.5)],
+ 'anit-yeni':[ik('anit-yeni','anit',['==',['get','tur'],'yeni'],'kare',1.05),lab('anit-yeni-lab','anit',['==',['get','tur'],'yeni'],'#fff',13.2)],
+ kazi:[ik('kazi','kazi',null,'ucgen',1),lab('kazi-lab','kazi',['all'],ORANGE,10.4,11)],
+ yy:[ik('yy','yy',null,'kare-bos',1.25),lab('yy-lab','yy',['all'],CYAN,9,12.5)],
+ baraj:[{id:'baraj',type:'circle',source:'baraj',paint:{'circle-radius':7,'circle-color':'#000','circle-stroke-color':'#fff','circle-stroke-width':3}},lab('baraj-lab','baraj',['all'],'#fff',8,13)]
 };
 Object.values(L).flat().forEach(l=>{l.layout=Object.assign({},l.layout,{visibility:'none'});map.addLayer(l);});
 const katman=list=>Object.entries(L).forEach(([k,ls])=>ls.forEach(l=>map.setLayoutProperty(l.id,'visibility',list.includes(k)?'visible':'none')));
@@ -146,7 +154,7 @@ function olc(v){const k=ub(M.el,v,M.n);return {k,alan:M.cA[k],hacim:(v*M.cA[k]-M
 let suT=null;
 function ciz(v){if(!M.hazir)return;const s=olc(v),D=M.img.data;
   for(let k=0;k<M.prev;k++)D[4*M.idx[k]+3]=0;
-  for(let k=0;k<s.k;k++){const i=4*M.idx[k],t=Math.min(1,(v-M.el[k])/70);D[i]=93-83*t;D[i+1]=240-190*t;D[i+2]=230-80*t;D[i+3]=150+95*t;}
+  for(let k=0;k<s.k;k++){const i=4*M.idx[k],t=Math.min(1,(v-M.el[k])/70);D[i]=0;D[i+1]=0;D[i+2]=0;D[i+3]=120+125*t;}
   M.prev=s.k;sux.putImageData(M.img,0,0);const src=map.getSource('su');if(src&&src.play){src.play();clearTimeout(suT);suT=setTimeout(()=>src.pause(),350);}
   $('h-kot').textContent=fmt(v,0);$('h-alan').textContent=fmt(s.alan,0);$('h-hacim').textContent=fmt(s.hacim,1);$('h-koy').textContent=s.koy+' / '+M.koyN;$('h-r').value=v;
   const mxA=M.egri[M.egri.length-1][1]||1;$('h-nok').setAttribute('cx',(4+(v-M.min)/(525-M.min)*212).toFixed(1));$('h-nok').setAttribute('cy',(52-s.alan/mxA*46).toFixed(1));M.v=v;}

@@ -1,7 +1,8 @@
 /* Dicle Vadisi Atlası 0.2: dosyalar, olaylar ve zaman çizgisi, anıtlar, görsel arşiv.
    app.js'ten sonra yüklenir; A, B, setImagery, turnOn, bars, $, esc, imById, fitAll oradan gelir. */
 window.__atlas.platformReady=(async function(){
-const T=window.__atlas;const {A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN}=T;const ORANGE='#ff8a1f';
+const T=window.__atlas;const {A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN}=T;const ORANGE='#8a8a8a';
+const ik=(id,source,filter,img,size,gizli)=>({id,type:'symbol',source,filter:filter||['all'],layout:Object.assign({'icon-image':img,'icon-size':size||1,'icon-allow-overlap':true,'icon-ignore-placement':true},gizli?{visibility:'none'}:{})});
 const J=u=>fetch(u).then(r=>r.json());
 const [OL,AN,KO,KAM]=await Promise.all([J('data/olaylar.json'),J('data/anitlar.geojson'),J('data/korpus.json'),J('data/kamulastirma_2016.geojson')]);
 const mob=()=>window.innerWidth<=860;
@@ -25,19 +26,19 @@ const EMPTY={type:'FeatureCollection',features:[]};
 const NL=[
  {id:'anit-hat',type:'line',source:'anit',filter:['==',['get','tur'],'hat'],paint:{'line-color':PINK,'line-width':1.6,'line-dasharray':[1.5,1.5]}},
  {id:'anit-yerinde',type:'circle',source:'anit',filter:['==',['get','tur'],'yerinde'],minzoom:11,paint:{'circle-radius':3.5,'circle-color':['case',['get','gol'],RED,'#111'],'circle-stroke-color':'#fff','circle-stroke-width':1}},
- {id:'anit-eski',type:'circle',source:'anit',filter:['==',['get','tur'],'eski'],paint:{'circle-radius':6,'circle-color':RED,'circle-stroke-color':'#fff','circle-stroke-width':1.6}},
- {id:'anit-yeni',type:'circle',source:'anit',filter:['==',['get','tur'],'yeni'],paint:{'circle-radius':6,'circle-color':'#fff','circle-stroke-color':'#000','circle-stroke-width':1.6}},
+ ik('anit-eski','anit',['==',['get','tur'],'eski'],'carpi',1.05),
+ ik('anit-yeni','anit',['==',['get','tur'],'yeni'],'kare',.95),
  {id:'anit-lab',type:'symbol',source:'anit',filter:['in',['get','tur'],['literal',['eski','yeni']]],minzoom:13.2,layout:{'text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.8,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#fff','text-halo-color':'#000','text-halo-width':1.5}},
- {id:'kam',type:'circle',source:'kam',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#ffd400','circle-stroke-width':2.2}},
- {id:'kam-lab',type:'symbol',source:'kam',minzoom:10.5,layout:{visibility:'none','text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.9,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#ffd400','text-halo-color':'#000','text-halo-width':1.5}},
+ ik('kam','kam',null,'elmas',1,true),
+ {id:'kam-lab',type:'symbol',source:'kam',minzoom:10.5,layout:{visibility:'none','text-field':['get','ad'],'text-font':FONT,'text-size':11,'text-offset':[0.9,0],'text-anchor':'left','text-optional':true},paint:{'text-color':'#fff','text-halo-color':'#000','text-halo-width':1.5}},
  {id:'olay',type:'circle',source:'olay',layout:{visibility:'none'},paint:{'circle-radius':4,'circle-color':['match',['get','serit'],'kasaba',PINK,'devlet',ORANGE,'karsi',CYAN,'#fff'],'circle-stroke-color':'#000','circle-stroke-width':1}},
  {id:'sec',type:'circle',source:'sec',paint:{'circle-radius':15,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#fff','circle-stroke-width':2.5}},
  {id:'sec2',type:'circle',source:'sec',paint:{'circle-radius':19,'circle-color':'rgba(0,0,0,0)','circle-stroke-color':PINK,'circle-stroke-width':1.5}}
 ];
 const NG=[
- {id:'g-anit',ad:'Anıtlar: eski yer, yeni yer, taşınma hattı',alt:'Kırmızı eski yer, beyaz yeni yer',renk:RED,layers:['anit-hat','anit-eski','anit-yeni','anit-lab'],on:true},
- {id:'g-anity',ad:'Yerinde kalan kazı alanları ve yapılar',alt:'Kırmızı göl sınırı içinde, siyah dışında',renk:'#111',layers:['anit-yerinde'],on:true},
- {id:'g-kam',ad:'2016 acele kamulaştırma kararındaki köyler',alt:'Haber kaynaklı 48 köyden konumu bulunan '+KAM.features.length+' köy',renk:'#ffd400',layers:['kam','kam-lab'],on:false},
+ {id:'g-anit',ad:'Anıtlar: eski yer, yeni yer, taşınma hattı',alt:'Çarpı eski yer, kare yeni yer, kesik çizgi taşınma hattı',renk:RED,layers:['anit-hat','anit-eski','anit-yeni','anit-lab'],on:true},
+ {id:'g-anity',ad:'Yerinde kalan kazı alanları ve yapılar',alt:'Beyaz nokta göl sınırı içinde, siyah nokta dışında',renk:'#000',layers:['anit-yerinde'],on:true},
+ {id:'g-kam',ad:'2016 acele kamulaştırma kararındaki köyler',alt:'Haber kaynaklı 48 köyden konumu bulunan '+KAM.features.length+' köy',renk:'#fff',layers:['kam','kam-lab'],on:false},
  {id:'g-olay',ad:'Olay yerleri',alt:'Konumu bilinen olaylar',renk:'#fff',layers:['olay'],on:false}
 ];
 const mapReady=new Promise(ok=>{const t=()=>(A.getSource('gol')&&B.getSource('gol'))?ok():setTimeout(t,120);t();});

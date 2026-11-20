@@ -3,7 +3,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const RED='#ff0000',PINK='#ffaee6',CYAN='#5df0e6',PURPLE='#552d7f';
+const RED='#ffffff',PINK='#ffffff',CYAN='#ffffff',PURPLE='#000000';
 
 /* ---------- uydu görüntüleri ve altlıklar ---------- */
 const EOX=y=>({id:'s'+y,ad:y+' · Sentinel-2 yıllık mozaik (10 m)',yil:y,max:14,tiles:['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-'+y+'_3857/default/g/{z}/{y}/{x}.jpg'],att:'Sentinel-2 cloudless, EOX IT Services GmbH (Copernicus Sentinel verisi '+y+')'});
@@ -54,7 +54,7 @@ const GROUPS=[
  {id:'g-koyk3',ad:'Çevre yerleşimler, 1 ile 3 km',renk:'#bbb',layers:['koy-k3'],on:false},
  {id:'g-su',ad:'Nehir ve çaylar',alt:'Dicle ve kolları, göl içinde kalan dereler',renk:'#5cc8ff',sek:'ln',layers:['su'],on:true},
  {id:'g-yol',ad:'Göl içinde kalan yollar ve köprüler',alt:'2022 haritasında hâlâ çizili duran yollar',renk:'#ffd400',sek:'ln',layers:['yolin','kopru'],on:true},
- {id:'g-arazi',ad:'Göl içinde kalan konut, tarla, bahçe, mezarlık',alt:'Beyaz konut alanı, yeşil tarla ve bahçe, mor mezarlık',renk:'#b7e04a',sek:'sq',layers:['arazi'],on:true},
+ {id:'g-arazi',ad:'Göl içinde kalan konut, tarla, bahçe, mezarlık',alt:'Beyaz konut alanı, açık gri tarla, koyu gri bahçe, siyah mezarlık',renk:'#b7e04a',sek:'sq',layers:['arazi'],on:true},
  {id:'g-ark',ad:'Arkeolojik alanlar ve höyükler',renk:'#ff9a2e',layers:['ark','ark-lab'],on:true},
  {id:'g-geo',ad:'Harabe, mağara, köprü kayıtları',alt:'Eski haritalardan derlenmiş yer kayıtları',renk:'#ff9a2e',layers:['geo'],on:false},
  {id:'g-kamu',ad:'Okul, mezarlık, muhtarlık',renk:'#c9a6ff',layers:['kamu'],on:false},
@@ -78,7 +78,24 @@ function setImagery(side,id){const m=maps[side],im=imById[id];cur[side]=id;
   if(im.tiles){m.addSource('uydu',{type:'raster',tiles:im.tiles,tileSize:256,maxzoom:im.max,attribution:im.att});
     const first=m.getStyle().layers.find(l=>l.id!=='zemin'&&l.id!=='uydu');m.addLayer({id:'uydu',type:'raster',source:'uydu'},first?first.id:undefined);}
   $('im'+side).value=id; document.querySelectorAll('#imlist button').forEach(b=>b.setAttribute('aria-pressed',cur[b.dataset.side]===b.dataset.id));}
-function addData(m){Object.entries(SRC).forEach(([k,u])=>m.addSource(k,{type:'geojson',data:u}));m.addSource('ref',{type:'geojson',data:REF});
+/* tek renk: siyah, beyaz, gri. Kategoriler renkle değil biçimle ayrılır. */
+const P=(id,o)=>Object.assign(LAYERS.find(l=>l.id===id).paint,o);
+P('gol-fill',{'fill-color':'#000','fill-opacity':.3});
+P('arazi',{'fill-color':['match',['get','sinif'],'farm','#d9d9d9','orchard','#9a9a9a','cemetery','#000000','#ffffff'],'fill-opacity':.42,'fill-outline-color':'#ffffff'});
+P('su',{'line-color':'#fff','line-opacity':.8});P('yolin',{'line-color':'#fff'});P('kopru',{'circle-color':'#fff'});
+P('isi',{'heatmap-color':['interpolate',['linear'],['heatmap-density'],0,'rgba(0,0,0,0)',.25,'rgba(255,255,255,.3)',.6,'rgba(255,255,255,.62)',1,'rgba(255,255,255,.96)']});
+P('derinlik',{'circle-color':['interpolate',['linear'],['-',525,['get','yukseklik']],0,'#ffffff',40,'#8a8a8a',80,'#000000'],'circle-stroke-color':'#fff','circle-stroke-width':1.4});
+P('geo',{'circle-color':'#000','circle-stroke-color':'#fff'});P('ark',{'circle-color':'#000','circle-stroke-color':'#fff','circle-stroke-width':1.5});P('kamu',{'circle-color':'#8a8a8a','circle-stroke-color':'#000'});
+P('koy-k3',{'circle-color':'#8a8a8a'});P('koy-k1',{'circle-color':'#000','circle-stroke-color':'#fff','circle-stroke-width':1.6});P('ark-lab',{'text-color':'#fff'});
+({'g-golf':'rgba(0,0,0,.55)','g-koyk1':'#000','g-koyk3':'#8a8a8a','g-su':'#fff','g-yol':'#fff','g-arazi':'#d9d9d9','g-ark':'#000','g-geo':'#000','g-kamu':'#8a8a8a','g-derinlik':'#8a8a8a'}),Object.entries({'g-golf':'rgba(0,0,0,.55)','g-koyk1':'#000','g-koyk3':'#8a8a8a','g-su':'#fff','g-yol':'#fff','g-arazi':'#d9d9d9','g-ark':'#000','g-geo':'#000','g-kamu':'#8a8a8a','g-derinlik':'#8a8a8a'}).forEach(([k,v])=>{const g=GROUPS.find(x=>x.id===k);if(g)g.renk=v;});
+function ikon(m){const mk=(ad,fn)=>{const s=32,c=document.createElement('canvas');c.width=c.height=s;const x=c.getContext('2d');fn(x,s);const d=x.getImageData(0,0,s,s);if(!m.hasImage(ad))m.addImage(ad,{width:s,height:s,data:new Uint8Array(d.data.buffer)},{pixelRatio:2});};
+ const cz=(x,yol,dolgu,cizgi,w)=>{x.beginPath();yol();x.closePath();if(dolgu){x.fillStyle=dolgu;x.fill();}x.lineWidth=w||3;x.strokeStyle=cizgi;x.stroke();};
+ mk('ucgen',(x,s)=>cz(x,()=>{x.moveTo(s/2,4);x.lineTo(s-4,s-5);x.lineTo(4,s-5);},'#fff','#000'));
+ mk('kare',(x,s)=>cz(x,()=>{x.rect(6,6,s-12,s-12);},'#fff','#000'));
+ mk('kare-bos',(x,s)=>{cz(x,()=>{x.rect(6,6,s-12,s-12);},null,'#000',8);cz(x,()=>{x.rect(6,6,s-12,s-12);},null,'#fff',4);});
+ mk('elmas',(x,s)=>{const p=()=>{x.moveTo(s/2,4);x.lineTo(s-4,s/2);x.lineTo(s/2,s-4);x.lineTo(4,s/2);};cz(x,p,null,'#000',8);cz(x,p,null,'#fff',4);});
+ mk('carpi',(x,s)=>{const l=(w,c)=>{x.beginPath();x.moveTo(7,7);x.lineTo(s-7,s-7);x.moveTo(s-7,7);x.lineTo(7,s-7);x.lineWidth=w;x.strokeStyle=c;x.stroke();};l(10,'#000');l(5,'#fff');});}
+function addData(m){ikon(m);Object.entries(SRC).forEach(([k,u])=>m.addSource(k,{type:'geojson',data:u}));m.addSource('ref',{type:'geojson',data:REF});
   LAYERS.forEach(l=>m.addLayer(JSON.parse(JSON.stringify(l))));
   GROUPS.forEach(g=>g.layers.forEach(id=>m.setLayoutProperty(id,'visibility',g.on?'visible':'none')));
   m.on('click',e=>{const f=m.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:CLICKABLE.filter(id=>m.getLayer(id))});if(!f.length)return;
@@ -163,5 +180,5 @@ function draw(){const q=$('ara').value.trim().toLocaleLowerCase('tr'),il=$('f-il
 /* ---------- başlat ---------- */
 let ready=0;const start=()=>{if(++ready<2)return;[A,B].forEach(addData);setImagery('A',cur.A);setImagery('B',cur.B);fitAll();};
 A.on('load',start);B.on('load',start);
-window.__atlas={A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN,PURPLE,maps,cur,IM,REL,altNames,popup,koy:()=>KOY,draw};
+window.__atlas={A,B,setImagery,turnOn,bars,$,esc,imById,fitAll,GROUPS,RED,FONT,PINK,CYAN,PURPLE,maps,cur,IM,REL,altNames,popup,koy:()=>KOY,draw,ikon};
 })();
