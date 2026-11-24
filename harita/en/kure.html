@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Tigris Valley Atlas: globe</title>
+<style>
+html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700}
+#kure{position:fixed;inset:0}#kure canvas{display:block;cursor:grab}#kure canvas:active{cursor:grabbing}
+.k{position:fixed;z-index:2;color:#fff;background:#000;border:1px solid #fff;font:inherit;font-size:12px;text-transform:uppercase;padding:5px 9px;text-decoration:none;cursor:pointer}
+.k:hover,.k:focus-visible{background:#fff;color:#000;outline:none}
+#geri{left:10px;top:10px}#atif-d{right:10px;bottom:10px;width:28px;padding:5px 0;text-align:center}
+#atif{position:fixed;z-index:2;right:10px;bottom:46px;max-width:340px;background:#fff;color:#000;border:1px solid #000;padding:9px 11px;font-size:11.5px;font-weight:400;line-height:1.35}
+#atif[hidden]{display:none}
+</style>
+</head>
+<body>
+<div id="kure" aria-label="Rotatable globe: overlapping images above Hasankeyf"></div>
+<a class="k" id="geri" href="index.html">← Atlas</a>
+<button class="k" id="atif-d" type="button" aria-label="Image credits">i</button>
+<div id="atif" hidden>Clouds: NASA EOSDIS GIBS, MODIS Terra, 19 July 2019, converted to black and white. Satellite fragments: Sentinel-2 cloudless, EOX IT Services GmbH (contains Copernicus Sentinel data); Esri World Imagery Wayback. Photographs and images: Visibility and Erasure visual corpus, rights remain with their makers. Pink line: reservoir boundary.</div>
+<script type="module" src="../kure.js?v=1"></script>
+</body>
+</html>

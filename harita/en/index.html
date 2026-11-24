@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Tigris Valley Atlas: Ilısu and Hasankeyf, before and after</title>
+<meta name="description" content="Settlements, roads, farmland and archaeological sites that the Ilısu Dam left under water in the Tigris valley. A before and after comparison with satellite imagery.">
+<link rel="stylesheet" href="../vendor/maplibre-gl.css">
+<link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body>
+<div class="akis" aria-hidden="true"><div><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span><span>Tigris Valley Atlas</span><span>Ilısu Dam and Hasankeyf</span><span lang="en">Visibility and Erasure</span><span>Impoundment 19/07/2019</span><span>Working version 0.4</span></div></div>
+<header class="top">
+  <h1 class="gizli">Tigris Valley Atlas: Ilısu Dam and Hasankeyf, research platform</h1>
+  <nav id="nav" aria-label="Sections">
+    <a href="../" lang="tr" hreflang="tr">TR</a><a href="hikaye.html">3D Narrative</a><a href="kure.html">Globe</a><a href="#dosyalar">Dossiers</a><a href="#olaylar">Events</a><a href="#yerlesimler">Settlements</a><a href="#anitlar">Monuments</a><a href="#arsiv">Visual archive</a><a href="#kutuphane">Library</a><a href="#katmanlar">Layers</a><a href="#analiz">Analysis</a><a href="#kaynaklar">Method</a>
+  </nav>
+</header>
+
+<main class="app">
+  <section class="mapwrap" aria-label="Map">
+    <div id="maps">
+      <div id="mapA" class="map"></div>
+      <div id="mapB" class="map"></div>
+      <div id="split" role="slider" aria-label="Before and after divider" tabindex="0"><i></i></div>
+      <div class="tag tagA"><label for="imA">Left</label><select id="imA"></select></div>
+      <div class="tag tagB"><label for="imB">Right</label><select id="imB"></select></div>
+      <div class="mode"><button type="button" id="m-kars" aria-pressed="true">Compare</button><button type="button" id="m-tek" aria-pressed="false">Single map</button><button type="button" id="m-3b" aria-pressed="false" title="Three-dimensional terrain: rotate with the right mouse button or two fingers">3D</button><button type="button" id="kaydet" title="Download this view as a PNG">PNG</button></div>
+      <div id="gun" hidden><button type="button" id="gun-oy" aria-label="Play or pause">Play</button><input type="range" id="gun-r" min="0" max="760" step="1" value="48" aria-label="Date"><b id="gun-t"></b><button type="button" id="gun-k" title="Switch between natural colour and a water-highlighted image">Colour</button><button type="button" id="gun-x" aria-label="Close">Close</button></div>
+    </div>
+    <div id="zc" aria-label="Timeline"><div id="zc-lab"></div><div id="zc-in"></div></div>
+  </section>
+
+  <aside class="side" id="side">
+    <section id="kart" class="kart" hidden></section>
+    <section id="p-dosyalar" class="panel">
+      <div id="d-liste">
+        <p class="eyebrow">Visibility and Erasure · Working version 0.4 · 20.11.2026</p>
+        <h1>The flooding of a valley</h1>
+        <p>The Ilısu Dam began impounding water on 19 July 2019. This platform gathers what happened in the Tigris valley into dossiers. Each dossier asks a question, builds the map around that question, and shows the finding, the method, the source and the question that is still open side by side.</p>
+        <p class="warn"><b>Working version.</b> The results on the map are based on calculation and have not been verified on site. Each record states its source.</p>
+        <div class="row"><a class="btn" href="hikaye.html">Open the three-dimensional narrative</a></div>
+        <div id="ozet" class="nums"></div>
+        <h2>Dossiers</h2>
+        <div id="dos" class="dos"></div>
+        <h2>Places</h2>
+        <div id="tur" class="chips"></div>
+      </div>
+      <div id="d-detay" hidden></div>
+    </section>
+
+    <section id="p-olaylar" class="panel" hidden>
+      <h1>Events</h1>
+      <p class="small">Dated and sourced records from 1954 to the present. Selecting an event moves the map to that place and to the imagery of that year. The same records appear on the timeline below the map.</p>
+      <div id="o-serit" class="chips"></div>
+      <ol id="o-liste" class="kron"></ol>
+      <ol id="kron" hidden></ol>
+    </section>
+
+    <section id="p-anitlar" class="panel" hidden>
+      <h1>Monuments</h1>
+      <p class="small">Structures in Hasankeyf that were moved, partly moved or left in place. The cross marks the old site, the square the new site, and the dashed line the route of relocation.</p>
+      <div id="an-ozet" class="nums"></div>
+      <h2>Relocation distance, as the crow flies</h2><div id="an-mes" class="bars"></div>
+      <h2>Structures moved and abandoned</h2><ul id="an-liste" class="liste"></ul>
+      <h2>Sites and structures that remain in place</h2><ul id="an-yer" class="liste"></ul>
+    </section>
+
+    <section id="p-arsiv" class="panel" hidden>
+      <h1>Visual archive</h1>
+      <p class="small">A record of images produced about the dam and Hasankeyf: state promotional films, press photographs, activist and artist works, satellite images. The thumbnails serve for identification only, and the rights belong to their producers.</p>
+      <div class="filters">
+        <input id="k-ara" type="search" placeholder="Search by title, producer or note" aria-label="Search the archive">
+        <select id="k-kat" aria-label="Cluster"><option value="">All clusters</option></select>
+        <select id="k-don" aria-label="Period"><option value="">All years</option><option value="0-2005">2005 and earlier</option><option value="2006-2016">2006 to 2016</option><option value="2017-2018">2017 to 2018</option><option value="2019-2020">2019 to 2020</option><option value="2021-2100">2021 and later</option></select>
+      </div>
+      <p class="small" id="k-say"></p>
+      <div id="k-grid" class="grid"></div>
+      <button type="button" id="k-daha" class="btn">Show more</button>
+    </section>
+
+    <section id="p-kutuphane" class="panel" hidden>
+      <h1>Library</h1>
+      <p class="small">The documents the research draws on: village lists, historical maps, archives, image sources and comparable projects. Each record gives a link to the source and its access status. Primary documents that could not be found are also listed.</p>
+      <div id="ku-tur" class="chips"></div>
+      <div class="filters"><input id="ku-ara" type="search" placeholder="Search by title, institution or note" aria-label="Search the library"></div>
+      <p class="small" id="ku-say"></p>
+      <ul id="ku-liste" class="liste"></ul>
+    </section>
+
+    <section id="p-katmanlar" class="panel" hidden>
+      <h1>Layers</h1>
+      <h2>Data layers</h2>
+      <div id="katlist" class="katlist"></div>
+      <h2>Satellite imagery and base map</h2>
+      <p class="small">Chosen separately for the left and right sides. These are the same as the menus above the map.</p>
+      <div id="imlist" class="imlist"></div>
+    </section>
+
+    <section id="p-yerlesimler" class="panel" hidden>
+      <h1>Settlements</h1>
+      <div class="filters">
+        <input id="ara" type="search" placeholder="Search by name or former name" aria-label="Search settlements">
+        <select id="f-il" aria-label="Province"><option value="">All provinces</option></select>
+        <select id="f-r" aria-label="Position relative to the lake"><option value="gol_icinde">Within the lake boundary</option><option value="kiyi_1km">Within 1 km of the shore</option><option value="kiyi_3km">1 to 3 km</option><option value="">All</option></select>
+      </div>
+      <p class="small" id="say"></p>
+      <ul id="liste" class="liste"></ul>
+    </section>
+
+    <section id="p-analiz" class="panel" hidden>
+      <h1>Analysis</h1>
+      <h2>Settlements within the lake boundary, by province</h2><div id="a-il" class="bars"></div>
+      <h2>Distribution of ground elevation</h2><p class="small">Pre-filling ground elevation of the settlement points within the lake boundary. The normal water level is 525 m.</p><div id="a-h" class="bars"></div>
+      <h2>Water surface within the lake boundary, by year</h2><p class="small">A rough estimate. The share of dark surface within the lake boundary was measured in annual Sentinel-2 mosaics. The 8 to 9 per cent before filling is the riverbed and shadows. The 2019 mosaic consists mostly of pre-filling frames. The drop in 2021 seems consistent with a dry year. An annual mosaic does not show a single day, and an exact measurement needs dated imagery and an infrared band.</p><div id="a-suyil" class="bars"></div>
+      <h2>Waterways remaining in the lake</h2><div id="a-su" class="bars"></div>
+      <h2>Roads remaining in the lake</h2><p class="small">Length within the lake boundary of roads still drawn on the August 2022 map.</p><div id="a-yol" class="bars"></div>
+      <h2>Land use remaining in the lake</h2><p class="small">Mapped areas. The real loss is larger, because not every field has been drawn.</p><div id="a-arazi" class="bars"></div>
+      <h2>Village population, 2007 to 2024</h2><p class="small" id="a-nufus-not"></p><div id="a-nufus" class="bars"></div>
+      <h2>Settlements that lost the most population from 2019 to 2024</h2><p class="small">Settlements within the lake boundary and within 1 km of the shore. Only those with a 2019 population of 30 or more.</p><div id="a-kayip" class="bars"></div>
+      <h2>Recorded place names</h2><p class="small">How many of the 260 settlements around the lake have a name recorded in another language.</p><div id="a-ad" class="bars"></div>
+      <h2>Archaeological sites, by status</h2><div id="a-ark" class="bars"></div>
+      <h2>Annual electricity generation</h2><div id="a-uretim" class="bars"></div>
+      <h2>Published figures: persons, households, dwellings</h2><p class="small">Figures given by different sources for the same dam. Each row states what was counted and the source.</p><table class="tbl" id="a-sayi"></table>
+      <h2>Visual archive, by cluster</h2><div id="a-kkat" class="bars"></div>
+      <h2>Visual archive, by period</h2><p class="small">Records with a known date.</p><div id="a-kdon" class="bars"></div>
+      <h2>Events, by strand</h2><div id="a-oser" class="bars"></div>
+      <h2>How many settlements were affected? The sources disagree</h2>
+      <p class="small">Figures published for the same dam. The difference depends on what counts as a settlement and on whether evacuated villages are included in the count.</p>
+      <table class="tbl" id="a-say"></table>
+    </section>
+
+    <section id="p-kaynaklar" class="panel" hidden>
+      <h1>Method and sources</h1>
+      <h2>Method</h2>
+      <p>The lake boundary polygon was intersected with the settlement points and map layers. For each settlement, we calculated whether it lies inside the boundary and, if not, how many metres away from it. For roads and waterways, we calculated the length inside the boundary, and for areas the share inside.</p>
+      <h2>Limitations</h2>
+      <ul>
+        <li>Settlement coordinates were compiled from old topographic maps, and some may be off by up to 1 km.</li>
+        <li>The same village may appear twice under two different names. Hamlets and abandoned places are also counted.</li>
+        <li>Alternative names are compiled data. They carry no information on language or origin.</li>
+        <li>The source of the lake boundary layer is uncertain. Its calculated area is 318 km², and the official figure is 313 km².</li>
+        <li>The road and land layers rely on volunteer mapping and are incomplete.</li>
+        <li>Kurdish, Armenian and Arabic names and village populations are taken from Wikidata records and have not been verified against a primary source.</li>
+        <li>The location of some archaeological sites is approximate, and the site card says so.</li>
+        <li>Daily MODIS imagery has a resolution of 250 metres, and the ground is not visible on cloudy days.</li>
+        <li>Monument locations are taken from volunteer mapping and have not been verified on site.</li>
+        <li>Event dates are compiled from published sources. Where the sources disagree, the record carries a note.</li>
+        <li>Interviews and the researcher's field locations will not be published until the consent process is complete.</li>
+        <li>For high-resolution archive images, the date is the publication date, not the date the image was taken.</li>
+      </ul>
+      <h2>Data sources</h2>
+      <ul id="src"></ul>
+      <h2>Credits</h2>
+      <p>Yelta Köm, doctoral research, Bauhaus-Universität Weimar. The atlas is a working version. Please consult the author before citing it.</p>
+    </section>
+  </aside>
+</main>
+
+<script>(()=>{const T=new Set(["anit_ek.json", "anitlar.geojson", "arkeoloji.geojson", "baraj_kunye.json", "barajlar.geojson", "belgeler.json", "benzer_projeler.json", "foto_arsivleri.json", "goruntu_kaynaklari.json", "korpus.json", "koy_adlari.json", "listeler.json", "olaylar.json", "sayilar.json", "tarihi_haritalar.json", "yeni_yerlesimler.geojson"]);const f=window.fetch.bind(window);window.fetch=(u,o)=>{if(typeof u==='string'&&u.startsWith('data/')){const n=u.slice(5).split('?')[0];if(!T.has(n))u='../'+u;}return f(u,o);};})();</script>
+<script src="../vendor/maplibre-gl.js"></script>
+<script src="app.js?v=8"></script>
+<script src="platform.js?v=8"></script>
+<script src="ek.js?v=8"></script>
+</body>
+</html>
