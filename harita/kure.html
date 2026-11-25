@@ -7,20 +7,45 @@
 <meta name="googlebot" content="noindex, nofollow">
 <title>Dicle Vadisi Atlası: küre</title>
 <style>
-html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700}
-#kure{position:fixed;inset:0}#kure canvas{display:block;cursor:grab}#kure canvas:active{cursor:grabbing}
-.k{position:fixed;z-index:2;color:#fff;background:#000;border:1px solid #fff;font:inherit;font-size:12px;text-transform:uppercase;padding:5px 9px;text-decoration:none;cursor:pointer}
+html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.3}
+*{box-sizing:border-box}
+#kure{position:fixed;inset:0}#kure canvas{display:block;cursor:grab;touch-action:none}
+.k{position:fixed;z-index:3;color:#fff;background:#000;border:1px solid #fff;font:inherit;font-size:12px;text-transform:uppercase;padding:6px 9px;text-decoration:none;cursor:pointer}
 .k:hover,.k:focus-visible{background:#fff;color:#000;outline:none}
-#geri{left:10px;top:10px}#atif-d{right:10px;bottom:10px;width:28px;padding:5px 0;text-align:center}
-#atif{position:fixed;z-index:2;right:10px;bottom:46px;max-width:340px;background:#fff;color:#000;border:1px solid #000;padding:9px 11px;font-size:11.5px;font-weight:400;line-height:1.35}
-#atif[hidden]{display:none}
+#geri{left:10px;top:10px}#kat-d{left:10px;top:46px}#dil{right:10px;top:10px}#atif-d{right:10px;bottom:10px;width:28px;padding:6px 0;text-align:center}
+#panel{position:fixed;z-index:2;left:10px;top:82px;bottom:10px;width:292px;max-width:calc(100vw - 20px);background:#fff;color:#000;border:1px solid #000;overflow:auto;padding:0 10px 10px}
+#panel[hidden],#kart[hidden],#atif[hidden]{display:none}
+#panel h2{font-size:12.5px;text-transform:uppercase;margin:0 -10px;padding:7px 10px;background:#f2f2f2;border-top:1px solid #000;border-bottom:1px solid #000}
+#panel h2:first-child{border-top:0}
+#panel label{display:grid;grid-template-columns:18px 22px 1fr auto;gap:6px;align-items:start;padding:5px 0;border-top:1px solid #000;cursor:pointer}
+#panel label:first-child{border-top:0}
+#panel input[type=checkbox]{width:15px;height:15px;margin:1px 0 0;accent-color:#000}
+#panel i{font-style:italic}#panel em{font-style:normal;font-weight:400;font-variant-numeric:tabular-nums}
+#panel input[type=range]{width:100%;accent-color:#000;margin:8px 0}
+.r{display:flex;flex-wrap:wrap;gap:6px;padding:7px 0}
+.r button,.r a{font:inherit;font-size:12px;border:1px solid currentColor;background:transparent;color:inherit;padding:4px 8px;cursor:pointer;text-decoration:none}
+#say{margin:8px 0 4px}.kucuk{font-weight:400;font-size:11.5px;margin:0}
+#kart{position:fixed;z-index:2;right:10px;top:46px;width:330px;max-width:calc(100vw - 20px);max-height:calc(100vh - 100px);overflow:auto;background:#000;color:#fff;border:1px solid #fff;padding:0 11px 10px}
+#kart .kh{display:flex;gap:8px;align-items:center;margin:0 -11px;padding:6px 6px 6px 11px;border-bottom:1px solid #fff;text-transform:uppercase;font-size:12px}
+#kart .kh b{font-style:italic}#kart .kh span{flex:1}
+#kart .kh button{font:inherit;font-size:18px;line-height:1;background:#000;color:#fff;border:1px solid #fff;width:26px;height:26px;cursor:pointer}
+#kart img{display:block;max-width:100%;max-height:230px;margin:10px 0 0;border:1px solid #fff}
+#kart h3{font-size:16px;line-height:1.15;text-transform:uppercase;margin:10px 0 6px}
+#kart dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:0}#kart dt{text-transform:uppercase;font-size:10.5px;padding-top:2px}#kart dd{margin:0}
+#kart p{font-weight:400;margin:8px 0 0}#kart a{color:#fff}
+#atif{position:fixed;z-index:3;right:10px;bottom:46px;max-width:340px;background:#fff;color:#000;border:1px solid #000;padding:9px 11px;font-size:11.5px;font-weight:400}
+@media (max-width:760px){#panel{top:82px;bottom:auto;max-height:60vh}#kart{top:auto;bottom:46px;right:10px;left:10px;width:auto;max-height:52vh}#kart img{max-height:130px}}
 </style>
 </head>
 <body>
-<div id="kure" aria-label="Döndürülebilen küre: Hasankeyf üzerinde üst üste binen görüntüler"></div>
+<div id="kure" aria-label="Döndürülebilen küre: görsel korpus, üreticilerinin kentleri üzerinde"></div>
 <a class="k" id="geri" href="index.html">← Atlas</a>
-<button class="k" id="atif-d" type="button" aria-label="Görüntü kaynakları">i</button>
-<div id="atif" hidden>Bulutlar: NASA EOSDIS GIBS, MODIS Terra, 19.07.2019, siyah beyaza çevrildi. Uydu parçaları: Sentinel-2 cloudless, EOX IT Services GmbH (Copernicus Sentinel verisi); Esri World Imagery Wayback. Fotoğraflar ve görüntüler: Visibility and Erasure görsel korpusu, hakları üreticilerine aittir. Pembe çizgi: baraj gölü sınırı.</div>
-<script type="module" src="kure.js?v=1"></script>
+<button class="k" id="kat-d" type="button" aria-expanded="true" aria-controls="panel"></button>
+<a class="k" id="dil" href="en/kure.html" lang="en">EN</a>
+<aside id="panel"></aside>
+<section id="kart" hidden></section>
+<button class="k" id="atif-d" type="button" aria-label="i">i</button>
+<div id="atif" hidden>Bulutlar: NASA EOSDIS GIBS, MODIS Terra, 19.07.2019, siyah beyaza çevrildi. Uydu parçaları: Sentinel-2 cloudless, EOX IT Services GmbH (Copernicus Sentinel verisi); Esri World Imagery Wayback. Görüntüler: Visibility and Erasure görsel korpusu, küçük görseller yalnızca tanıma amaçlıdır, hakları üreticilerine aittir. Pembe çizgi: baraj gölü sınırı. Konumlar üreticinin merkezine göre atanmıştır, yaklaşıktır.</div>
+<script type="module" src="kure.js?v=3"></script>
 </body>
 </html>
