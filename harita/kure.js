@@ -5,8 +5,8 @@ import * as THREE from './vendor/three/three.module.min.js';
 import {OrbitControls} from './vendor/three/OrbitControls.js';
 
 const H=document.documentElement,BASE=H.dataset.base||'',EN=H.lang==='en';
-const S=EN?{kat:'Layers',bol:'Sections',hep:'All',hic:'None',diger:'Other layers',hat:'Lines to Hasankeyf',yer:'Place names',uydu:'Satellite fragments',gol:'Reservoir and Tigris',yor:'Orbits',bulut:'Clouds',yil:'Up to year',kayit:'records',ure:'Producer',tar:'Date',tur:'Type',konum:'Placed at',git:'Open source',atlas:'Open in atlas',kapat:'Close',yaklasik:'approximate, by producer seat'}
- :{kat:'Katmanlar',bol:'Bölümler',hep:'Hepsi',hic:'Hiçbiri',diger:'Diğer katmanlar',hat:'Hasankeyf\'e hatlar',yer:'Yer adları',uydu:'Uydu parçaları',gol:'Baraj gölü ve Dicle',yor:'Yörüngeler',bulut:'Bulutlar',yil:'Şu yıla kadar',kayit:'kayıt',ure:'Üretici',tar:'Tarih',tur:'Tür',konum:'Konum',git:'Kaynağa git',atlas:'Atlasta aç',kapat:'Kapat',yaklasik:'yaklaşık, üreticinin merkezine göre'};
+const S=EN?{kat:'Layers',bol:'Sections',hep:'All',hic:'None',diger:'Other layers',hat:'Lines to Hasankeyf',yer:'Place names',uydu:'Satellite fragments',gol:'Reservoir and Tigris',yor:'Orbits',bulut:'Clouds',cizgi:'Woven world',yil:'Up to year',kayit:'records',ure:'Producer',tar:'Date',tur:'Type',konum:'Placed at',git:'Open source',atlas:'Open in atlas',kapat:'Close',yaklasik:'approximate, by producer seat'}
+ :{kat:'Katmanlar',bol:'Bölümler',hep:'Hepsi',hic:'Hiçbiri',diger:'Diğer katmanlar',hat:'Hasankeyf\'e hatlar',yer:'Yer adları',uydu:'Uydu parçaları',gol:'Baraj gölü ve Dicle',yor:'Yörüngeler',bulut:'Bulutlar',cizgi:'Dokuma dünya',yil:'Şu yıla kadar',kayit:'kayıt',ure:'Üretici',tar:'Tarih',tur:'Tür',konum:'Konum',git:'Kaynağa git',atlas:'Atlasta aç',kapat:'Kapat',yaklasik:'yaklaşık, üreticinin merkezine göre'};
 const $=id=>document.getElementById(id),esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const R=1,HK=[41.41,37.71],mob=innerWidth<760;
 const renderer=new THREE.WebGLRenderer({antialias:true});
@@ -21,20 +21,22 @@ camera.position.copy(pos(HK[0]-14,HK[1]+2,2.5));camera.lookAt(0,0,0);
 /* dünya ve bulutlar */
 const globe=new THREE.Mesh(new THREE.SphereGeometry(R,128,96),new THREE.MeshBasicMaterial({color:0x000000}));scene.add(globe);
 const kafes=new THREE.Group();scene.add(kafes);
-{const m=new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.16});
- for(let lat=-60;lat<=60;lat+=30){const p=[];for(let l=0;l<=360;l+=4)p.push(pos(l-180,lat,R*1.001));kafes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(p),m));}
- for(let lon=-180;lon<180;lon+=30){const p=[];for(let l=-90;l<=90;l+=4)p.push(pos(lon,l,R*1.001));kafes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(p),m));}}
 const yukle=src=>new Promise((ok,no)=>{const i=new Image();i.crossOrigin='anonymous';i.onload=()=>ok(i);i.onerror=no;i.src=src;});
 function esikle(img,w,h,es){const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(img,0,0,w,h);
   const d=x.getImageData(0,0,w,h),p=d.data;for(let i=0;i<p.length;i+=4){const l=.3*p[i]+.59*p[i+1]+.11*p[i+2];const v=l>es+18?255:l>es-18?Math.round((l-es+18)/36*255):0;p[i]=p[i+1]=p[i+2]=v;}x.putImageData(d,0,0);return c;}
 function gurultu(){const w=1024,h=512,c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle='#000';x.fillRect(0,0,w,h);
-  for(let k=0;k<1100;k++){const cx=Math.random()*w,cy=h*.1+Math.random()*h*.8,r=2+Math.random()*16;x.fillStyle='rgba(255,255,255,'+(.15+Math.random()*.5)+')';x.beginPath();x.ellipse(cx,cy,r*2.4,r,Math.random()*.6-.3,0,7);x.fill();}return c;}
-let bulutMat=null;const duzMat=globe.material;
-const L={hat:true,yer:!mob,uydu:true,gol:true,yor:true,bulut:true};
+  for(let k=0;k<320;k++){const cx=Math.random()*w,cy=h*.1+Math.random()*h*.8,r=2+Math.random()*16;x.fillStyle='rgba(255,255,255,'+(.15+Math.random()*.5)+')';x.beginPath();x.ellipse(cx,cy,r*2.4,r,Math.random()*.6-.3,0,7);x.fill();}return c;}
+const bulut=new THREE.Mesh(new THREE.SphereGeometry(R*1.006,96,64),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0,depthWrite:false}));scene.add(bulut);
+/* dokuma dünya: boylam çizgileri karaya girince yana kayar, kıyı çizgide bir kırılma olarak görünür */
+yukle(BASE+'kure/kara.png').then(im=>{const w=im.width,h=im.height,c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(im,0,0);const d=x.getImageData(0,0,w,h).data;
+  const kara=(lon,lat)=>d[4*(Math.min(h-1,Math.max(0,Math.round((90-lat)/180*h)))*w+((Math.round((lon+180)/360*w)%w)+w)%w)]/255;
+  const AD=1.5,pts=[];for(let lon=-180;lon<180;lon+=AD){let once=null;for(let lat=-84;lat<=84;lat+=.5){const v=pos(lon+kara(lon,lat)*AD*.62,lat,R*1.002);if(once)pts.push(once,v);once=v;}}
+  kafes.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.85})));});
+const L={hat:true,yer:!mob,uydu:true,gol:true,yor:true,cizgi:true,bulut:true};
 (async()=>{let c;const T='2019-07-19',W='https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&SRS=EPSG:4326&BBOX=-180,-90,180,90&FORMAT=image/jpeg&STYLES=';
   try{c=esikle(await yukle(W+'&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&WIDTH=4096&HEIGHT=2048&TIME='+T),4096,2048,150);}
   catch(e){try{c=esikle(await yukle(W+'&LAYERS=VIIRS_SNPP_CorrectedReflectance_TrueColor&WIDTH=2048&HEIGHT=1024&TIME='+T),2048,1024,150);}catch(e2){c=gurultu();}}
-  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;bulutMat=new THREE.MeshBasicMaterial({map:t});if(L.bulut)globe.material=bulutMat;})();
+  const t=new THREE.CanvasTexture(c);t.anisotropy=4;bulut.material=new THREE.MeshBasicMaterial({color:0xffffff,alphaMap:t,transparent:true,depthWrite:false});})();
 
 /* yörüngeler */
 const yor=new THREE.Group();scene.add(yor);
@@ -101,14 +103,14 @@ const yillar=ucan.map(m=>m.userData.k.yil).filter(Boolean),yMin=Math.min(...yill
 const p=$('panel');
 p.innerHTML='<h2>'+S.bol+'</h2><div class="r"><button type="button" id="b-hep">'+S.hep+'</button><button type="button" id="b-hic">'+S.hic+'</button></div><div id="bl"></div><h2>'+S.yil+' <b id="yil-t">2026</b></h2><input type="range" id="yil" min="'+yMin+'" max="2026" value="2026" aria-label="'+S.yil+'"><h2>'+S.diger+'</h2><div id="dl"></div><p id="say"></p><p class="kucuk">'+(EN?'Each image hangs above the city of its producer and is tied to Hasankeyf by a line. Positions are approximate.':'Her görüntü üreticisinin kentinin üstünde durur ve Hasankeyf\'e bir hatla bağlanır. Konumlar yaklaşıktır.')+'</p>';
 Object.entries(BOL).forEach(([b,o])=>{const l=document.createElement('label');l.innerHTML='<input type="checkbox" checked><i>'+String(b).padStart(2,'0')+'</i><span>'+esc(o.ad)+'</span><em>'+o.n+'</em>';$('bl').appendChild(l);l.firstChild.onchange=e=>{o.on=e.target.checked;uygula();};});
-[['hat',S.hat],['yer',S.yer],['gol',S.gol],['uydu',S.uydu],['yor',S.yor],['bulut',S.bulut]].forEach(([k,ad])=>{const l=document.createElement('label');l.innerHTML='<input type="checkbox"'+(L[k]?' checked':'')+'><i></i><span>'+ad+'</span>';$('dl').appendChild(l);l.firstChild.onchange=e=>{L[k]=e.target.checked;uygula();};});
+[['hat',S.hat],['yer',S.yer],['gol',S.gol],['uydu',S.uydu],['yor',S.yor],['cizgi',S.cizgi],['bulut',S.bulut]].forEach(([k,ad])=>{const l=document.createElement('label');l.innerHTML='<input type="checkbox"'+(L[k]?' checked':'')+'><i></i><span>'+ad+'</span>';$('dl').appendChild(l);l.firstChild.onchange=e=>{L[k]=e.target.checked;uygula();};});
 const hepsi=v=>{Object.values(BOL).forEach(o=>o.on=v);$('bl').querySelectorAll('input').forEach(i=>i.checked=v);uygula();};
 $('b-hep').onclick=()=>hepsi(true);$('b-hic').onclick=()=>hepsi(false);
 $('yil').oninput=e=>{yilMax=+e.target.value;$('yil-t').textContent=yilMax;uygula();};
 const acik=m=>BOL[m.userData.bol].on&&(!m.userData.k.yil||m.userData.k.yil<=yilMax);
 function uygula(){let n=0;ucan.forEach(m=>{m.visible=acik(m);if(m.visible)n++;});
   YER.forEach(y=>{const v=y.kayit.some(m=>m.visible);if(y.hat)y.hat.visible=L.hat&&v;y.nok.visible=v;y.et.visible=L.yer&&v;});
-  uyduG.visible=L.uydu;golG.visible=L.gol;yor.visible=L.yor;globe.material=L.bulut&&bulutMat?bulutMat:duzMat;kafes.visible=!L.bulut;
+  uyduG.visible=L.uydu;golG.visible=L.gol;yor.visible=L.yor;bulut.visible=L.bulut;kafes.visible=L.cizgi;
   $('say').textContent=n+' / '+ucan.length+' '+S.kayit;if(sec&&!sec.visible)kapat();}
 $('kat-d').textContent=S.kat;$('kat-d').onclick=()=>{p.hidden=!p.hidden;$('kat-d').setAttribute('aria-expanded',!p.hidden);};if(mob)p.hidden=true;
 
